@@ -1,0 +1,110 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+.DEFAULT_GOAL	Makefile	/^.DEFAULT_GOAL :=	all$/;"	m
+CC	Makefile	/^CC :=				gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS :=			-g3 -O0$/;"	m
+COLOR_H	src/color/color.h	14;"	d
+COORDINATE_H	src/coordinate/coordinate.h	14;"	d
+CURRENT_DIR	Makefile	/^CURRENT_DIR :=		$(shell pwd)$/;"	m
+CURRENT_MANPAHT	Makefile	/^CURRENT_MANPAHT :=	$(shell man --path)$/;"	m
+DEP	Makefile	/^DEP :=				$(addprefix $(DEP_PATH)\/,$(SRC:.c=.d))$/;"	m
+DEP_PATH	Makefile	/^DEP_PATH :=			.\/DEP$/;"	m
+EXCLUDE_DIRS	Makefile	/^EXCLUDE_DIRS :=		$(DEP_PATH) $(OBJ_PATH) .\/.git$/;"	m
+EXCLUDE_FILES	Makefile	/^EXCLUDE_FILES :=	.\/tags$/;"	m
+HDR	Makefile	/^HDR :=				$(HDR:.\/%=%)$/;"	m
+HDR	Makefile	/^HDR :=				$(shell find . \\$/;"	m
+LIBFT	Makefile	/^LIBFT :=			libft.a$/;"	m
+LIBFT_H	src/libft/libft.h	14;"	d
+LIBFT_PATH	Makefile	/^LIBFT_PATH :=		..$/;"	m
+MANPATH_APPEND	Makefile	/^MANPATH_APPEND :=	$(CURRENT_DIR)\/manpages\/$/;"	m
+NAME	Makefile	/^NAME :=				minirt$/;"	m
+NEW_DIRS	Makefile	/^NEW_DIRS :=			$(addprefix $(OBJ_PATH)\/,$(SUB_DIR))$/;"	m
+NORMINETTE	Makefile	/^NORMINETTE :=		$(shell command -v norminette)$/;"	m
+OBJ	Makefile	/^OBJ :=				$(addprefix $(OBJ_PATH)\/,$(SRC:%.c=%.o))$/;"	m
+OBJ_PATH	Makefile	/^OBJ_PATH :=			.\/OBJ$/;"	m
+PARAMETERS_H	src/parameters/parameters.h	14;"	d
+SHELL	Makefile	/^SHELL :=			bash$/;"	m
+SRC	Makefile	/^SRC :=				$(SRC:.\/%=%)$/;"	m
+SRC	Makefile	/^SRC :=				$(shell find . \\$/;"	m
+SUB_DIR	Makefile	/^SUB_DIR :=			$(SUB_DIR:.%=%)$/;"	m
+SUB_DIR	Makefile	/^SUB_DIR :=			$(SUB_DIR:\/%=%)$/;"	m
+SUB_DIR	Makefile	/^SUB_DIR :=			$(sort $(dir $(SRC)))$/;"	m
+UNAME	Makefile	/^UNAME :=			$(shell uname -s)$/;"	m
+VECTOR_H	src/vector/vector.h	14;"	d
+ambient_lightning	src/parameters/parameters.h	/^	long double	ambient_lightning;$/;"	m	struct:s_ambient_lightning
+ambient_lightning	src/parameters/parameters.h	/^	t_ambient_lightning	ambient_lightning;$/;"	m	struct:s_parametes
+b	src/color/color.h	/^	unsigned char	b;$/;"	m	struct:s_color
+brightness	src/parameters/parameters.h	/^	long double		brightness;$/;"	m	struct:s_light
+camera	src/parameters/parameters.h	/^	t_camera			camera;$/;"	m	struct:s_parametes
+color	src/parameters/parameters.h	/^	t_color			color;$/;"	m	struct:s_cylinder
+color	src/parameters/parameters.h	/^	t_color			color;$/;"	m	struct:s_light
+color	src/parameters/parameters.h	/^	t_color			color;$/;"	m	struct:s_plane
+color	src/parameters/parameters.h	/^	t_color			color;$/;"	m	struct:s_sphere
+color	src/parameters/parameters.h	/^	t_color		color;$/;"	m	struct:s_ambient_lightning
+cylinder_list	src/parameters/parameters.h	/^	t_cylider_list		cylinder_list;$/;"	m	struct:s_parametes
+diameter	src/parameters/parameters.h	/^	long double		diameter;$/;"	m	struct:s_cylinder
+diameter	src/parameters/parameters.h	/^	long double		diameter;$/;"	m	struct:s_sphere
+field_of_view	src/parameters/parameters.h	/^	long double		field_of_view;$/;"	m	struct:s_camera
+g	src/color/color.h	/^	unsigned char	g;$/;"	m	struct:s_color
+height	src/parameters/parameters.h	/^	long double		height;$/;"	m	struct:s_cylinder
+is_initialized	src/parameters/parameters.h	/^	bool			is_initialized;$/;"	m	struct:s_camera
+is_initialized	src/parameters/parameters.h	/^	bool			is_initialized;$/;"	m	struct:s_light
+is_initialized	src/parameters/parameters.h	/^	bool		is_initialized;$/;"	m	struct:s_ambient_lightning
+is_initialized	src/parameters/parameters.h	/^	bool		is_initialized;$/;"	m	struct:s_sphere_list
+is_initialized	src/parameters/parameters.h	/^	bool	is_initialized;$/;"	m	struct:s_cylider_list
+is_initialized	src/parameters/parameters.h	/^	bool	is_initialized;$/;"	m	struct:s_plane_list
+light	src/parameters/parameters.h	/^	t_light				light;$/;"	m	struct:s_parametes
+main	src/main.c	/^int	main(int argc, char **argv)$/;"	f
+orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	m	struct:s_camera
+orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	m	struct:s_cylinder
+orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	m	struct:s_plane
+plane_list	src/parameters/parameters.h	/^	t_cylinder	*plane_list;$/;"	m	struct:s_cylider_list
+plane_list	src/parameters/parameters.h	/^	t_plane	*plane_list;$/;"	m	struct:s_plane_list
+plane_list	src/parameters/parameters.h	/^	t_plane_list		plane_list;$/;"	m	struct:s_parametes
+position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	m	struct:s_camera
+position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	m	struct:s_cylinder
+position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	m	struct:s_light
+position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	m	struct:s_plane
+position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	m	struct:s_sphere
+r	src/color/color.h	/^	unsigned char	r;$/;"	m	struct:s_color
+s_ambient_lightning	src/parameters/parameters.h	/^typedef struct s_ambient_lightning$/;"	s
+s_camera	src/parameters/parameters.h	/^typedef struct s_camera$/;"	s
+s_color	src/color/color.h	/^typedef struct s_color$/;"	s
+s_coordinate	src/coordinate/coordinate.h	/^typedef struct s_coordinate$/;"	s
+s_cylider_list	src/parameters/parameters.h	/^typedef struct s_cylider_list$/;"	s
+s_cylinder	src/parameters/parameters.h	/^typedef struct s_cylinder$/;"	s
+s_light	src/parameters/parameters.h	/^typedef struct s_light$/;"	s
+s_parametes	src/parameters/parameters.h	/^typedef struct s_parametes$/;"	s
+s_plane	src/parameters/parameters.h	/^typedef struct s_plane$/;"	s
+s_plane_list	src/parameters/parameters.h	/^typedef struct s_plane_list$/;"	s
+s_sphere	src/parameters/parameters.h	/^typedef struct s_sphere$/;"	s
+s_sphere_list	src/parameters/parameters.h	/^typedef struct s_sphere_list$/;"	s
+s_vector	src/vector/vector.h	/^typedef struct s_vector$/;"	s
+size	src/parameters/parameters.h	/^	int			size;$/;"	m	struct:s_sphere_list
+size	src/parameters/parameters.h	/^	int		size;$/;"	m	struct:s_cylider_list
+size	src/parameters/parameters.h	/^	int		size;$/;"	m	struct:s_plane_list
+sphere_list	src/parameters/parameters.h	/^	t_sphere	*sphere_list;$/;"	m	struct:s_sphere_list
+sphere_list	src/parameters/parameters.h	/^	t_sphere_list		sphere_list;$/;"	m	struct:s_parametes
+t_ambient_lightning	src/parameters/parameters.h	/^}t_ambient_lightning;$/;"	t	typeref:struct:s_ambient_lightning
+t_camera	src/parameters/parameters.h	/^}t_camera;$/;"	t	typeref:struct:s_camera
+t_color	src/color/color.h	/^}t_color;$/;"	t	typeref:struct:s_color
+t_coordinate	src/coordinate/coordinate.h	/^}t_coordinate;$/;"	t	typeref:struct:s_coordinate
+t_cylider_list	src/parameters/parameters.h	/^}t_cylider_list;$/;"	t	typeref:struct:s_cylider_list
+t_cylinder	src/parameters/parameters.h	/^}t_cylinder;$/;"	t	typeref:struct:s_cylinder
+t_light	src/parameters/parameters.h	/^}t_light;$/;"	t	typeref:struct:s_light
+t_parameters	src/parameters/parameters.h	/^}t_parameters;$/;"	t	typeref:struct:s_parametes
+t_plane	src/parameters/parameters.h	/^}t_plane;$/;"	t	typeref:struct:s_plane
+t_plane_list	src/parameters/parameters.h	/^}t_plane_list;$/;"	t	typeref:struct:s_plane_list
+t_sphere	src/parameters/parameters.h	/^}t_sphere;$/;"	t	typeref:struct:s_sphere
+t_sphere_list	src/parameters/parameters.h	/^}t_sphere_list;$/;"	t	typeref:struct:s_sphere_list
+t_vector	src/vector/vector.h	/^}t_vector;$/;"	t	typeref:struct:s_vector
+x	src/coordinate/coordinate.h	/^	long double	x;$/;"	m	struct:s_coordinate
+x	src/vector/vector.h	/^	long double	x;$/;"	m	struct:s_vector
+y	src/coordinate/coordinate.h	/^	long double	y;$/;"	m	struct:s_coordinate
+y	src/vector/vector.h	/^	long double	y;$/;"	m	struct:s_vector
+z	src/coordinate/coordinate.h	/^	long double	z;$/;"	m	struct:s_coordinate
+z	src/vector/vector.h	/^	long double	z;$/;"	m	struct:s_vector
