@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                                            */
-/*   Filename: color.h                                                        */
+/*   Filename: ft_putstr.c                                                    */
 /*   Author:   Peru Riezu <riezumunozperu@gmail.com>                          */
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
-/*   Created:  2023/10/03 23:50:07                                            */
-/*   Updated:  2023/10/07 20:32:48                                            */
+/*   Created:  2023/10/07 20:54:18                                            */
+/*   Updated:  2023/10/07 20:55:35                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COLOR_H
-# define COLOR_H
+#include "libft.h"
+#include <unistd.h>
 
 ;
-# pragma clang diagnostic push
-# pragma clang diagnostic warning "-Weverything"
-# pragma clang diagnostic ignored "-Wempty-translation-unit"
-# pragma clang diagnostic ignored "-Wunused-macros"
+#pragma clang diagnostic push
+#pragma clang diagnostic warning "-Weverything"
+#pragma clang diagnostic ignored "-Wempty-translation-unit"
+#pragma clang diagnostic ignored "-Wunused-macros"
 
-typedef struct s_color
+void	ft_putstr(const char *str)
 {
-	unsigned char	r;
-	unsigned char	g;
-	unsigned char	b;
-}t_color;
+	write(STDOUT_FILENO, str, ft_strlen(str));
+}
 
-# pragma clang diagnostic pop
-
-#endif
+#pragma clang diagnostic pop

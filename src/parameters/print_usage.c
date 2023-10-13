@@ -1,19 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                                            */
-/*   Filename: main.c                                                         */
+/*   Filename: print_usage.c                                                  */
 /*   Author:   Peru Riezu <riezumunozperu@gmail.com>                          */
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
-/*   Created:  2023/09/25 17:27:48                                            */
-/*   Updated:  2023/10/07 21:31:19                                            */
+/*   Created:  2023/10/06 18:09:42                                            */
+/*   Updated:  2023/10/07 21:33:00                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parameters/parameters.h"
-#include "libft/libft.h"
-#include <stdbool.h>
-#include <stdlib.h>
+#include "parameters.h"
 #include <unistd.h>
 
 ;
@@ -22,23 +19,15 @@
 #pragma clang diagnostic ignored "-Wempty-translation-unit"
 #pragma clang diagnostic ignored "-Wunused-macros"
 
-int	main(int argc, char **argv)
+void	print_usage(void)
 {
-	t_parameters	parameters;
+	const char	msg[]
+		= "Usage: ./minirt SCENE_FILE\n"
+		"Render scene described in SCENE_FILE and show it in screen\n"
+		"for more information on how a SCENE_FILE should look, see\n"
+		"man minirt(1)\n";
 
-	if (argc != 2)
-	{
-		print_usage();
-		return (EXIT_FAILURE);
-	}
-	parameters = get_parameters(argv[1]);
-	if (parameters.parameters_valid == false)
-	{
-//		destroy_parameters(parameters);
-		return (EXIT_FAILURE);
-	}
-//	destroy_parameters(parameters);
-	return (EXIT_SUCCESS);
+	write(STDOUT_FILENO, msg, sizeof(msg));
 }
 
 #pragma clang diagnostic pop

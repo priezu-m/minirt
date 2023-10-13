@@ -1,110 +1,362 @@
-!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
-!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
-!_TAG_PROGRAM_NAME	Exuberant Ctags	//
-!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-.DEFAULT_GOAL	Makefile	/^.DEFAULT_GOAL :=	all$/;"	m
-CC	Makefile	/^CC :=				gcc$/;"	m
-CFLAGS	Makefile	/^CFLAGS :=			-g3 -O0$/;"	m
-COLOR_H	src/color/color.h	14;"	d
-COORDINATE_H	src/coordinate/coordinate.h	14;"	d
-CURRENT_DIR	Makefile	/^CURRENT_DIR :=		$(shell pwd)$/;"	m
-CURRENT_MANPAHT	Makefile	/^CURRENT_MANPAHT :=	$(shell man --path)$/;"	m
-DEP	Makefile	/^DEP :=				$(addprefix $(DEP_PATH)\/,$(SRC:.c=.d))$/;"	m
-DEP_PATH	Makefile	/^DEP_PATH :=			.\/DEP$/;"	m
-EXCLUDE_DIRS	Makefile	/^EXCLUDE_DIRS :=		$(DEP_PATH) $(OBJ_PATH) .\/.git$/;"	m
-EXCLUDE_FILES	Makefile	/^EXCLUDE_FILES :=	.\/tags$/;"	m
-HDR	Makefile	/^HDR :=				$(HDR:.\/%=%)$/;"	m
-HDR	Makefile	/^HDR :=				$(shell find . \\$/;"	m
-LIBFT	Makefile	/^LIBFT :=			libft.a$/;"	m
-LIBFT_H	src/libft/libft.h	14;"	d
-LIBFT_PATH	Makefile	/^LIBFT_PATH :=		..$/;"	m
-MANPATH_APPEND	Makefile	/^MANPATH_APPEND :=	$(CURRENT_DIR)\/manpages\/$/;"	m
-NAME	Makefile	/^NAME :=				minirt$/;"	m
-NEW_DIRS	Makefile	/^NEW_DIRS :=			$(addprefix $(OBJ_PATH)\/,$(SUB_DIR))$/;"	m
-NORMINETTE	Makefile	/^NORMINETTE :=		$(shell command -v norminette)$/;"	m
-OBJ	Makefile	/^OBJ :=				$(addprefix $(OBJ_PATH)\/,$(SRC:%.c=%.o))$/;"	m
-OBJ_PATH	Makefile	/^OBJ_PATH :=			.\/OBJ$/;"	m
-PARAMETERS_H	src/parameters/parameters.h	14;"	d
-SHELL	Makefile	/^SHELL :=			bash$/;"	m
-SRC	Makefile	/^SRC :=				$(SRC:.\/%=%)$/;"	m
-SRC	Makefile	/^SRC :=				$(shell find . \\$/;"	m
-SUB_DIR	Makefile	/^SUB_DIR :=			$(SUB_DIR:.%=%)$/;"	m
-SUB_DIR	Makefile	/^SUB_DIR :=			$(SUB_DIR:\/%=%)$/;"	m
-SUB_DIR	Makefile	/^SUB_DIR :=			$(sort $(dir $(SRC)))$/;"	m
-UNAME	Makefile	/^UNAME :=			$(shell uname -s)$/;"	m
-VECTOR_H	src/vector/vector.h	14;"	d
-ambient_lightning	src/parameters/parameters.h	/^	long double	ambient_lightning;$/;"	m	struct:s_ambient_lightning
-ambient_lightning	src/parameters/parameters.h	/^	t_ambient_lightning	ambient_lightning;$/;"	m	struct:s_parametes
-b	src/color/color.h	/^	unsigned char	b;$/;"	m	struct:s_color
-brightness	src/parameters/parameters.h	/^	long double		brightness;$/;"	m	struct:s_light
-camera	src/parameters/parameters.h	/^	t_camera			camera;$/;"	m	struct:s_parametes
-color	src/parameters/parameters.h	/^	t_color			color;$/;"	m	struct:s_cylinder
-color	src/parameters/parameters.h	/^	t_color			color;$/;"	m	struct:s_light
-color	src/parameters/parameters.h	/^	t_color			color;$/;"	m	struct:s_plane
-color	src/parameters/parameters.h	/^	t_color			color;$/;"	m	struct:s_sphere
-color	src/parameters/parameters.h	/^	t_color		color;$/;"	m	struct:s_ambient_lightning
-cylinder_list	src/parameters/parameters.h	/^	t_cylider_list		cylinder_list;$/;"	m	struct:s_parametes
-diameter	src/parameters/parameters.h	/^	long double		diameter;$/;"	m	struct:s_cylinder
-diameter	src/parameters/parameters.h	/^	long double		diameter;$/;"	m	struct:s_sphere
-field_of_view	src/parameters/parameters.h	/^	long double		field_of_view;$/;"	m	struct:s_camera
-g	src/color/color.h	/^	unsigned char	g;$/;"	m	struct:s_color
-height	src/parameters/parameters.h	/^	long double		height;$/;"	m	struct:s_cylinder
-is_initialized	src/parameters/parameters.h	/^	bool			is_initialized;$/;"	m	struct:s_camera
-is_initialized	src/parameters/parameters.h	/^	bool			is_initialized;$/;"	m	struct:s_light
-is_initialized	src/parameters/parameters.h	/^	bool		is_initialized;$/;"	m	struct:s_ambient_lightning
-is_initialized	src/parameters/parameters.h	/^	bool		is_initialized;$/;"	m	struct:s_sphere_list
-is_initialized	src/parameters/parameters.h	/^	bool	is_initialized;$/;"	m	struct:s_cylider_list
-is_initialized	src/parameters/parameters.h	/^	bool	is_initialized;$/;"	m	struct:s_plane_list
-light	src/parameters/parameters.h	/^	t_light				light;$/;"	m	struct:s_parametes
-main	src/main.c	/^int	main(int argc, char **argv)$/;"	f
-orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	m	struct:s_camera
-orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	m	struct:s_cylinder
-orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	m	struct:s_plane
-plane_list	src/parameters/parameters.h	/^	t_cylinder	*plane_list;$/;"	m	struct:s_cylider_list
-plane_list	src/parameters/parameters.h	/^	t_plane	*plane_list;$/;"	m	struct:s_plane_list
-plane_list	src/parameters/parameters.h	/^	t_plane_list		plane_list;$/;"	m	struct:s_parametes
-position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	m	struct:s_camera
-position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	m	struct:s_cylinder
-position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	m	struct:s_light
-position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	m	struct:s_plane
-position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	m	struct:s_sphere
-r	src/color/color.h	/^	unsigned char	r;$/;"	m	struct:s_color
-s_ambient_lightning	src/parameters/parameters.h	/^typedef struct s_ambient_lightning$/;"	s
-s_camera	src/parameters/parameters.h	/^typedef struct s_camera$/;"	s
-s_color	src/color/color.h	/^typedef struct s_color$/;"	s
-s_coordinate	src/coordinate/coordinate.h	/^typedef struct s_coordinate$/;"	s
-s_cylider_list	src/parameters/parameters.h	/^typedef struct s_cylider_list$/;"	s
-s_cylinder	src/parameters/parameters.h	/^typedef struct s_cylinder$/;"	s
-s_light	src/parameters/parameters.h	/^typedef struct s_light$/;"	s
-s_parametes	src/parameters/parameters.h	/^typedef struct s_parametes$/;"	s
-s_plane	src/parameters/parameters.h	/^typedef struct s_plane$/;"	s
-s_plane_list	src/parameters/parameters.h	/^typedef struct s_plane_list$/;"	s
-s_sphere	src/parameters/parameters.h	/^typedef struct s_sphere$/;"	s
-s_sphere_list	src/parameters/parameters.h	/^typedef struct s_sphere_list$/;"	s
-s_vector	src/vector/vector.h	/^typedef struct s_vector$/;"	s
-size	src/parameters/parameters.h	/^	int			size;$/;"	m	struct:s_sphere_list
-size	src/parameters/parameters.h	/^	int		size;$/;"	m	struct:s_cylider_list
-size	src/parameters/parameters.h	/^	int		size;$/;"	m	struct:s_plane_list
-sphere_list	src/parameters/parameters.h	/^	t_sphere	*sphere_list;$/;"	m	struct:s_sphere_list
-sphere_list	src/parameters/parameters.h	/^	t_sphere_list		sphere_list;$/;"	m	struct:s_parametes
-t_ambient_lightning	src/parameters/parameters.h	/^}t_ambient_lightning;$/;"	t	typeref:struct:s_ambient_lightning
-t_camera	src/parameters/parameters.h	/^}t_camera;$/;"	t	typeref:struct:s_camera
-t_color	src/color/color.h	/^}t_color;$/;"	t	typeref:struct:s_color
-t_coordinate	src/coordinate/coordinate.h	/^}t_coordinate;$/;"	t	typeref:struct:s_coordinate
-t_cylider_list	src/parameters/parameters.h	/^}t_cylider_list;$/;"	t	typeref:struct:s_cylider_list
-t_cylinder	src/parameters/parameters.h	/^}t_cylinder;$/;"	t	typeref:struct:s_cylinder
-t_light	src/parameters/parameters.h	/^}t_light;$/;"	t	typeref:struct:s_light
-t_parameters	src/parameters/parameters.h	/^}t_parameters;$/;"	t	typeref:struct:s_parametes
-t_plane	src/parameters/parameters.h	/^}t_plane;$/;"	t	typeref:struct:s_plane
-t_plane_list	src/parameters/parameters.h	/^}t_plane_list;$/;"	t	typeref:struct:s_plane_list
-t_sphere	src/parameters/parameters.h	/^}t_sphere;$/;"	t	typeref:struct:s_sphere
-t_sphere_list	src/parameters/parameters.h	/^}t_sphere_list;$/;"	t	typeref:struct:s_sphere_list
-t_vector	src/vector/vector.h	/^}t_vector;$/;"	t	typeref:struct:s_vector
-x	src/coordinate/coordinate.h	/^	long double	x;$/;"	m	struct:s_coordinate
-x	src/vector/vector.h	/^	long double	x;$/;"	m	struct:s_vector
-y	src/coordinate/coordinate.h	/^	long double	y;$/;"	m	struct:s_coordinate
-y	src/vector/vector.h	/^	long double	y;$/;"	m	struct:s_vector
-z	src/coordinate/coordinate.h	/^	long double	z;$/;"	m	struct:s_coordinate
-z	src/vector/vector.h	/^	long double	z;$/;"	m	struct:s_vector
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/;"	extras:pseudo
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/;"	extras:pseudo
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/;"	extras:pseudo
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/;"	extras:pseudo
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/;"	extras:pseudo
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/;"	extras:pseudo
+!_TAG_PROC_CWD	/home/peru/minirt/	//;"	extras:pseudo
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//;"	extras:pseudo
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/;"	extras:pseudo
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/;"	extras:pseudo
+!_TAG_PROGRAM_VERSION	5.9.0	//;"	extras:pseudo
+../color/color.h	src/parameters/parameters.h	/^# include "..\/color\/color.h"/;"	kind:header	line:19	language:C++	roles:local	extras:reference
+../coordinate/coordinate.h	src/parameters/parameters.h	/^# include "..\/coordinate\/coordinate.h"/;"	kind:header	line:18	language:C++	roles:local	extras:reference
+../libft/libft.h	src/parameters/add_to_count_helper.c	/^#include "..\/libft\/libft.h"/;"	kind:header	line:14	language:C	roles:local	extras:reference
+../libft/libft.h	src/parameters/count_elements.c	/^#include "..\/libft\/libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+../libft/libft.h	src/parameters/get_parameters.c	/^#include "..\/libft\/libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+../libft/libft.h	src/parameters/is_valid_id.c	/^#include "..\/libft\/libft.h"/;"	kind:header	line:14	language:C	roles:local	extras:reference
+../vector/vector.h	src/parameters/parameters.h	/^# include "..\/vector\/vector.h"/;"	kind:header	line:17	language:C++	roles:local	extras:reference
+BUFSIZE	src/parameters/parameters.h	/^# define BUFSIZE /;"	kind:macro	line:28	language:C++	roles:def	end:28	macrodef:10000
+COLOR_H	src/color/color.h	/^# define COLOR_H$/;"	kind:macro	line:14	language:C++	roles:def	end:14	macrodef:
+COORDINATE_H	src/coordinate/coordinate.h	/^# define COORDINATE_H$/;"	kind:macro	line:14	language:C++	roles:def	end:14	macrodef:
+LIBFT_H	src/libft/libft.h	/^# define LIBFT_H$/;"	kind:macro	line:14	language:C++	roles:def	end:14	macrodef:
+MAX_LINE_SIZE	src/parameters/parameters.h	/^# define MAX_LINE_SIZE /;"	kind:macro	line:27	language:C++	roles:def	end:27	macrodef:1000
+PARAMETERS_H	src/parameters/parameters.h	/^# define PARAMETERS_H$/;"	kind:macro	line:14	language:C++	roles:def	end:14	macrodef:
+VECTOR_H	src/vector/vector.h	/^# define VECTOR_H$/;"	kind:macro	line:14	language:C++	roles:def	end:14	macrodef:
+add_to_count	src/parameters/count_elements.c	/^static void	add_to_count(t_element_count *element_count, t_line *line,$/;"	kind:function	line:25	language:C	typeref:typename:void	file:	signature:(t_element_count * element_count,t_line * line,int lineno)	roles:def	extras:fileScope	end:53	properties:static
+add_to_count_helper	src/parameters/add_to_count_helper.c	/^void	add_to_count_helper(t_line *line,$/;"	kind:function	line:104	language:C	typeref:typename:void	signature:(t_line * line,t_element_count * element_count,int lineno)	roles:def	end:127
+add_to_count_helper	src/parameters/parameters.h	/^void			add_to_count_helper(t_line *line,$/;"	kind:prototype	line:141	language:C++	typeref:typename:void	signature:(t_line * line,t_element_count * element_count,int lineno)	roles:def	end:142
+add_to_count_helper.c	src/parameters/add_to_count_helper.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:129	epoch:1696704838
+ambient_lightning	src/parameters/parameters.h	/^	long double	ambient_lightning;$/;"	kind:member	line:47	language:C++	scope:struct:s_ambient_lightning	typeref:typename:long double	access:public	roles:def	end:47
+ambient_lightning	src/parameters/parameters.h	/^	t_ambient_lightning	ambient_lightning;$/;"	kind:member	line:114	language:C++	scope:struct:s_parametes	typeref:typename:t_ambient_lightning	access:public	roles:def	end:114
+ambient_lightning_count	src/parameters/parameters.h	/^	int		ambient_lightning_count;$/;"	kind:member	line:125	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	end:125
+argc	src/main.c	/^int	main(int argc, char **argv)$/;"	kind:parameter	line:25	language:C	scope:function:main	typeref:typename:int	file:	roles:def	extras:fileScope	nth:0
+argv	src/main.c	/^int	main(int argc, char **argv)$/;"	kind:parameter	line:25	language:C	scope:function:main	typeref:typename:char **	file:	roles:def	extras:fileScope	nth:1
+b	src/color/color.h	/^	unsigned char	b;$/;"	kind:member	line:26	language:C++	scope:struct:s_color	typeref:typename:unsigned char	access:public	roles:def	end:26
+brightness	src/parameters/parameters.h	/^	long double		brightness;$/;"	kind:member	line:63	language:C++	scope:struct:s_light	typeref:typename:long double	access:public	roles:def	end:63
+buf	src/parameters/count_elements.c	/^	t_buffer		buf;$/;"	kind:local	line:83	language:C	scope:function:count_elements	typeref:typename:t_buffer	file:	roles:def	extras:fileScope	end:83
+buf	src/parameters/count_elements.c	/^static void	read_file(t_line *line, t_buffer *buf,$/;"	kind:parameter	line:55	language:C	scope:function:read_file	typeref:typename:t_buffer *	file:	roles:def	extras:fileScope	nth:1
+buf	src/parameters/load_line.c	/^static char	get_char_from_buf(t_buffer *buf, int fileno)$/;"	kind:parameter	line:22	language:C	scope:function:get_char_from_buf	typeref:typename:t_buffer *	file:	roles:def	extras:fileScope	nth:0
+buf	src/parameters/load_line.c	/^void	load_line(t_line *line, t_buffer *buf, int fileno)$/;"	kind:parameter	line:37	language:C	scope:function:load_line	typeref:typename:t_buffer *	file:	roles:def	extras:fileScope	nth:1
+buf	src/parameters/parameters.h	/^	char	buf[BUFSIZE];$/;"	kind:member	line:41	language:C++	scope:struct:s_buffer	typeref:typename:char[]	access:public	roles:def	end:41
+buf	src/parameters/parameters.h	/^void			load_line(t_line *line, t_buffer *buf, int fileno);$/;"	kind:parameter	line:139	language:C++	scope:prototype:load_line	typeref:typename:t_buffer *	file:	roles:def	extras:fileScope	nth:1
+c	src/libft/ft_isspace.c	/^int	ft_isspace(char c)$/;"	kind:parameter	line:21	language:C	scope:function:ft_isspace	typeref:typename:char	file:	roles:def	extras:fileScope	nth:0
+c	src/libft/libft.h	/^int		ft_isspace(char c);$/;"	kind:parameter	line:27	language:C++	scope:prototype:ft_isspace	typeref:typename:char	file:	roles:def	extras:fileScope	nth:0
+camera	src/parameters/parameters.h	/^	t_camera			camera;$/;"	kind:member	line:115	language:C++	scope:struct:s_parametes	typeref:typename:t_camera	access:public	roles:def	end:115
+camera_count	src/parameters/parameters.h	/^	int		camera_count;$/;"	kind:member	line:126	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	end:126
+check_ambient_light	src/parameters/add_to_count_helper.c	/^static void	check_ambient_light(t_line *line,$/;"	kind:function	line:41	language:C	typeref:typename:void	file:	signature:(t_line * line,t_element_count * element_count,int i,int lineno)	roles:def	extras:fileScope	end:56	properties:static
+check_camera	src/parameters/add_to_count_helper.c	/^static void	check_camera(t_line *line,$/;"	kind:function	line:24	language:C	typeref:typename:void	file:	signature:(t_line * line,t_element_count * element_count,int i,int lineno)	roles:def	extras:fileScope	end:39	properties:static
+check_light	src/parameters/add_to_count_helper.c	/^static void	check_light(t_line *line,$/;"	kind:function	line:58	language:C	typeref:typename:void	file:	signature:(t_line * line,t_element_count * element_count,int i,int lineno)	roles:def	extras:fileScope	end:73	properties:static
+check_sphere_and_cylinders	src/parameters/add_to_count_helper.c	/^static void	check_sphere_and_cylinders(t_line *line,$/;"	kind:function	line:75	language:C	typeref:typename:void	file:	signature:(t_line * line,t_element_count * element_count,int i,int lineno)	roles:def	extras:fileScope	end:102	properties:static
+color	src/parameters/parameters.h	/^	t_color			color;$/;"	kind:member	line:102	language:C++	scope:struct:s_cylinder	typeref:typename:t_color	access:public	roles:def	end:102
+color	src/parameters/parameters.h	/^	t_color			color;$/;"	kind:member	line:64	language:C++	scope:struct:s_light	typeref:typename:t_color	access:public	roles:def	end:64
+color	src/parameters/parameters.h	/^	t_color			color;$/;"	kind:member	line:72	language:C++	scope:struct:s_sphere	typeref:typename:t_color	access:public	roles:def	end:72
+color	src/parameters/parameters.h	/^	t_color			color;$/;"	kind:member	line:86	language:C++	scope:struct:s_plane	typeref:typename:t_color	access:public	roles:def	end:86
+color	src/parameters/parameters.h	/^	t_color		color;$/;"	kind:member	line:48	language:C++	scope:struct:s_ambient_lightning	typeref:typename:t_color	access:public	roles:def	end:48
+color.h	src/color/color.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:31	epoch:1696703568
+coordinate.h	src/coordinate/coordinate.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:31	epoch:1696369459
+count_elements	src/parameters/count_elements.c	/^t_element_count	count_elements(char *filename)$/;"	kind:function	line:79	language:C	typeref:typename:t_element_count	signature:(char * filename)	roles:def	end:97
+count_elements	src/parameters/parameters.h	/^t_element_count	count_elements(char *filename);$/;"	kind:prototype	line:138	language:C++	typeref:typename:t_element_count	signature:(char * filename)	roles:def	end:138
+count_elements.c	src/parameters/count_elements.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:99	epoch:1697211186
+count_failed	src/parameters/parameters.h	/^	bool	count_failed;$/;"	kind:member	line:131	language:C++	scope:struct:s_element_count	typeref:typename:bool	access:public	roles:def	end:131
+cylinder_count	src/parameters/parameters.h	/^	int		cylinder_count;$/;"	kind:member	line:130	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	end:130
+cylinder_list	src/parameters/parameters.h	/^	t_cylider_list		cylinder_list;$/;"	kind:member	line:119	language:C++	scope:struct:s_parametes	typeref:typename:t_cylider_list	access:public	roles:def	end:119
+destroy_parameters	src/parameters/parameters.h	/^void			destroy_parameters(t_parameters parameters);$/;"	kind:prototype	line:136	language:C++	typeref:typename:void	signature:(t_parameters parameters)	roles:def	end:136
+diameter	src/parameters/parameters.h	/^	long double		diameter;$/;"	kind:member	line:101	language:C++	scope:struct:s_cylinder	typeref:typename:long double	access:public	roles:def	end:101
+diameter	src/parameters/parameters.h	/^	long double		diameter;$/;"	kind:member	line:71	language:C++	scope:struct:s_sphere	typeref:typename:long double	access:public	roles:def	end:71
+element_count	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:25	language:C	scope:function:check_camera	typeref:typename:t_element_count *	file:	roles:def	extras:fileScope	nth:1
+element_count	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:42	language:C	scope:function:check_ambient_light	typeref:typename:t_element_count *	file:	roles:def	extras:fileScope	nth:1
+element_count	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:59	language:C	scope:function:check_light	typeref:typename:t_element_count *	file:	roles:def	extras:fileScope	nth:1
+element_count	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:76	language:C	scope:function:check_sphere_and_cylinders	typeref:typename:t_element_count *	file:	roles:def	extras:fileScope	nth:1
+element_count	src/parameters/add_to_count_helper.c	/^			t_element_count *element_count, int lineno)$/;"	kind:parameter	line:105	language:C	scope:function:add_to_count_helper	typeref:typename:t_element_count *	file:	roles:def	extras:fileScope	nth:1
+element_count	src/parameters/count_elements.c	/^				t_element_count *element_count, int fileno)$/;"	kind:parameter	line:56	language:C	scope:function:read_file	typeref:typename:t_element_count *	file:	roles:def	extras:fileScope	nth:2
+element_count	src/parameters/count_elements.c	/^	t_element_count	element_count;$/;"	kind:local	line:82	language:C	scope:function:count_elements	typeref:typename:t_element_count	file:	roles:def	extras:fileScope	end:82
+element_count	src/parameters/count_elements.c	/^static void	add_to_count(t_element_count *element_count, t_line *line,$/;"	kind:parameter	line:25	language:C	scope:function:add_to_count	typeref:typename:t_element_count *	file:	roles:def	extras:fileScope	nth:0
+element_count	src/parameters/get_parameters.c	/^	t_element_count	element_count;$/;"	kind:local	line:45	language:C	scope:function:get_parameters	typeref:typename:t_element_count	file:	roles:def	extras:fileScope	end:45
+element_count	src/parameters/parameters.h	/^					t_element_count *element_count, int lineno);$/;"	kind:parameter	line:142	language:C++	scope:prototype:add_to_count_helper	typeref:typename:t_element_count *	file:	roles:def	extras:fileScope	nth:1
+fcntl.h	src/parameters/count_elements.c	/^#include <fcntl.h>/;"	kind:header	line:17	language:C	roles:system	extras:reference
+field_of_view	src/parameters/parameters.h	/^	long double		field_of_view;$/;"	kind:member	line:55	language:C++	scope:struct:s_camera	typeref:typename:long double	access:public	roles:def	end:55
+filename	src/parameters/count_elements.c	/^t_element_count	count_elements(char *filename)$/;"	kind:parameter	line:79	language:C	scope:function:count_elements	typeref:typename:char *	file:	roles:def	extras:fileScope	nth:0
+filename	src/parameters/get_parameters.c	/^static bool	filename_extension_correct(char *filename)$/;"	kind:parameter	line:23	language:C	scope:function:filename_extension_correct	typeref:typename:char *	file:	roles:def	extras:fileScope	nth:0
+filename	src/parameters/get_parameters.c	/^t_parameters	get_parameters(char *filename)$/;"	kind:parameter	line:42	language:C	scope:function:get_parameters	typeref:typename:char *	file:	roles:def	extras:fileScope	nth:0
+filename	src/parameters/parameters.h	/^t_element_count	count_elements(char *filename);$/;"	kind:parameter	line:138	language:C++	scope:prototype:count_elements	typeref:typename:char *	file:	roles:def	extras:fileScope	nth:0
+filename	src/parameters/parameters.h	/^t_parameters	get_parameters(char *filename);$/;"	kind:parameter	line:134	language:C++	scope:prototype:get_parameters	typeref:typename:char *	file:	roles:def	extras:fileScope	nth:0
+filename_extension_correct	src/parameters/get_parameters.c	/^static bool	filename_extension_correct(char *filename)$/;"	kind:function	line:23	language:C	typeref:typename:bool	file:	signature:(char * filename)	roles:def	extras:fileScope	end:40	properties:static
+fileno	src/libft/ft_putnbr_fileno.c	/^void	ft_putnbr_fileno(int fileno, int nbr)$/;"	kind:parameter	line:41	language:C	scope:function:ft_putnbr_fileno	typeref:typename:int	file:	roles:def	extras:fileScope	nth:0
+fileno	src/libft/ft_putstr_fileno.c	/^void	ft_putstr_fileno(int fileno, const char *str)$/;"	kind:parameter	line:22	language:C	scope:function:ft_putstr_fileno	typeref:typename:int	file:	roles:def	extras:fileScope	nth:0
+fileno	src/libft/libft.h	/^void	ft_putnbr_fileno(int fileno, int nbr);$/;"	kind:parameter	line:29	language:C++	scope:prototype:ft_putnbr_fileno	typeref:typename:int	file:	roles:def	extras:fileScope	nth:0
+fileno	src/libft/libft.h	/^void	ft_putstr_fileno(int fileno, const char *str);$/;"	kind:parameter	line:28	language:C++	scope:prototype:ft_putstr_fileno	typeref:typename:int	file:	roles:def	extras:fileScope	nth:0
+fileno	src/parameters/count_elements.c	/^				t_element_count *element_count, int fileno)$/;"	kind:parameter	line:56	language:C	scope:function:read_file	typeref:typename:int	file:	roles:def	extras:fileScope	nth:3
+fileno	src/parameters/count_elements.c	/^	const int		fileno = open(filename, O_RDONLY);$/;"	kind:local	line:81	language:C	scope:function:count_elements	typeref:typename:const int	file:	roles:def	extras:fileScope	end:81
+fileno	src/parameters/load_line.c	/^static char	get_char_from_buf(t_buffer *buf, int fileno)$/;"	kind:parameter	line:22	language:C	scope:function:get_char_from_buf	typeref:typename:int	file:	roles:def	extras:fileScope	nth:1
+fileno	src/parameters/load_line.c	/^void	load_line(t_line *line, t_buffer *buf, int fileno)$/;"	kind:parameter	line:37	language:C	scope:function:load_line	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
+fileno	src/parameters/parameters.h	/^void			load_line(t_line *line, t_buffer *buf, int fileno);$/;"	kind:parameter	line:139	language:C++	scope:prototype:load_line	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
+ft_isspace	src/libft/ft_isspace.c	/^int	ft_isspace(char c)$/;"	kind:function	line:21	language:C	typeref:typename:int	signature:(char c)	roles:def	end:27
+ft_isspace	src/libft/libft.h	/^int		ft_isspace(char c);$/;"	kind:prototype	line:27	language:C++	typeref:typename:int	signature:(char c)	roles:def	end:27
+ft_isspace.c	src/libft/ft_isspace.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:29	epoch:1697211428
+ft_putnbr_fileno	src/libft/ft_putnbr_fileno.c	/^void	ft_putnbr_fileno(int fileno, int nbr)$/;"	kind:function	line:41	language:C	typeref:typename:void	signature:(int fileno,int nbr)	roles:def	end:64
+ft_putnbr_fileno	src/libft/libft.h	/^void	ft_putnbr_fileno(int fileno, int nbr);$/;"	kind:prototype	line:29	language:C++	typeref:typename:void	signature:(int fileno,int nbr)	roles:def	end:29
+ft_putnbr_fileno.c	src/libft/ft_putnbr_fileno.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:66	epoch:1697211390
+ft_putstr	src/libft/ft_putstr.c	/^void	ft_putstr(const char *str)$/;"	kind:function	line:22	language:C	typeref:typename:void	signature:(const char * str)	roles:def	end:25
+ft_putstr	src/libft/libft.h	/^void	ft_putstr(const char *str);$/;"	kind:prototype	line:24	language:C++	typeref:typename:void	signature:(const char * str)	roles:def	end:24
+ft_putstr.c	src/libft/ft_putstr.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:27	epoch:1696704935
+ft_putstr_fileno	src/libft/ft_putstr_fileno.c	/^void	ft_putstr_fileno(int fileno, const char *str)$/;"	kind:function	line:22	language:C	typeref:typename:void	signature:(int fileno,const char * str)	roles:def	end:25
+ft_putstr_fileno	src/libft/libft.h	/^void	ft_putstr_fileno(int fileno, const char *str);$/;"	kind:prototype	line:28	language:C++	typeref:typename:void	signature:(int fileno,const char * str)	roles:def	end:28
+ft_putstr_fileno.c	src/libft/ft_putstr_fileno.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:27	epoch:1696705061
+ft_strcmp	src/libft/ft_strcmp.c	/^int	ft_strcmp(const char *s1, const char *s2)$/;"	kind:function	line:21	language:C	typeref:typename:int	signature:(const char * s1,const char * s2)	roles:def	end:31
+ft_strcmp	src/libft/libft.h	/^int		ft_strcmp(const char *s1, const char *s2);$/;"	kind:prototype	line:26	language:C++	typeref:typename:int	signature:(const char * s1,const char * s2)	roles:def	end:26
+ft_strcmp.c	src/libft/ft_strcmp.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:33	epoch:1697211369
+ft_strlen	src/libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	kind:function	line:22	language:C	typeref:typename:size_t	signature:(const char * str)	roles:def	end:30
+ft_strlen	src/libft/libft.h	/^size_t	ft_strlen(const char *str);$/;"	kind:prototype	line:25	language:C++	typeref:typename:size_t	signature:(const char * str)	roles:def	end:25
+ft_strlen.c	src/libft/ft_strlen.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:32	epoch:1696705127
+g	src/color/color.h	/^	unsigned char	g;$/;"	kind:member	line:25	language:C++	scope:struct:s_color	typeref:typename:unsigned char	access:public	roles:def	end:25
+get_char_from_buf	src/parameters/load_line.c	/^static char	get_char_from_buf(t_buffer *buf, int fileno)$/;"	kind:function	line:22	language:C	typeref:typename:char	file:	signature:(t_buffer * buf,int fileno)	roles:def	extras:fileScope	end:35	properties:static
+get_magnitude	src/libft/ft_putnbr_fileno.c	/^static int	get_magnitude(long int n)$/;"	kind:function	line:23	language:C	typeref:typename:int	file:	signature:(long int n)	roles:def	extras:fileScope	end:39	properties:static
+get_parameters	src/parameters/get_parameters.c	/^t_parameters	get_parameters(char *filename)$/;"	kind:function	line:42	language:C	typeref:typename:t_parameters	signature:(char * filename)	roles:def	end:61
+get_parameters	src/parameters/parameters.h	/^t_parameters	get_parameters(char *filename);$/;"	kind:prototype	line:134	language:C++	typeref:typename:t_parameters	signature:(char * filename)	roles:def	end:134
+get_parameters.c	src/parameters/get_parameters.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:63	epoch:1697210639
+height	src/parameters/parameters.h	/^	long double		height;$/;"	kind:member	line:100	language:C++	scope:struct:s_cylinder	typeref:typename:long double	access:public	roles:def	end:100
+i	src/libft/ft_putnbr_fileno.c	/^	size_t		i;$/;"	kind:local	line:44	language:C	scope:function:ft_putnbr_fileno	typeref:typename:size_t	file:	roles:def	extras:fileScope	end:44
+i	src/libft/ft_strlen.c	/^	size_t	i;$/;"	kind:local	line:24	language:C	scope:function:ft_strlen	typeref:typename:size_t	file:	roles:def	extras:fileScope	end:24
+i	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:25	language:C	scope:function:check_camera	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
+i	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:42	language:C	scope:function:check_ambient_light	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
+i	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:59	language:C	scope:function:check_light	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
+i	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:76	language:C	scope:function:check_sphere_and_cylinders	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
+i	src/parameters/add_to_count_helper.c	/^	int	i;$/;"	kind:local	line:107	language:C	scope:function:add_to_count_helper	typeref:typename:int	file:	roles:def	extras:fileScope	end:107
+i	src/parameters/count_elements.c	/^	int	i;$/;"	kind:local	line:58	language:C	scope:function:read_file	typeref:typename:int	file:	roles:def	extras:fileScope	end:58
+i	src/parameters/is_valid_id.c	/^	int	i;$/;"	kind:local	line:51	language:C	scope:function:is_valid_id	typeref:typename:int	file:	roles:def	extras:fileScope	end:51
+i	src/parameters/is_valid_id.c	/^static bool	there_is_match(t_line *line, const char *id, int i)$/;"	kind:parameter	line:24	language:C	scope:function:there_is_match	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
+i	src/parameters/load_line.c	/^	int	i;$/;"	kind:local	line:39	language:C	scope:function:load_line	typeref:typename:int	file:	roles:def	extras:fileScope	end:39
+id	src/parameters/is_valid_id.c	/^static bool	there_is_match(t_line *line, const char *id, int i)$/;"	kind:parameter	line:24	language:C	scope:function:there_is_match	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:1
+index	src/parameters/parameters.h	/^	int		index;$/;"	kind:member	line:40	language:C++	scope:struct:s_buffer	typeref:typename:int	access:public	roles:def	end:40
+io_error	src/parameters/parameters.h	/^	bool	io_error;$/;"	kind:member	line:34	language:C++	scope:struct:s_line	typeref:typename:bool	access:public	roles:def	end:34
+io_error	src/parameters/parameters.h	/^	bool	io_error;$/;"	kind:member	line:42	language:C++	scope:struct:s_buffer	typeref:typename:bool	access:public	roles:def	end:42
+is_initialized	src/parameters/parameters.h	/^	bool			is_initialized;$/;"	kind:member	line:57	language:C++	scope:struct:s_camera	typeref:typename:bool	access:public	roles:def	end:57
+is_initialized	src/parameters/parameters.h	/^	bool			is_initialized;$/;"	kind:member	line:65	language:C++	scope:struct:s_light	typeref:typename:bool	access:public	roles:def	end:65
+is_initialized	src/parameters/parameters.h	/^	bool		is_initialized;$/;"	kind:member	line:109	language:C++	scope:struct:s_cylider_list	typeref:typename:bool	access:public	roles:def	end:109
+is_initialized	src/parameters/parameters.h	/^	bool		is_initialized;$/;"	kind:member	line:49	language:C++	scope:struct:s_ambient_lightning	typeref:typename:bool	access:public	roles:def	end:49
+is_initialized	src/parameters/parameters.h	/^	bool		is_initialized;$/;"	kind:member	line:79	language:C++	scope:struct:s_sphere_list	typeref:typename:bool	access:public	roles:def	end:79
+is_initialized	src/parameters/parameters.h	/^	bool	is_initialized;$/;"	kind:member	line:93	language:C++	scope:struct:s_plane_list	typeref:typename:bool	access:public	roles:def	end:93
+is_valid_id	src/parameters/is_valid_id.c	/^bool	is_valid_id(const char **valid_element_ids, t_line *line)$/;"	kind:function	line:49	language:C	typeref:typename:bool	signature:(const char ** valid_element_ids,t_line * line)	roles:def	end:65
+is_valid_id	src/parameters/parameters.h	/^bool			is_valid_id(const char **valid_element_ids, t_line *line);$/;"	kind:prototype	line:140	language:C++	typeref:typename:bool	signature:(const char ** valid_element_ids,t_line * line)	roles:def	end:140
+is_valid_id.c	src/parameters/is_valid_id.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:67	epoch:1696848243
+k	src/parameters/is_valid_id.c	/^	int	k;$/;"	kind:local	line:26	language:C	scope:function:there_is_match	typeref:typename:int	file:	roles:def	extras:fileScope	end:26
+len	src/parameters/get_parameters.c	/^	const size_t	len = ft_strlen(filename);$/;"	kind:local	line:25	language:C	scope:function:filename_extension_correct	typeref:typename:const size_t	file:	roles:def	extras:fileScope	end:25
+libft.h	src/libft/ft_isspace.c	/^#include "libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+libft.h	src/libft/ft_putnbr_fileno.c	/^#include "libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+libft.h	src/libft/ft_putstr.c	/^#include "libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+libft.h	src/libft/ft_putstr_fileno.c	/^#include "libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+libft.h	src/libft/ft_strcmp.c	/^#include "libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+libft.h	src/libft/ft_strlen.c	/^#include "libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+libft.h	src/libft/libft.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:33	epoch:1696707041
+libft/libft.h	src/main.c	/^#include "libft\/libft.h"/;"	kind:header	line:14	language:C	roles:local	extras:reference
+light	src/parameters/parameters.h	/^	t_light				light;$/;"	kind:member	line:116	language:C++	scope:struct:s_parametes	typeref:typename:t_light	access:public	roles:def	end:116
+light_count	src/parameters/parameters.h	/^	int		light_count;$/;"	kind:member	line:127	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	end:127
+limits.h	src/parameters/add_to_count_helper.c	/^#include <limits.h>/;"	kind:header	line:16	language:C	roles:system	extras:reference
+line	src/parameters/add_to_count_helper.c	/^static void	check_ambient_light(t_line *line,$/;"	kind:parameter	line:41	language:C	scope:function:check_ambient_light	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:0
+line	src/parameters/add_to_count_helper.c	/^static void	check_camera(t_line *line,$/;"	kind:parameter	line:24	language:C	scope:function:check_camera	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:0
+line	src/parameters/add_to_count_helper.c	/^static void	check_light(t_line *line,$/;"	kind:parameter	line:58	language:C	scope:function:check_light	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:0
+line	src/parameters/add_to_count_helper.c	/^static void	check_sphere_and_cylinders(t_line *line,$/;"	kind:parameter	line:75	language:C	scope:function:check_sphere_and_cylinders	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:0
+line	src/parameters/add_to_count_helper.c	/^void	add_to_count_helper(t_line *line,$/;"	kind:parameter	line:104	language:C	scope:function:add_to_count_helper	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:0
+line	src/parameters/count_elements.c	/^	t_line			line;$/;"	kind:local	line:84	language:C	scope:function:count_elements	typeref:typename:t_line	file:	roles:def	extras:fileScope	end:84
+line	src/parameters/count_elements.c	/^static void	add_to_count(t_element_count *element_count, t_line *line,$/;"	kind:parameter	line:25	language:C	scope:function:add_to_count	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:1
+line	src/parameters/count_elements.c	/^static void	read_file(t_line *line, t_buffer *buf,$/;"	kind:parameter	line:55	language:C	scope:function:read_file	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:0
+line	src/parameters/is_valid_id.c	/^bool	is_valid_id(const char **valid_element_ids, t_line *line)$/;"	kind:parameter	line:49	language:C	scope:function:is_valid_id	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:1
+line	src/parameters/is_valid_id.c	/^static bool	there_is_match(t_line *line, const char *id, int i)$/;"	kind:parameter	line:24	language:C	scope:function:there_is_match	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:0
+line	src/parameters/load_line.c	/^void	load_line(t_line *line, t_buffer *buf, int fileno)$/;"	kind:parameter	line:37	language:C	scope:function:load_line	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:0
+line	src/parameters/parameters.h	/^	char	line[MAX_LINE_SIZE];$/;"	kind:member	line:32	language:C++	scope:struct:s_line	typeref:typename:char[]	access:public	roles:def	end:32
+line	src/parameters/parameters.h	/^bool			is_valid_id(const char **valid_element_ids, t_line *line);$/;"	kind:parameter	line:140	language:C++	scope:prototype:is_valid_id	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:1
+line	src/parameters/parameters.h	/^void			add_to_count_helper(t_line *line,$/;"	kind:parameter	line:141	language:C++	scope:prototype:add_to_count_helper	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:0
+line	src/parameters/parameters.h	/^void			load_line(t_line *line, t_buffer *buf, int fileno);$/;"	kind:parameter	line:139	language:C++	scope:prototype:load_line	typeref:typename:t_line *	file:	roles:def	extras:fileScope	nth:0
+lineno	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:25	language:C	scope:function:check_camera	typeref:typename:int	file:	roles:def	extras:fileScope	nth:3
+lineno	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:42	language:C	scope:function:check_ambient_light	typeref:typename:int	file:	roles:def	extras:fileScope	nth:3
+lineno	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:59	language:C	scope:function:check_light	typeref:typename:int	file:	roles:def	extras:fileScope	nth:3
+lineno	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, int i, int lineno)$/;"	kind:parameter	line:76	language:C	scope:function:check_sphere_and_cylinders	typeref:typename:int	file:	roles:def	extras:fileScope	nth:3
+lineno	src/parameters/add_to_count_helper.c	/^			t_element_count *element_count, int lineno)$/;"	kind:parameter	line:105	language:C	scope:function:add_to_count_helper	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
+lineno	src/parameters/count_elements.c	/^				int lineno)$/;"	kind:parameter	line:26	language:C	scope:function:add_to_count	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
+lineno	src/parameters/parameters.h	/^					t_element_count *element_count, int lineno);$/;"	kind:parameter	line:142	language:C++	scope:prototype:add_to_count_helper	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
+load_line	src/parameters/load_line.c	/^void	load_line(t_line *line, t_buffer *buf, int fileno)$/;"	kind:function	line:37	language:C	typeref:typename:void	signature:(t_line * line,t_buffer * buf,int fileno)	roles:def	end:58
+load_line	src/parameters/parameters.h	/^void			load_line(t_line *line, t_buffer *buf, int fileno);$/;"	kind:prototype	line:139	language:C++	typeref:typename:void	signature:(t_line * line,t_buffer * buf,int fileno)	roles:def	end:139
+load_line.c	src/parameters/load_line.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:60	epoch:1697210819
+magnitude	src/libft/ft_putnbr_fileno.c	/^	int			magnitude;$/;"	kind:local	line:45	language:C	scope:function:ft_putnbr_fileno	typeref:typename:int	file:	roles:def	extras:fileScope	end:45
+magnitude	src/libft/ft_putnbr_fileno.c	/^	int	magnitude;$/;"	kind:local	line:25	language:C	scope:function:get_magnitude	typeref:typename:int	file:	roles:def	extras:fileScope	end:25
+main	src/main.c	/^int	main(int argc, char **argv)$/;"	kind:function	line:25	language:C	typeref:typename:int	signature:(int argc,char ** argv)	roles:def	end:42
+main.c	src/main.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:44	epoch:1696707080
+msg	src/parameters/get_parameters.c	/^	const char		msg[]$/;"	kind:local	line:26	language:C	scope:function:filename_extension_correct	typeref:typename:const char[]	file:	roles:def	extras:fileScope	end:27
+msg	src/parameters/print_usage.c	/^	const char	msg[]$/;"	kind:local	line:24	language:C	scope:function:print_usage	typeref:typename:const char[]	file:	roles:def	extras:fileScope	end:28
+n	src/libft/ft_putnbr_fileno.c	/^	long int	n;$/;"	kind:local	line:43	language:C	scope:function:ft_putnbr_fileno	typeref:typename:long int	file:	roles:def	extras:fileScope	end:43
+n	src/libft/ft_putnbr_fileno.c	/^static int	get_magnitude(long int n)$/;"	kind:parameter	line:23	language:C	scope:function:get_magnitude	typeref:typename:long int	file:	roles:def	extras:fileScope	nth:0
+nbr	src/libft/ft_putnbr_fileno.c	/^void	ft_putnbr_fileno(int fileno, int nbr)$/;"	kind:parameter	line:41	language:C	scope:function:ft_putnbr_fileno	typeref:typename:int	file:	roles:def	extras:fileScope	nth:1
+nbr	src/libft/libft.h	/^void	ft_putnbr_fileno(int fileno, int nbr);$/;"	kind:parameter	line:29	language:C++	scope:prototype:ft_putnbr_fileno	typeref:typename:int	file:	roles:def	extras:fileScope	nth:1
+orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	kind:member	line:54	language:C++	scope:struct:s_camera	typeref:typename:t_vector	access:public	roles:def	end:54
+orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	kind:member	line:84	language:C++	scope:struct:s_plane	typeref:typename:t_vector	access:public	roles:def	end:84
+orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	kind:member	line:98	language:C++	scope:struct:s_cylinder	typeref:typename:t_vector	access:public	roles:def	end:98
+parameters	src/main.c	/^	t_parameters	parameters;$/;"	kind:local	line:27	language:C	scope:function:main	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	end:27
+parameters	src/parameters/get_parameters.c	/^	t_parameters	parameters;$/;"	kind:local	line:44	language:C	scope:function:get_parameters	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	end:44
+parameters	src/parameters/parameters.h	/^bool			parameters_valid(t_parameters parameters);$/;"	kind:parameter	line:135	language:C++	scope:prototype:parameters_valid	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	nth:0
+parameters	src/parameters/parameters.h	/^void			destroy_parameters(t_parameters parameters);$/;"	kind:parameter	line:136	language:C++	scope:prototype:destroy_parameters	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	nth:0
+parameters.h	src/parameters/add_to_count_helper.c	/^#include "parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+parameters.h	src/parameters/count_elements.c	/^#include "parameters.h"/;"	kind:header	line:14	language:C	roles:local	extras:reference
+parameters.h	src/parameters/get_parameters.c	/^#include "parameters.h"/;"	kind:header	line:14	language:C	roles:local	extras:reference
+parameters.h	src/parameters/is_valid_id.c	/^#include "parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+parameters.h	src/parameters/load_line.c	/^#include "parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+parameters.h	src/parameters/parameters.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:146	epoch:1697210442
+parameters.h	src/parameters/print_usage.c	/^#include "parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+parameters/parameters.h	src/main.c	/^#include "parameters\/parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
+parameters_valid	src/parameters/parameters.h	/^	bool				parameters_valid;$/;"	kind:member	line:120	language:C++	scope:struct:s_parametes	typeref:typename:bool	access:public	roles:def	end:120
+parameters_valid	src/parameters/parameters.h	/^bool			parameters_valid(t_parameters parameters);$/;"	kind:prototype	line:135	language:C++	typeref:typename:bool	signature:(t_parameters parameters)	roles:def	end:135
+plane_count	src/parameters/parameters.h	/^	int		plane_count;$/;"	kind:member	line:129	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	end:129
+plane_list	src/parameters/parameters.h	/^	t_cylinder	*plane_list;$/;"	kind:member	line:107	language:C++	scope:struct:s_cylider_list	typeref:typename:t_cylinder *	access:public	roles:def	end:107
+plane_list	src/parameters/parameters.h	/^	t_plane	*plane_list;$/;"	kind:member	line:91	language:C++	scope:struct:s_plane_list	typeref:typename:t_plane *	access:public	roles:def	end:91
+plane_list	src/parameters/parameters.h	/^	t_plane_list		plane_list;$/;"	kind:member	line:118	language:C++	scope:struct:s_parametes	typeref:typename:t_plane_list	access:public	roles:def	end:118
+position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:56	language:C++	scope:struct:s_camera	typeref:typename:t_coordinate	access:public	roles:def	end:56
+position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:62	language:C++	scope:struct:s_light	typeref:typename:t_coordinate	access:public	roles:def	end:62
+position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:70	language:C++	scope:struct:s_sphere	typeref:typename:t_coordinate	access:public	roles:def	end:70
+position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:85	language:C++	scope:struct:s_plane	typeref:typename:t_coordinate	access:public	roles:def	end:85
+position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:99	language:C++	scope:struct:s_cylinder	typeref:typename:t_coordinate	access:public	roles:def	end:99
+print_usage	src/parameters/parameters.h	/^void			print_usage(void);$/;"	kind:prototype	line:137	language:C++	typeref:typename:void	signature:(void)	roles:def	end:137
+print_usage	src/parameters/print_usage.c	/^void	print_usage(void)$/;"	kind:function	line:22	language:C	typeref:typename:void	signature:(void)	roles:def	end:31
+print_usage.c	src/parameters/print_usage.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:33	epoch:1696707180
+r	src/color/color.h	/^	unsigned char	r;$/;"	kind:member	line:24	language:C++	scope:struct:s_color	typeref:typename:unsigned char	access:public	roles:def	end:24
+read_file	src/parameters/count_elements.c	/^static void	read_file(t_line *line, t_buffer *buf,$/;"	kind:function	line:55	language:C	typeref:typename:void	file:	signature:(t_line * line,t_buffer * buf,t_element_count * element_count,int fileno)	roles:def	extras:fileScope	end:77	properties:static
+s1	src/libft/ft_strcmp.c	/^int	ft_strcmp(const char *s1, const char *s2)$/;"	kind:parameter	line:21	language:C	scope:function:ft_strcmp	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:0
+s1	src/libft/libft.h	/^int		ft_strcmp(const char *s1, const char *s2);$/;"	kind:parameter	line:26	language:C++	scope:prototype:ft_strcmp	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:0
+s2	src/libft/ft_strcmp.c	/^int	ft_strcmp(const char *s1, const char *s2)$/;"	kind:parameter	line:21	language:C	scope:function:ft_strcmp	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:1
+s2	src/libft/libft.h	/^int		ft_strcmp(const char *s1, const char *s2);$/;"	kind:parameter	line:26	language:C++	scope:prototype:ft_strcmp	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:1
+s_ambient_lightning	src/parameters/parameters.h	/^typedef struct s_ambient_lightning$/;"	kind:struct	line:45	language:C++	roles:def	end:50
+s_ambient_lightning::ambient_lightning	src/parameters/parameters.h	/^	long double	ambient_lightning;$/;"	kind:member	line:47	language:C++	scope:struct:s_ambient_lightning	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_ambient_lightning::color	src/parameters/parameters.h	/^	t_color		color;$/;"	kind:member	line:48	language:C++	scope:struct:s_ambient_lightning	typeref:typename:t_color	access:public	roles:def	extras:qualified
+s_ambient_lightning::is_initialized	src/parameters/parameters.h	/^	bool		is_initialized;$/;"	kind:member	line:49	language:C++	scope:struct:s_ambient_lightning	typeref:typename:bool	access:public	roles:def	extras:qualified
+s_buffer	src/parameters/parameters.h	/^typedef struct s_buffer$/;"	kind:struct	line:37	language:C++	roles:def	end:43
+s_buffer::buf	src/parameters/parameters.h	/^	char	buf[BUFSIZE];$/;"	kind:member	line:41	language:C++	scope:struct:s_buffer	typeref:typename:char[]	access:public	roles:def	extras:qualified
+s_buffer::index	src/parameters/parameters.h	/^	int		index;$/;"	kind:member	line:40	language:C++	scope:struct:s_buffer	typeref:typename:int	access:public	roles:def	extras:qualified
+s_buffer::io_error	src/parameters/parameters.h	/^	bool	io_error;$/;"	kind:member	line:42	language:C++	scope:struct:s_buffer	typeref:typename:bool	access:public	roles:def	extras:qualified
+s_buffer::size	src/parameters/parameters.h	/^	int		size;$/;"	kind:member	line:39	language:C++	scope:struct:s_buffer	typeref:typename:int	access:public	roles:def	extras:qualified
+s_camera	src/parameters/parameters.h	/^typedef struct s_camera$/;"	kind:struct	line:52	language:C++	roles:def	end:58
+s_camera::field_of_view	src/parameters/parameters.h	/^	long double		field_of_view;$/;"	kind:member	line:55	language:C++	scope:struct:s_camera	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_camera::is_initialized	src/parameters/parameters.h	/^	bool			is_initialized;$/;"	kind:member	line:57	language:C++	scope:struct:s_camera	typeref:typename:bool	access:public	roles:def	extras:qualified
+s_camera::orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	kind:member	line:54	language:C++	scope:struct:s_camera	typeref:typename:t_vector	access:public	roles:def	extras:qualified
+s_camera::position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:56	language:C++	scope:struct:s_camera	typeref:typename:t_coordinate	access:public	roles:def	extras:qualified
+s_color	src/color/color.h	/^typedef struct s_color$/;"	kind:struct	line:22	language:C++	roles:def	end:27
+s_color::b	src/color/color.h	/^	unsigned char	b;$/;"	kind:member	line:26	language:C++	scope:struct:s_color	typeref:typename:unsigned char	access:public	roles:def	extras:qualified
+s_color::g	src/color/color.h	/^	unsigned char	g;$/;"	kind:member	line:25	language:C++	scope:struct:s_color	typeref:typename:unsigned char	access:public	roles:def	extras:qualified
+s_color::r	src/color/color.h	/^	unsigned char	r;$/;"	kind:member	line:24	language:C++	scope:struct:s_color	typeref:typename:unsigned char	access:public	roles:def	extras:qualified
+s_coordinate	src/coordinate/coordinate.h	/^typedef struct s_coordinate$/;"	kind:struct	line:22	language:C++	roles:def	end:27
+s_coordinate::x	src/coordinate/coordinate.h	/^	long double	x;$/;"	kind:member	line:24	language:C++	scope:struct:s_coordinate	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_coordinate::y	src/coordinate/coordinate.h	/^	long double	y;$/;"	kind:member	line:25	language:C++	scope:struct:s_coordinate	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_coordinate::z	src/coordinate/coordinate.h	/^	long double	z;$/;"	kind:member	line:26	language:C++	scope:struct:s_coordinate	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_cylider_list	src/parameters/parameters.h	/^typedef struct s_cylider_list$/;"	kind:struct	line:105	language:C++	roles:def	end:110
+s_cylider_list::is_initialized	src/parameters/parameters.h	/^	bool		is_initialized;$/;"	kind:member	line:109	language:C++	scope:struct:s_cylider_list	typeref:typename:bool	access:public	roles:def	extras:qualified
+s_cylider_list::plane_list	src/parameters/parameters.h	/^	t_cylinder	*plane_list;$/;"	kind:member	line:107	language:C++	scope:struct:s_cylider_list	typeref:typename:t_cylinder *	access:public	roles:def	extras:qualified
+s_cylider_list::size	src/parameters/parameters.h	/^	int			size;$/;"	kind:member	line:108	language:C++	scope:struct:s_cylider_list	typeref:typename:int	access:public	roles:def	extras:qualified
+s_cylinder	src/parameters/parameters.h	/^typedef struct s_cylinder$/;"	kind:struct	line:96	language:C++	roles:def	end:103
+s_cylinder::color	src/parameters/parameters.h	/^	t_color			color;$/;"	kind:member	line:102	language:C++	scope:struct:s_cylinder	typeref:typename:t_color	access:public	roles:def	extras:qualified
+s_cylinder::diameter	src/parameters/parameters.h	/^	long double		diameter;$/;"	kind:member	line:101	language:C++	scope:struct:s_cylinder	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_cylinder::height	src/parameters/parameters.h	/^	long double		height;$/;"	kind:member	line:100	language:C++	scope:struct:s_cylinder	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_cylinder::orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	kind:member	line:98	language:C++	scope:struct:s_cylinder	typeref:typename:t_vector	access:public	roles:def	extras:qualified
+s_cylinder::position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:99	language:C++	scope:struct:s_cylinder	typeref:typename:t_coordinate	access:public	roles:def	extras:qualified
+s_element_count	src/parameters/parameters.h	/^typedef struct s_element_count$/;"	kind:struct	line:123	language:C++	roles:def	end:132
+s_element_count::ambient_lightning_count	src/parameters/parameters.h	/^	int		ambient_lightning_count;$/;"	kind:member	line:125	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	extras:qualified
+s_element_count::camera_count	src/parameters/parameters.h	/^	int		camera_count;$/;"	kind:member	line:126	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	extras:qualified
+s_element_count::count_failed	src/parameters/parameters.h	/^	bool	count_failed;$/;"	kind:member	line:131	language:C++	scope:struct:s_element_count	typeref:typename:bool	access:public	roles:def	extras:qualified
+s_element_count::cylinder_count	src/parameters/parameters.h	/^	int		cylinder_count;$/;"	kind:member	line:130	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	extras:qualified
+s_element_count::light_count	src/parameters/parameters.h	/^	int		light_count;$/;"	kind:member	line:127	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	extras:qualified
+s_element_count::plane_count	src/parameters/parameters.h	/^	int		plane_count;$/;"	kind:member	line:129	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	extras:qualified
+s_element_count::sphere_count	src/parameters/parameters.h	/^	int		sphere_count;$/;"	kind:member	line:128	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	extras:qualified
+s_light	src/parameters/parameters.h	/^typedef struct s_light$/;"	kind:struct	line:60	language:C++	roles:def	end:66
+s_light::brightness	src/parameters/parameters.h	/^	long double		brightness;$/;"	kind:member	line:63	language:C++	scope:struct:s_light	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_light::color	src/parameters/parameters.h	/^	t_color			color;$/;"	kind:member	line:64	language:C++	scope:struct:s_light	typeref:typename:t_color	access:public	roles:def	extras:qualified
+s_light::is_initialized	src/parameters/parameters.h	/^	bool			is_initialized;$/;"	kind:member	line:65	language:C++	scope:struct:s_light	typeref:typename:bool	access:public	roles:def	extras:qualified
+s_light::position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:62	language:C++	scope:struct:s_light	typeref:typename:t_coordinate	access:public	roles:def	extras:qualified
+s_line	src/parameters/parameters.h	/^typedef struct s_line$/;"	kind:struct	line:30	language:C++	roles:def	end:35
+s_line::io_error	src/parameters/parameters.h	/^	bool	io_error;$/;"	kind:member	line:34	language:C++	scope:struct:s_line	typeref:typename:bool	access:public	roles:def	extras:qualified
+s_line::line	src/parameters/parameters.h	/^	char	line[MAX_LINE_SIZE];$/;"	kind:member	line:32	language:C++	scope:struct:s_line	typeref:typename:char[]	access:public	roles:def	extras:qualified
+s_line::size	src/parameters/parameters.h	/^	int		size;$/;"	kind:member	line:33	language:C++	scope:struct:s_line	typeref:typename:int	access:public	roles:def	extras:qualified
+s_parametes	src/parameters/parameters.h	/^typedef struct s_parametes$/;"	kind:struct	line:112	language:C++	roles:def	end:121
+s_parametes::ambient_lightning	src/parameters/parameters.h	/^	t_ambient_lightning	ambient_lightning;$/;"	kind:member	line:114	language:C++	scope:struct:s_parametes	typeref:typename:t_ambient_lightning	access:public	roles:def	extras:qualified
+s_parametes::camera	src/parameters/parameters.h	/^	t_camera			camera;$/;"	kind:member	line:115	language:C++	scope:struct:s_parametes	typeref:typename:t_camera	access:public	roles:def	extras:qualified
+s_parametes::cylinder_list	src/parameters/parameters.h	/^	t_cylider_list		cylinder_list;$/;"	kind:member	line:119	language:C++	scope:struct:s_parametes	typeref:typename:t_cylider_list	access:public	roles:def	extras:qualified
+s_parametes::light	src/parameters/parameters.h	/^	t_light				light;$/;"	kind:member	line:116	language:C++	scope:struct:s_parametes	typeref:typename:t_light	access:public	roles:def	extras:qualified
+s_parametes::parameters_valid	src/parameters/parameters.h	/^	bool				parameters_valid;$/;"	kind:member	line:120	language:C++	scope:struct:s_parametes	typeref:typename:bool	access:public	roles:def	extras:qualified
+s_parametes::plane_list	src/parameters/parameters.h	/^	t_plane_list		plane_list;$/;"	kind:member	line:118	language:C++	scope:struct:s_parametes	typeref:typename:t_plane_list	access:public	roles:def	extras:qualified
+s_parametes::sphere_list	src/parameters/parameters.h	/^	t_sphere_list		sphere_list;$/;"	kind:member	line:117	language:C++	scope:struct:s_parametes	typeref:typename:t_sphere_list	access:public	roles:def	extras:qualified
+s_plane	src/parameters/parameters.h	/^typedef struct s_plane$/;"	kind:struct	line:82	language:C++	roles:def	end:87
+s_plane::color	src/parameters/parameters.h	/^	t_color			color;$/;"	kind:member	line:86	language:C++	scope:struct:s_plane	typeref:typename:t_color	access:public	roles:def	extras:qualified
+s_plane::orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	kind:member	line:84	language:C++	scope:struct:s_plane	typeref:typename:t_vector	access:public	roles:def	extras:qualified
+s_plane::position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:85	language:C++	scope:struct:s_plane	typeref:typename:t_coordinate	access:public	roles:def	extras:qualified
+s_plane_list	src/parameters/parameters.h	/^typedef struct s_plane_list$/;"	kind:struct	line:89	language:C++	roles:def	end:94
+s_plane_list::is_initialized	src/parameters/parameters.h	/^	bool	is_initialized;$/;"	kind:member	line:93	language:C++	scope:struct:s_plane_list	typeref:typename:bool	access:public	roles:def	extras:qualified
+s_plane_list::plane_list	src/parameters/parameters.h	/^	t_plane	*plane_list;$/;"	kind:member	line:91	language:C++	scope:struct:s_plane_list	typeref:typename:t_plane *	access:public	roles:def	extras:qualified
+s_plane_list::size	src/parameters/parameters.h	/^	int		size;$/;"	kind:member	line:92	language:C++	scope:struct:s_plane_list	typeref:typename:int	access:public	roles:def	extras:qualified
+s_sphere	src/parameters/parameters.h	/^typedef struct s_sphere$/;"	kind:struct	line:68	language:C++	roles:def	end:73
+s_sphere::color	src/parameters/parameters.h	/^	t_color			color;$/;"	kind:member	line:72	language:C++	scope:struct:s_sphere	typeref:typename:t_color	access:public	roles:def	extras:qualified
+s_sphere::diameter	src/parameters/parameters.h	/^	long double		diameter;$/;"	kind:member	line:71	language:C++	scope:struct:s_sphere	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_sphere::position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:70	language:C++	scope:struct:s_sphere	typeref:typename:t_coordinate	access:public	roles:def	extras:qualified
+s_sphere_list	src/parameters/parameters.h	/^typedef struct s_sphere_list$/;"	kind:struct	line:75	language:C++	roles:def	end:80
+s_sphere_list::is_initialized	src/parameters/parameters.h	/^	bool		is_initialized;$/;"	kind:member	line:79	language:C++	scope:struct:s_sphere_list	typeref:typename:bool	access:public	roles:def	extras:qualified
+s_sphere_list::size	src/parameters/parameters.h	/^	int			size;$/;"	kind:member	line:78	language:C++	scope:struct:s_sphere_list	typeref:typename:int	access:public	roles:def	extras:qualified
+s_sphere_list::sphere_list	src/parameters/parameters.h	/^	t_sphere	*sphere_list;$/;"	kind:member	line:77	language:C++	scope:struct:s_sphere_list	typeref:typename:t_sphere *	access:public	roles:def	extras:qualified
+s_vector	src/vector/vector.h	/^typedef struct s_vector$/;"	kind:struct	line:22	language:C++	roles:def	end:27
+s_vector::x	src/vector/vector.h	/^	long double	x;$/;"	kind:member	line:24	language:C++	scope:struct:s_vector	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_vector::y	src/vector/vector.h	/^	long double	y;$/;"	kind:member	line:25	language:C++	scope:struct:s_vector	typeref:typename:long double	access:public	roles:def	extras:qualified
+s_vector::z	src/vector/vector.h	/^	long double	z;$/;"	kind:member	line:26	language:C++	scope:struct:s_vector	typeref:typename:long double	access:public	roles:def	extras:qualified
+size	src/parameters/parameters.h	/^	int			size;$/;"	kind:member	line:108	language:C++	scope:struct:s_cylider_list	typeref:typename:int	access:public	roles:def	end:108
+size	src/parameters/parameters.h	/^	int			size;$/;"	kind:member	line:78	language:C++	scope:struct:s_sphere_list	typeref:typename:int	access:public	roles:def	end:78
+size	src/parameters/parameters.h	/^	int		size;$/;"	kind:member	line:33	language:C++	scope:struct:s_line	typeref:typename:int	access:public	roles:def	end:33
+size	src/parameters/parameters.h	/^	int		size;$/;"	kind:member	line:39	language:C++	scope:struct:s_buffer	typeref:typename:int	access:public	roles:def	end:39
+size	src/parameters/parameters.h	/^	int		size;$/;"	kind:member	line:92	language:C++	scope:struct:s_plane_list	typeref:typename:int	access:public	roles:def	end:92
+sphere_count	src/parameters/parameters.h	/^	int		sphere_count;$/;"	kind:member	line:128	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	end:128
+sphere_list	src/parameters/parameters.h	/^	t_sphere	*sphere_list;$/;"	kind:member	line:77	language:C++	scope:struct:s_sphere_list	typeref:typename:t_sphere *	access:public	roles:def	end:77
+sphere_list	src/parameters/parameters.h	/^	t_sphere_list		sphere_list;$/;"	kind:member	line:117	language:C++	scope:struct:s_parametes	typeref:typename:t_sphere_list	access:public	roles:def	end:117
+stdbool.h	src/main.c	/^#include <stdbool.h>/;"	kind:header	line:15	language:C	roles:system	extras:reference
+stdbool.h	src/parameters/is_valid_id.c	/^#include <stdbool.h>/;"	kind:header	line:15	language:C	roles:system	extras:reference
+stdbool.h	src/parameters/parameters.h	/^# include <stdbool.h>/;"	kind:header	line:16	language:C++	roles:system	extras:reference
+stddef.h	src/libft/ft_putnbr_fileno.c	/^#include <stddef.h>/;"	kind:header	line:14	language:C	roles:system	extras:reference
+stddef.h	src/libft/ft_strlen.c	/^#include <stddef.h>/;"	kind:header	line:14	language:C	roles:system	extras:reference
+stddef.h	src/libft/libft.h	/^# include <stddef.h>/;"	kind:header	line:16	language:C++	roles:system	extras:reference
+stddef.h	src/parameters/is_valid_id.c	/^#include <stddef.h>/;"	kind:header	line:16	language:C	roles:system	extras:reference
+stdio.h	src/parameters/count_elements.c	/^#include <stdio.h>/;"	kind:header	line:16	language:C	roles:system	extras:reference
+stdlib.h	src/main.c	/^#include <stdlib.h>/;"	kind:header	line:16	language:C	roles:system	extras:reference
+str	src/libft/ft_putnbr_fileno.c	/^	char		str[11];$/;"	kind:local	line:46	language:C	scope:function:ft_putnbr_fileno	typeref:typename:char[11]	file:	roles:def	extras:fileScope	end:46
+str	src/libft/ft_putstr.c	/^void	ft_putstr(const char *str)$/;"	kind:parameter	line:22	language:C	scope:function:ft_putstr	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:0
+str	src/libft/ft_putstr_fileno.c	/^void	ft_putstr_fileno(int fileno, const char *str)$/;"	kind:parameter	line:22	language:C	scope:function:ft_putstr_fileno	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:1
+str	src/libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	kind:parameter	line:22	language:C	scope:function:ft_strlen	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:0
+str	src/libft/libft.h	/^size_t	ft_strlen(const char *str);$/;"	kind:parameter	line:25	language:C++	scope:prototype:ft_strlen	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:0
+str	src/libft/libft.h	/^void	ft_putstr(const char *str);$/;"	kind:parameter	line:24	language:C++	scope:prototype:ft_putstr	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:0
+str	src/libft/libft.h	/^void	ft_putstr_fileno(int fileno, const char *str);$/;"	kind:parameter	line:28	language:C++	scope:prototype:ft_putstr_fileno	typeref:typename:const char *	file:	roles:def	extras:fileScope	nth:1
+t_ambient_lightning	src/parameters/parameters.h	/^}t_ambient_lightning;$/;"	kind:typedef	line:50	language:C++	typeref:struct:s_ambient_lightning	roles:def
+t_buffer	src/parameters/parameters.h	/^}t_buffer;$/;"	kind:typedef	line:43	language:C++	typeref:struct:s_buffer	roles:def
+t_camera	src/parameters/parameters.h	/^}t_camera;$/;"	kind:typedef	line:58	language:C++	typeref:struct:s_camera	roles:def
+t_color	src/color/color.h	/^}t_color;$/;"	kind:typedef	line:27	language:C++	typeref:struct:s_color	roles:def
+t_coordinate	src/coordinate/coordinate.h	/^}t_coordinate;$/;"	kind:typedef	line:27	language:C++	typeref:struct:s_coordinate	roles:def
+t_cylider_list	src/parameters/parameters.h	/^}t_cylider_list;$/;"	kind:typedef	line:110	language:C++	typeref:struct:s_cylider_list	roles:def
+t_cylinder	src/parameters/parameters.h	/^}t_cylinder;$/;"	kind:typedef	line:103	language:C++	typeref:struct:s_cylinder	roles:def
+t_element_count	src/parameters/parameters.h	/^}t_element_count;$/;"	kind:typedef	line:132	language:C++	typeref:struct:s_element_count	roles:def
+t_light	src/parameters/parameters.h	/^}t_light;$/;"	kind:typedef	line:66	language:C++	typeref:struct:s_light	roles:def
+t_line	src/parameters/parameters.h	/^}t_line;$/;"	kind:typedef	line:35	language:C++	typeref:struct:s_line	roles:def
+t_parameters	src/parameters/parameters.h	/^}t_parameters;$/;"	kind:typedef	line:121	language:C++	typeref:struct:s_parametes	roles:def
+t_plane	src/parameters/parameters.h	/^}t_plane;$/;"	kind:typedef	line:87	language:C++	typeref:struct:s_plane	roles:def
+t_plane_list	src/parameters/parameters.h	/^}t_plane_list;$/;"	kind:typedef	line:94	language:C++	typeref:struct:s_plane_list	roles:def
+t_sphere	src/parameters/parameters.h	/^}t_sphere;$/;"	kind:typedef	line:73	language:C++	typeref:struct:s_sphere	roles:def
+t_sphere_list	src/parameters/parameters.h	/^}t_sphere_list;$/;"	kind:typedef	line:80	language:C++	typeref:struct:s_sphere_list	roles:def
+t_vector	src/vector/vector.h	/^}t_vector;$/;"	kind:typedef	line:27	language:C++	typeref:struct:s_vector	roles:def
+there_is_match	src/parameters/is_valid_id.c	/^static bool	there_is_match(t_line *line, const char *id, int i)$/;"	kind:function	line:24	language:C	typeref:typename:bool	file:	signature:(t_line * line,const char * id,int i)	roles:def	extras:fileScope	end:47	properties:static
+unistd.h	src/libft/ft_putnbr_fileno.c	/^#include <unistd.h>/;"	kind:header	line:15	language:C	roles:system	extras:reference
+unistd.h	src/libft/ft_putstr.c	/^#include <unistd.h>/;"	kind:header	line:14	language:C	roles:system	extras:reference
+unistd.h	src/libft/ft_putstr_fileno.c	/^#include <unistd.h>/;"	kind:header	line:14	language:C	roles:system	extras:reference
+unistd.h	src/main.c	/^#include <unistd.h>/;"	kind:header	line:17	language:C	roles:system	extras:reference
+unistd.h	src/parameters/add_to_count_helper.c	/^#include <unistd.h>/;"	kind:header	line:15	language:C	roles:system	extras:reference
+unistd.h	src/parameters/count_elements.c	/^#include <unistd.h>/;"	kind:header	line:15	language:C	roles:system	extras:reference
+unistd.h	src/parameters/get_parameters.c	/^#include <unistd.h>/;"	kind:header	line:15	language:C	roles:system	extras:reference
+unistd.h	src/parameters/load_line.c	/^#include <unistd.h>/;"	kind:header	line:14	language:C	roles:system	extras:reference
+unistd.h	src/parameters/print_usage.c	/^#include <unistd.h>/;"	kind:header	line:14	language:C	roles:system	extras:reference
+valid_element_ids	src/parameters/count_elements.c	/^	const char	*valid_element_ids[] = {"C", "A", "L", "sp", "cy", "pl", NULL};$/;"	kind:local	line:28	language:C	scope:function:add_to_count	typeref:typename:const char * []	file:	roles:def	extras:fileScope	end:28
+valid_element_ids	src/parameters/is_valid_id.c	/^bool	is_valid_id(const char **valid_element_ids, t_line *line)$/;"	kind:parameter	line:49	language:C	scope:function:is_valid_id	typeref:typename:const char **	file:	roles:def	extras:fileScope	nth:0
+valid_element_ids	src/parameters/parameters.h	/^bool			is_valid_id(const char **valid_element_ids, t_line *line);$/;"	kind:parameter	line:140	language:C++	scope:prototype:is_valid_id	typeref:typename:const char **	file:	roles:def	extras:fileScope	nth:0
+vector.h	src/vector/vector.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:31	epoch:1696703620
+x	src/coordinate/coordinate.h	/^	long double	x;$/;"	kind:member	line:24	language:C++	scope:struct:s_coordinate	typeref:typename:long double	access:public	roles:def	end:24
+x	src/vector/vector.h	/^	long double	x;$/;"	kind:member	line:24	language:C++	scope:struct:s_vector	typeref:typename:long double	access:public	roles:def	end:24
+y	src/coordinate/coordinate.h	/^	long double	y;$/;"	kind:member	line:25	language:C++	scope:struct:s_coordinate	typeref:typename:long double	access:public	roles:def	end:25
+y	src/vector/vector.h	/^	long double	y;$/;"	kind:member	line:25	language:C++	scope:struct:s_vector	typeref:typename:long double	access:public	roles:def	end:25
+z	src/coordinate/coordinate.h	/^	long double	z;$/;"	kind:member	line:26	language:C++	scope:struct:s_coordinate	typeref:typename:long double	access:public	roles:def	end:26
+z	src/vector/vector.h	/^	long double	z;$/;"	kind:member	line:26	language:C++	scope:struct:s_vector	typeref:typename:long double	access:public	roles:def	end:26

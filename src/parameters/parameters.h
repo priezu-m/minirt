@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/03 21:56:50                                            */
-/*   Updated:  2023/10/04 01:13:32                                            */
+/*   Updated:  2023/10/13 17:20:42                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,24 @@
 # pragma clang diagnostic warning "-Weverything"
 # pragma clang diagnostic ignored "-Wempty-translation-unit"
 # pragma clang diagnostic ignored "-Wunused-macros"
+
+# define MAX_LINE_SIZE 1000
+# define BUFSIZE 10000
+
+typedef struct s_line
+{
+	char	line[MAX_LINE_SIZE];
+	int		size;
+	bool	io_error;
+}t_line;
+
+typedef struct s_buffer
+{
+	int		size;
+	int		index;
+	char	buf[BUFSIZE];
+	bool	io_error;
+}t_buffer;
 
 typedef struct s_ambient_lightning
 {
@@ -87,8 +105,8 @@ typedef struct s_cylinder
 typedef struct s_cylider_list
 {
 	t_cylinder	*plane_list;
-	int		size;
-	bool	is_initialized;
+	int			size;
+	bool		is_initialized;
 }t_cylider_list;
 
 typedef struct s_parametes
@@ -99,13 +117,29 @@ typedef struct s_parametes
 	t_sphere_list		sphere_list;
 	t_plane_list		plane_list;
 	t_cylider_list		cylinder_list;
+	bool				parameters_valid;
 }t_parameters;
 
-bool			parameter_file_valid(char *filename);
+typedef struct s_element_count
+{
+	int		ambient_lightning_count;
+	int		camera_count;
+	int		light_count;
+	int		sphere_count;
+	int		plane_count;
+	int		cylinder_count;
+	bool	count_failed;
+}t_element_count;
+
 t_parameters	get_parameters(char *filename);
 bool			parameters_valid(t_parameters parameters);
 void			destroy_parameters(t_parameters parameters);
 void			print_usage(void);
+t_element_count	count_elements(char *filename);
+void			load_line(t_line *line, t_buffer *buf, int fileno);
+bool			is_valid_id(const char **valid_element_ids, t_line *line);
+void			add_to_count_helper(t_line *line,
+					t_element_count *element_count, int lineno);
 
 # pragma clang diagnostic pop
 

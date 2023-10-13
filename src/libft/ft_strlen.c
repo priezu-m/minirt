@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                                            */
-/*   Filename: color.h                                                        */
+/*   Filename: ft_strlen.c                                                    */
 /*   Author:   Peru Riezu <riezumunozperu@gmail.com>                          */
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
-/*   Created:  2023/10/03 23:50:07                                            */
-/*   Updated:  2023/10/07 20:32:48                                            */
+/*   Created:  2023/10/07 20:57:55                                            */
+/*   Updated:  2023/10/07 20:58:44                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COLOR_H
-# define COLOR_H
+#include "libft.h"
+#include <stddef.h>
 
 ;
-# pragma clang diagnostic push
-# pragma clang diagnostic warning "-Weverything"
-# pragma clang diagnostic ignored "-Wempty-translation-unit"
-# pragma clang diagnostic ignored "-Wunused-macros"
+#pragma clang diagnostic push
+#pragma clang diagnostic warning "-Weverything"
+#pragma clang diagnostic ignored "-Wempty-translation-unit"
+#pragma clang diagnostic ignored "-Wunused-macros"
 
-typedef struct s_color
+size_t	ft_strlen(const char *str)
 {
-	unsigned char	r;
-	unsigned char	g;
-	unsigned char	b;
-}t_color;
+	size_t	i;
 
-# pragma clang diagnostic pop
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
 
-#endif
+#pragma clang diagnostic pop

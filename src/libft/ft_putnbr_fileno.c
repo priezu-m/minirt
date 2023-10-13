@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                                            */
-/*   Filename: main.c                                                         */
+/*   Filename: ft_putnbr_fileno.c                                             */
 /*   Author:   Peru Riezu <riezumunozperu@gmail.com>                          */
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
-/*   Created:  2023/09/25 17:27:48                                            */
-/*   Updated:  2023/10/07 21:31:19                                            */
+/*   Created:  2023/10/07 20:59:04                                            */
+/*   Updated:  2023/10/13 17:36:30                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parameters/parameters.h"
-#include "libft/libft.h"
-#include <stdbool.h>
-#include <stdlib.h>
+#include "libft.h"
+#include <stddef.h>
 #include <unistd.h>
 
 ;
@@ -22,23 +20,47 @@
 #pragma clang diagnostic ignored "-Wempty-translation-unit"
 #pragma clang diagnostic ignored "-Wunused-macros"
 
-int	main(int argc, char **argv)
+static int	get_magnitude(long int n)
 {
-	t_parameters	parameters;
+	int	magnitude;
 
-	if (argc != 2)
+	if (n == 0)
+		return (1);
+	magnitude = 0;
+	while (n != 0)
 	{
-		print_usage();
-		return (EXIT_FAILURE);
+		if (magnitude == 0)
+			magnitude = 1;
+		else
+			magnitude *= 10;
+		n /= 10;
 	}
-	parameters = get_parameters(argv[1]);
-	if (parameters.parameters_valid == false)
+	return (magnitude);
+}
+
+void	ft_putnbr_fileno(int fileno, int nbr)
+{
+	long int	n;
+	size_t		i;
+	int			magnitude;
+	char		str[11];
+
+	n = nbr;
+	i = 0;
+	if (n < 0)
 	{
-//		destroy_parameters(parameters);
-		return (EXIT_FAILURE);
+		str[i] = '-';
+		i++;
+		n = -n;
 	}
-//	destroy_parameters(parameters);
-	return (EXIT_SUCCESS);
+	magnitude = get_magnitude(n);
+	while (magnitude > 0)
+	{
+		str[i] = ((char)((n / magnitude) % 10)) + '0';
+		magnitude /= 10;
+		i++;
+	}
+	write(fileno, str, i);
 }
 
 #pragma clang diagnostic pop

@@ -6,7 +6,7 @@
 #    github:   https://github.com/priezu-m                                     #
 #    Licence:  GPLv3                                                           #
 #    Created:  2023/09/27 18:57:07                                             #
-#    Updated:  2023/10/04 11:46:05                                             #
+#    Updated:  2023/10/13 00:54:36                                             #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ NEW_DIRS +=			$(addprefix $(DEP_PATH)/,$(SUB_DIR))
 NEW_DIRS +=			$(OBJ_PATH) $(DEP_PATH) $(LIBFT_OBJ_PATH)
 
 CURRENT_DIR :=		$(shell pwd)
-MANPATH_APPEND :=	$(CURRENT_DIR)/manpages/
+MANPATH_APPEND :=	$(CURRENT_DIR)/manpages
 CURRENT_MANPAHT :=	$(shell man --path)
 
 -include $(DEP)
@@ -79,7 +79,7 @@ $(NAME): $(OBJ)
 
 .PHONY: clean fclean all push update_manpath tags
 
-all: update_manpath $(NAME)
+all: $(NAME)
 
 clean:
 	@rm $(DEP) $(OBJ) $(ALL_NORM) $(NORM) &> /dev/null || true
@@ -100,9 +100,9 @@ push:
 	@git push
 
 update_manpath:
-	@printf "Updating manpath enviroment variable\n"
-	export MANPATH='$(CURRENT_MANPAHT):$(MANPATH_APPEND)'
-	@printf "\n"
+	@printf "execute:\n"
+	@printf "export MANPATH='$(CURRENT_MANPAHT):$(MANPATH_APPEND)'\n"
+	@printf "to update the manpath and become able to read the manuals\n"
 
 tags:
-	@ctags -R --exclude=.git
+	@ctags --extras-all=* --fields-all=* --c-kinds=* --c++-kinds=* $(SRC) $(HDR)
