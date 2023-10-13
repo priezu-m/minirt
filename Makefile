@@ -6,7 +6,7 @@
 #    github:   https://github.com/priezu-m                                     #
 #    Licence:  GPLv3                                                           #
 #    Created:  2023/09/27 18:57:07                                             #
-#    Updated:  2023/10/13 00:54:36                                             #
+#    Updated:  2023/10/13 17:49:05                                             #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,8 +94,8 @@ re: fclean
 pull:
 	@git pull
 
-push:
-	@git add $(SRC) $(HDR) manpages/* Makefile
+push: fclean
+	@git add .
 	@git commit
 	@git push
 
