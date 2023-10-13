@@ -6,12 +6,13 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/07 19:49:21                                            */
-/*   Updated:  2023/10/13 17:32:56                                            */
+/*   Updated:  2023/10/13 18:00:54                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
 #include "parameters.h"
+#include <stddef.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <fcntl.h>
@@ -23,7 +24,7 @@
 #pragma clang diagnostic ignored "-Wunused-macros"
 
 static void	add_to_count(t_element_count *element_count, t_line *line,
-				int lineno)
+				size_t lineno)
 {
 	const char	*valid_element_ids[] = {"C", "A", "L", "sp", "cy", "pl", NULL};
 
@@ -55,14 +56,14 @@ static void	add_to_count(t_element_count *element_count, t_line *line,
 static void	read_file(t_line *line, t_buffer *buf,
 				t_element_count *element_count, int fileno)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	load_line(line, buf, fileno);
 	while (line->size > 0)
 	{
 		if (line->line[0] != '\n')
-			add_to_count(element_count, line, i);
+			add_to_count(element_count, line, i + 1);
 		if (element_count->count_failed)
 			return ;
 		load_line(line, buf, fileno);

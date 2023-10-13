@@ -6,12 +6,13 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/07 20:42:38                                            */
-/*   Updated:  2023/10/07 20:53:16                                            */
+/*   Updated:  2023/10/13 18:04:37                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parameters.h"
 #include "../libft/libft.h"
+#include <stddef.h>
 #include <unistd.h>
 #include <limits.h>
 
@@ -22,7 +23,7 @@
 #pragma clang diagnostic ignored "-Wunused-macros"
 
 static void	check_camera(t_line *line,
-				t_element_count *element_count, int i, int lineno)
+				t_element_count *element_count, size_t i, size_t lineno)
 {
 	if (line->line[i] == 'C')
 	{
@@ -39,12 +40,12 @@ static void	check_camera(t_line *line,
 }
 
 static void	check_ambient_light(t_line *line,
-				t_element_count *element_count, int i, int lineno)
+				t_element_count *element_count, size_t i, size_t lineno)
 {
 	if (line->line[i] == 'A')
 	{
-		element_count->ambient_lightning_count++;
-		if (element_count->camera_count == 2)
+		element_count->ambient_lighting_count++;
+		if (element_count->ambient_lighting_count == 2)
 		{
 			ft_putstr_fileno(STDERR_FILENO, "Error\nLine ");
 			ft_putnbr_fileno(STDERR_FILENO, lineno);
@@ -56,11 +57,11 @@ static void	check_ambient_light(t_line *line,
 }
 
 static void	check_light(t_line *line,
-				t_element_count *element_count, int i, int lineno)
+				t_element_count *element_count, size_t i, size_t lineno)
 {
 	if (line->line[i] == 'L')
 	{
-		element_count->ambient_lightning_count++;
+		element_count->light_count++;
 		if (element_count->light_count == 2)
 		{
 			ft_putstr_fileno(STDERR_FILENO, "Error\nLine ");
@@ -73,7 +74,7 @@ static void	check_light(t_line *line,
 }
 
 static void	check_sphere_and_cylinders(t_line *line,
-				t_element_count *element_count, int i, int lineno)
+				t_element_count *element_count, size_t i, size_t lineno)
 {
 	if (line->line[i] == 's')
 	{
@@ -102,9 +103,9 @@ static void	check_sphere_and_cylinders(t_line *line,
 }
 
 void	add_to_count_helper(t_line *line,
-			t_element_count *element_count, int lineno)
+			t_element_count *element_count, size_t lineno)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (ft_isspace(line->line[i]) == true)
@@ -115,7 +116,7 @@ void	add_to_count_helper(t_line *line,
 	check_sphere_and_cylinders(line, element_count, i, lineno);
 	if (line->line[i] == 'p')
 	{
-		if (element_count->cylinder_count == INT_MAX)
+		if (element_count->plane_count == INT_MAX)
 		{
 			ft_putstr_fileno(STDERR_FILENO, "Error\nLine ");
 			ft_putnbr_fileno(STDERR_FILENO, lineno);

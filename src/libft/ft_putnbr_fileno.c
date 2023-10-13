@@ -6,12 +6,13 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/07 20:59:04                                            */
-/*   Updated:  2023/10/13 17:36:30                                            */
+/*   Updated:  2023/10/13 18:08:27                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
+#include <stdint.h>
 #include <unistd.h>
 
 ;
@@ -20,9 +21,9 @@
 #pragma clang diagnostic ignored "-Wempty-translation-unit"
 #pragma clang diagnostic ignored "-Wunused-macros"
 
-static int	get_magnitude(long int n)
+static uintmax_t	get_magnitude(uintmax_t n)
 {
-	int	magnitude;
+	uintmax_t	magnitude;
 
 	if (n == 0)
 		return (1);
@@ -38,21 +39,15 @@ static int	get_magnitude(long int n)
 	return (magnitude);
 }
 
-void	ft_putnbr_fileno(int fileno, int nbr)
+void	ft_putnbr_fileno(int fileno, uintmax_t nbr)
 {
-	long int	n;
-	size_t		i;
-	int			magnitude;
-	char		str[11];
+	uintmax_t	n;
+	int			i;
+	uintmax_t	magnitude;
+	char		str[20];
 
 	n = nbr;
 	i = 0;
-	if (n < 0)
-	{
-		str[i] = '-';
-		i++;
-		n = -n;
-	}
 	magnitude = get_magnitude(n);
 	while (magnitude > 0)
 	{
@@ -60,7 +55,7 @@ void	ft_putnbr_fileno(int fileno, int nbr)
 		magnitude /= 10;
 		i++;
 	}
-	write(fileno, str, i);
+	write(fileno, str, (size_t)i);
 }
 
 #pragma clang diagnostic pop

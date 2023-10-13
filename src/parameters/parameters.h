@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/03 21:56:50                                            */
-/*   Updated:  2023/10/13 17:20:42                                            */
+/*   Updated:  2023/10/13 18:03:39                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PARAMETERS_H
 
 # include <stdbool.h>
+#include <stddef.h>
 # include "../vector/vector.h"
 # include "../coordinate/coordinate.h"
 # include "../color/color.h"
@@ -122,7 +123,7 @@ typedef struct s_parametes
 
 typedef struct s_element_count
 {
-	int		ambient_lightning_count;
+	int		ambient_lighting_count;
 	int		camera_count;
 	int		light_count;
 	int		sphere_count;
@@ -139,7 +140,7 @@ t_element_count	count_elements(char *filename);
 void			load_line(t_line *line, t_buffer *buf, int fileno);
 bool			is_valid_id(const char **valid_element_ids, t_line *line);
 void			add_to_count_helper(t_line *line,
-					t_element_count *element_count, int lineno);
+					t_element_count *element_count, size_t lineno);
 
 # pragma clang diagnostic pop
 
