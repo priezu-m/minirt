@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/18 16:23:54                                            */
-/*   Updated:  2023/10/18 17:23:25                                            */
+/*   Updated:  2023/10/20 01:22:32                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static long double	parse_float_internal(t_line *line, int *i)
 	}
 	magnitude = get_magnitude(decimal_part);
 	return (((long double)
-		((__uint128_t)integer_part * magnitude + decimal_part))
+			((__uint128_t)integer_part * magnitude + decimal_part))
 		/ (long double)magnitude);
 }
 
@@ -99,7 +99,8 @@ static bool	check_regex_match(t_line *line, int i)
 	return (true);
 }
 
-long double	parse_float(t_line *line, int *i, bool *parsing_error, size_t lineno)
+long double	parse_float(t_line *line, int *i, bool *parsing_error,
+				size_t lineno)
 {
 	if (check_regex_match(line, *i) == false)
 	{
@@ -107,7 +108,7 @@ long double	parse_float(t_line *line, int *i, bool *parsing_error, size_t lineno
 		ft_putstr_fileno(STDERR_FILENO, "Error\nline ");
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
 		ft_putstr_fileno(STDERR_FILENO, " floating point value does not match"
-				" regex (-?[0-9]{0,19}(\\.[0-9]{1,18})?).\n");
+			" regex (-?[0-9]{0,19}(\\.[0-9]{1,18})?).\n");
 		return (0);
 	}
 	if (line->line[*i] == '-')

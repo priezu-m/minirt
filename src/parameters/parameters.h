@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/03 21:56:50                                            */
-/*   Updated:  2023/10/19 23:05:41                                            */
+/*   Updated:  2023/10/20 01:09:35                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PARAMETERS_H
 
 # include <stdbool.h>
-#include <stddef.h>
+# include <stddef.h>
 # include "../vector/vector.h"
 # include "../coordinate/coordinate.h"
 # include "../color/color.h"
@@ -151,8 +151,10 @@ t_color			parse_color(t_line *line, int *i, bool *parsing_error,
 char			first_char_of_line(t_line *line);
 void			load_line_initial(t_line *line, t_buffer *buf, int fileno);
 void			set_camera(char *filename, t_parameters *parameters);
-t_coordinate	 parse_coordinates(t_line *line, int *i, bool *parsing_error,
+t_coordinate	parse_coordinates(t_line *line, int *i, bool *parsing_error,
 					size_t lineno);
+t_vector		parse_orientation_vector(t_line *line, int *i,
+					bool *parsing_error, size_t lineno);
 
 # pragma clang diagnostic pop
 
