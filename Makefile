@@ -6,7 +6,7 @@
 #    github:   https://github.com/priezu-m                                     #
 #    Licence:  GPLv3                                                           #
 #    Created:  2023/09/27 18:57:07                                             #
-#    Updated:  2023/10/13 18:20:29                                             #
+#    Updated:  2023/10/20 01:27:06                                             #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@
 SHELL :=			bash
 CC :=				gcc
 CFLAGS :=			-g3 -O0 -flto -Wall -Wextra -Wno-unknown-pragmas
+LDFLAGS :=			-lm
 
 ################################################################################
 
@@ -73,7 +74,7 @@ $(OBJ_PATH)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $@
+	$(CC) $(CFLAGS) $(OBJ) -o $@ $(LDFLAGS)
 
 .PHONY: clean fclean all push update_manpath tags
 
