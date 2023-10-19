@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/03 21:56:50                                            */
-/*   Updated:  2023/10/13 18:03:39                                            */
+/*   Updated:  2023/10/19 23:05:41                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,19 +43,18 @@ typedef struct s_buffer
 	bool	io_error;
 }t_buffer;
 
-typedef struct s_ambient_lightning
+typedef struct s_ambient_lighting
 {
-	long double	ambient_lightning;
+	long double	ambient_lighting_intensity;
 	t_color		color;
 	bool		is_initialized;
-}t_ambient_lightning;
+}t_ambient_lighting;
 
 typedef struct s_camera
 {
 	t_vector		orientation_vector;
 	long double		field_of_view;
 	t_coordinate	position;
-	bool			is_initialized;
 }t_camera;
 
 typedef struct s_light
@@ -112,7 +111,7 @@ typedef struct s_cylider_list
 
 typedef struct s_parametes
 {
-	t_ambient_lightning	ambient_lightning;
+	t_ambient_lighting	ambient_lighting;
 	t_camera			camera;
 	t_light				light;
 	t_sphere_list		sphere_list;
@@ -141,6 +140,19 @@ void			load_line(t_line *line, t_buffer *buf, int fileno);
 bool			is_valid_id(const char **valid_element_ids, t_line *line);
 void			add_to_count_helper(t_line *line,
 					t_element_count *element_count, size_t lineno);
+t_parameters	get_parameters_internal(char *filename,
+					t_element_count element_count);
+void			set_ambient_lighting(char *filename,
+					t_element_count element_count, t_parameters *parameters);
+long double		parse_float(t_line *line, int *i, bool *parsing_error,
+					size_t lineno);
+t_color			parse_color(t_line *line, int *i, bool *parsing_error,
+					size_t lineno);
+char			first_char_of_line(t_line *line);
+void			load_line_initial(t_line *line, t_buffer *buf, int fileno);
+void			set_camera(char *filename, t_parameters *parameters);
+t_coordinate	 parse_coordinates(t_line *line, int *i, bool *parsing_error,
+					size_t lineno);
 
 # pragma clang diagnostic pop
 

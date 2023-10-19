@@ -6,11 +6,12 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/07 19:54:14                                            */
-/*   Updated:  2023/10/13 17:26:59                                            */
+/*   Updated:  2023/10/18 17:41:06                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parameters.h"
+#include "../libft/libft.h"
 #include <unistd.h>
 
 ;
@@ -18,6 +19,23 @@
 #pragma clang diagnostic warning "-Weverything"
 #pragma clang diagnostic ignored "-Wempty-translation-unit"
 #pragma clang diagnostic ignored "-Wunused-macros"
+
+char	first_char_of_line(t_line *line)
+{
+	int	i;
+
+	i = 0;
+	while (ft_isspace(line->line[i]) != false)
+		i++;
+	return (line->line[i]);
+}
+
+void	load_line_initial(t_line *line, t_buffer *buf, int fileno)
+{
+	*line = (t_line){0};
+	*buf = (t_buffer){0};
+	load_line(line, buf, fileno);
+}
 
 static char	get_char_from_buf(t_buffer *buf, int fileno)
 {
@@ -44,7 +62,10 @@ void	load_line(t_line *line, t_buffer *buf, int fileno)
 	{
 		i++;
 		if (i == MAX_LINE_SIZE)
+		{
+			line->size = i;
 			return ;
+		}
 		line->line[i] = get_char_from_buf(buf, fileno);
 	}
 	if (line->line[i] == '\n')

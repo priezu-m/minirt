@@ -6,12 +6,13 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/06 18:23:36                                            */
-/*   Updated:  2023/10/07 21:35:59                                            */
+/*   Updated:  2023/10/14 01:42:49                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
 #include "parameters.h"
+#include <stdbool.h>
 #include <unistd.h>
 
 ;
@@ -28,12 +29,12 @@ static bool	filename_extension_correct(char *filename)
 
 	if (len < 4)
 	{
-		write(STDERR_FILENO, msg, sizeof(msg));
+		ft_putstr_fileno(STDERR_FILENO, msg);
 		return (false);
 	}
 	if (ft_strcmp(&filename[len - 3], ".rt") != 0)
 	{
-		write(STDERR_FILENO, msg, sizeof(msg));
+		ft_putstr_fileno(STDERR_FILENO, msg);
 		return (false);
 	}
 	return (true);
@@ -56,7 +57,7 @@ t_parameters	get_parameters(char *filename)
 		parameters.parameters_valid = false;
 		return (parameters);
 	}
-//	parameters = get_parameters_internal(filename, element_count);
+	parameters = get_parameters_internal(filename, element_count);
 	return (parameters);
 }
 

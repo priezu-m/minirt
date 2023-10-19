@@ -6,7 +6,7 @@
 #    github:   https://github.com/priezu-m                                     #
 #    Licence:  GPLv3                                                           #
 #    Created:  2023/09/27 18:57:07                                             #
-#    Updated:  2023/10/13 17:49:05                                             #
+#    Updated:  2023/10/13 18:20:29                                             #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,7 @@
 
 SHELL :=			bash
 CC :=				gcc
-CFLAGS :=			-g3 -O0
-NORMINETTE :=		$(shell command -v norminette)
-UNAME :=			$(shell uname -s)
+CFLAGS :=			-g3 -O0 -flto -Wall -Wextra -Wno-unknown-pragmas
 
 ################################################################################
 
@@ -82,7 +80,7 @@ $(NAME): $(OBJ)
 all: $(NAME)
 
 clean:
-	@rm $(DEP) $(OBJ) $(ALL_NORM) $(NORM) &> /dev/null || true
+	@rm $(DEP) $(OBJ) &> /dev/null || true
 	@rmdir -p $(NEW_DIRS) $(DEP_PATH) $(OBJ_PATH) &> /dev/null || true
 
 fclean: clean

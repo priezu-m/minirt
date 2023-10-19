@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/07 19:49:21                                            */
-/*   Updated:  2023/10/13 18:00:54                                            */
+/*   Updated:  2023/10/13 18:59:32                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,14 +84,14 @@ t_element_count	count_elements(char *filename)
 	t_buffer		buf;
 	t_line			line;
 
-	element_count = (t_element_count){.count_failed = false};
-	line = (t_line){0};
-	buf = (t_buffer){0};
 	if (fileno == -1)
 	{
 		perror("Error\nCould not open input file");
 		return ((t_element_count){.count_failed = true});
 	}
+	element_count = (t_element_count){.count_failed = false};
+	line = (t_line){0};
+	buf = (t_buffer){0};
 	read_file(&line, &buf, &element_count, fileno);
 	close(fileno);
 	return (element_count);
