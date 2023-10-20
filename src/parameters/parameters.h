@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/03 21:56:50                                            */
-/*   Updated:  2023/10/20 01:09:35                                            */
+/*   Updated:  2023/10/20 04:00:14                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,7 +144,7 @@ t_parameters	get_parameters_internal(char *filename,
 					t_element_count element_count);
 void			set_ambient_lighting(char *filename,
 					t_element_count element_count, t_parameters *parameters);
-long double		parse_float(t_line *line, int *i, bool *parsing_error,
+long double			parse_float(t_line *line, int *i, bool *parsing_error,
 					size_t lineno);
 t_color			parse_color(t_line *line, int *i, bool *parsing_error,
 					size_t lineno);

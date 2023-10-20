@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/19 21:29:44                                            */
-/*   Updated:  2023/10/20 01:21:27                                            */
+/*   Updated:  2023/10/20 01:50:56                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ static void	set_camera_internal(t_parameters *parameters, int fileno)
 	size_t		i;
 	bool		parsing_error;
 
+	parsing_error = false;
 	i = 1;
 	load_line_initial(&line, &buf, fileno);
 	while (line.size > 0 && first_char_of_line(&line) != 'C')

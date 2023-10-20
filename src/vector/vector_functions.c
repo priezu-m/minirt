@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/20 00:13:37                                            */
-/*   Updated:  2023/10/20 01:23:08                                            */
+/*   Updated:  2023/10/20 04:01:31                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,13 @@
 
 bool	is_normal(t_vector vector)
 {
-	return (sqrtl(
-			vector.x * vector.x + vector.y * vector.y + vector.z + vector.z)
-		== 1);
+	const long double magnitude = sqrtl(vector.x * vector.x
+			+ vector.y * vector.y + vector.z * vector.z);
+
+	if ((magnitude < 1.L - 1E-14L)
+		|| (magnitude > 1.L + 1E-14L))
+		return (false);
+	return (true);
 }
 
 #pragma clang diagnostic pop

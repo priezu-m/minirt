@@ -6,7 +6,7 @@
 #    github:   https://github.com/priezu-m                                     #
 #    Licence:  GPLv3                                                           #
 #    Created:  2023/09/27 18:57:07                                             #
-#    Updated:  2023/10/20 01:27:06                                             #
+#    Updated:  2023/10/20 04:49:11                                             #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@
 
 SHELL :=			bash
 CC :=				gcc
-CFLAGS :=			-g3 -O0 -flto -Wall -Wextra -Wno-unknown-pragmas
+CFLAGS :=			-g3 -Og -flto -Wall -Wextra -Wno-unknown-pragmas\
+					-fsanitize=address,undefined,leak
 LDFLAGS :=			-lm
 
 ################################################################################
@@ -24,6 +25,7 @@ LDFLAGS :=			-lm
 NAME :=				minirt
 
 DEP_PATH :=			./DEP
+DEP_PATH_MAKE :=	DEP/
 OBJ_PATH :=			./OBJ
 
 EXCLUDE_DIRS :=		$(DEP_PATH) $(OBJ_PATH) ./.git
@@ -64,14 +66,15 @@ CURRENT_MANPAHT :=	$(shell man --path)
 $(NEW_DIRS):
 	@mkdir -p $@
 
+$(OBJ_PATH)/%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 $(DEP_PATH)/%.d: %.c | $(NEW_DIRS)
 	@rm -f $(DEP_PATH)/$@; \
 		$(CC) -M $< > $@.tmp; \
-		sed 's,\($*\)\.o[ :]*,$(OBJ_PATH)/\1.o $@ : ,g' < $@.tmp > $@; \
+		sed 's,$(notdir $*).o[ :]*,$(OBJ_PATH)/$(subst $(DEP_PATH_MAKE),,$(basename $@).o) $@ : ,g' \
+	   	< $@.tmp > $@; \
 		rm -f $@.tmp
-
-$(OBJ_PATH)/%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $@ $(LDFLAGS)

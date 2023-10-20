@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/18 16:23:54                                            */
-/*   Updated:  2023/10/20 01:22:32                                            */
+/*   Updated:  2023/10/20 04:00:51                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@
 _Static_assert(sizeof(unsigned long int) == 8,
 	"Code is not portable to this system\n");
 
-static unsigned int	get_magnitude(unsigned long int x)
+static unsigned long int	get_magnitude(unsigned long int x)
 {
-	unsigned int	magnitude;
+	unsigned long int	magnitude;
 
-	magnitude = 1;
+	magnitude = 10;
 	while (x > 9)
 	{
 		x /= 10;
-		magnitude++;
+		magnitude *= 10;
 	}
 	return (magnitude);
 }
@@ -67,8 +67,7 @@ static long double	parse_float_internal(t_line *line, int *i)
 		decimal_part = get_num(line, i);
 	}
 	magnitude = get_magnitude(decimal_part);
-	return (((long double)
-			((__uint128_t)integer_part * magnitude + decimal_part))
+	return ((((long double)integer_part * (long double)magnitude) + (long double)decimal_part)
 		/ (long double)magnitude);
 }
 

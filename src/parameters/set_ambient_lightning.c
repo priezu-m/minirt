@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/18 16:19:52                                            */
-/*   Updated:  2023/10/20 01:10:54                                            */
+/*   Updated:  2023/10/20 01:51:39                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ static void	set_ambient_lighting_internal(t_parameters *parameters, int fileno)
 	bool		parsing_error;
 
 	i = 1;
+	parsing_error = false;
 	load_line_initial(&line, &buf, fileno);
 	while (line.size > 0 && first_char_of_line(&line) != 'A')
 	{
