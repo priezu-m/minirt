@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/07 19:49:21                                            */
-/*   Updated:  2023/10/13 18:59:32                                            */
+/*   Updated:  2023/10/20 06:26:50                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	add_to_count(t_element_count *element_count, t_line *line,
 
 	if (line->size == MAX_LINE_SIZE)
 	{
-		ft_putstr_fileno(STDERR_FILENO, "Error\n line ");
+		ft_putstr_fileno(STDERR_FILENO, "Error\nline ");
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
 		ft_putstr_fileno(STDERR_FILENO, " too big to parse.\n");
 		element_count->count_failed = true;

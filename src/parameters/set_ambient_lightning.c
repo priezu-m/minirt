@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/18 16:19:52                                            */
-/*   Updated:  2023/10/20 01:51:39                                            */
+/*   Updated:  2023/10/21 08:00:36                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,18 @@
 #pragma clang diagnostic ignored "-Wempty-translation-unit"
 #pragma clang diagnostic ignored "-Wunused-macros"
 
-static bool	check_for_space_float(t_line *line, int i, bool *parsing_error,
-				size_t lineno)
+static bool	check_for_space_float(char c, bool *parsing_error,
+				size_t lineno, long double x)
 {
-	if (!!ft_isspace(line->line[i]) == false)
+	if (!!ft_isspace(c) == false || x < 0 || x > 1)
 	{
 		*parsing_error = true;
 		ft_putstr_fileno(STDERR_FILENO, "Error\nline ");
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
 		ft_putstr_fileno(STDERR_FILENO, " floating point value does not match"
 			" regex (-?[0-9]{0,19}(\\.[0-9]{1,18})?). Or is not separated\n"
-			"by a space from the color descriptor.\n");
+			"by a space from the color descriptor. Or is not in the range"
+			" of 0 to 1.\n");
 		return (false);
 	}
 	return (true);
@@ -57,7 +58,8 @@ static t_ambient_lighting	parse_lighting(t_line *line, bool *parsing_error,
 	ambient_lighting.ambient_lighting_intensity
 		= parse_float(line, &i, parsing_error, lineno);
 	if ((*parsing_error == true)
-		|| (check_for_space_float(line, i, parsing_error, lineno) == false))
+		|| (check_for_space_float(line->line[i], parsing_error, lineno,
+		ambient_lighting.ambient_lighting_intensity) == false))
 		return (ambient_lighting);
 	while (ft_isspace(line->line[i]) != false)
 		i++;

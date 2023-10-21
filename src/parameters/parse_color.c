@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/18 17:30:30                                            */
-/*   Updated:  2023/10/20 01:11:49                                            */
+/*   Updated:  2023/10/20 08:31:10                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void	check_for_space(t_line *line, int *i, bool *parsing_error,
 		ft_putstr_fileno(STDERR_FILENO, "Error\nline ");
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
 		ft_putstr_fileno(STDERR_FILENO, " color is not three integers in the"
-			" range from 0 to 255 separated by comas endign in\n"
+			" range of 0 to 255 separated by comas endign in\n"
 			"a space or newline\n");
 	}
 }
@@ -73,7 +73,7 @@ t_color	parse_color(t_line *line, int *i, bool *parsing_error, size_t lineno)
 		ft_putstr_fileno(STDERR_FILENO, "Error\nline ");
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
 		ft_putstr_fileno(STDERR_FILENO, " color is not three integers in the"
-			" range from 0 to 255 separated by comas\n");
+			" range of 0 to 255 separated by comas\n");
 		return (color);
 	}
 	color.g = get_color(line, i, parsing_error);
@@ -83,7 +83,7 @@ t_color	parse_color(t_line *line, int *i, bool *parsing_error, size_t lineno)
 		ft_putstr_fileno(STDERR_FILENO, "Error\nline ");
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
 		ft_putstr_fileno(STDERR_FILENO, " color is not three integers in the"
-			" range from 0 to 255 separated by comas\n");
+			" range of 0 to 255 separated by comas\n");
 		return (color);
 	}
 	color.b = get_color(line, i, parsing_error);

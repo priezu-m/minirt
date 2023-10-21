@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/03 21:56:50                                            */
-/*   Updated:  2023/10/20 04:00:14                                            */
+/*   Updated:  2023/10/21 08:50:28                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ typedef struct s_sphere_list
 {
 	t_sphere	*sphere_list;
 	int			size;
-	bool		is_initialized;
 }t_sphere_list;
 
 typedef struct s_plane
@@ -90,7 +89,6 @@ typedef struct s_plane_list
 {
 	t_plane	*plane_list;
 	int		size;
-	bool	is_initialized;
 }t_plane_list;
 
 typedef struct s_cylinder
@@ -104,9 +102,8 @@ typedef struct s_cylinder
 
 typedef struct s_cylider_list
 {
-	t_cylinder	*plane_list;
+	t_cylinder	*cylinder_list;
 	int			size;
-	bool		is_initialized;
 }t_cylider_list;
 
 typedef struct s_parametes
@@ -144,7 +141,7 @@ t_parameters	get_parameters_internal(char *filename,
 					t_element_count element_count);
 void			set_ambient_lighting(char *filename,
 					t_element_count element_count, t_parameters *parameters);
-long double			parse_float(t_line *line, int *i, bool *parsing_error,
+long double		parse_float(t_line *line, int *i, bool *parsing_error,
 					size_t lineno);
 t_color			parse_color(t_line *line, int *i, bool *parsing_error,
 					size_t lineno);
@@ -155,6 +152,16 @@ t_coordinate	parse_coordinates(t_line *line, int *i, bool *parsing_error,
 					size_t lineno);
 t_vector		parse_orientation_vector(t_line *line, int *i,
 					bool *parsing_error, size_t lineno);
+void			set_light(char *filename, t_element_count element_count,
+					t_parameters *parameters);
+void			set_sphere_list(char *filename, t_element_count element_count,
+					t_parameters *parameters);
+void			set_plane_list(char *filename, t_element_count element_count,
+					t_parameters *parameters);
+void		set_cylinder_list(char *filename, t_element_count element_count,
+					t_parameters *parameters);
+t_cylinder	parse_cylinder(t_line *line, bool *parsing_error,
+								size_t lineno);
 
 # pragma clang diagnostic pop
 

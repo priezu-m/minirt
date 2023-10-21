@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/18 16:23:54                                            */
-/*   Updated:  2023/10/20 04:00:51                                            */
+/*   Updated:  2023/10/20 06:17:51                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,27 +24,17 @@
 _Static_assert(sizeof(unsigned long int) == 8,
 	"Code is not portable to this system\n");
 
-static unsigned long int	get_magnitude(unsigned long int x)
-{
-	unsigned long int	magnitude;
-
-	magnitude = 10;
-	while (x > 9)
-	{
-		x /= 10;
-		magnitude *= 10;
-	}
-	return (magnitude);
-}
-
-static unsigned long int	get_num(t_line *line, int *i)
+static unsigned long int	get_num(t_line *line, int *i,
+								unsigned long int *magnitude)
 {
 	unsigned long int	res;
 
 	res = 0;
+	*magnitude = 1;
 	while (ft_isdigit(line->line[*i]) != false)
 	{
 		res *= 10;
+		*magnitude *= 10;
 		res += (unsigned)line->line[*i] - '0';
 		(*i)++;
 	}
@@ -59,16 +49,16 @@ static long double	parse_float_internal(t_line *line, int *i)
 
 	integer_part = 0;
 	decimal_part = 0;
+	magnitude = 0;
 	if (line->line[*i] != '.')
-		integer_part = get_num(line, i);
+		integer_part = get_num(line, i, &magnitude);
 	if (line->line[*i] == '.')
 	{
 		(*i)++;
-		decimal_part = get_num(line, i);
+		decimal_part = get_num(line, i, &magnitude);
 	}
-	magnitude = get_magnitude(decimal_part);
-	return ((((long double)integer_part * (long double)magnitude) + (long double)decimal_part)
-		/ (long double)magnitude);
+	return ((((long double)integer_part * (long double)magnitude)
+			+ (long double)decimal_part) / (long double)magnitude);
 }
 
 static bool	check_regex_match(t_line *line, int i)

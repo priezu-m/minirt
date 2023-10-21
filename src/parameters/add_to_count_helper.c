@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/07 20:42:38                                            */
-/*   Updated:  2023/10/13 18:04:37                                            */
+/*   Updated:  2023/10/21 08:03:21                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	check_camera(t_line *line,
 			ft_putstr_fileno(STDERR_FILENO, "Error\nLine ");
 			ft_putnbr_fileno(STDERR_FILENO, lineno);
 			ft_putstr_fileno(STDERR_FILENO,
-				" redefinition of camera element\n");
+				" redefinition of the camera element\n");
 			element_count->count_failed = true;
 		}
 	}
@@ -50,7 +50,7 @@ static void	check_ambient_light(t_line *line,
 			ft_putstr_fileno(STDERR_FILENO, "Error\nLine ");
 			ft_putnbr_fileno(STDERR_FILENO, lineno);
 			ft_putstr_fileno(STDERR_FILENO,
-				" redefinition of ambient lighting element\n");
+				" redefinition of the ambient lighting element\n");
 			element_count->count_failed = true;
 		}
 	}
@@ -67,7 +67,7 @@ static void	check_light(t_line *line,
 			ft_putstr_fileno(STDERR_FILENO, "Error\nLine ");
 			ft_putnbr_fileno(STDERR_FILENO, lineno);
 			ft_putstr_fileno(STDERR_FILENO,
-				" redefinition of light element\n");
+				" redefinition of the light element\n");
 			element_count->count_failed = true;
 		}
 	}

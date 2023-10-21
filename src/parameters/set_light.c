@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                                            */
-/*   Filename: set_camera.c                                                   */
+/*   Filename: set_light.c                                                    */
 /*   Author:   Peru Riezu <riezumunozperu@gmail.com>                          */
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
-/*   Created:  2023/10/19 21:29:44                                            */
-/*   Updated:  2023/10/21 08:13:14                                            */
+/*   Created:  2023/10/20 06:47:13                                            */
+/*   Updated:  2023/10/21 08:01:10                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parameters.h"
 #include "../libft/libft.h"
-#include <fcntl.h>
-#include <stdbool.h>
-#include <stddef.h>
-#include <unistd.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 ;
 #pragma clang diagnostic push
@@ -34,92 +32,98 @@ static bool	check_space(t_line *line, int i, bool *parsing_error,
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
 		ft_putstr_fileno(STDERR_FILENO, " floating point value does not match"
 			" regex (-?[0-9]{0,19}(\\.[0-9]{1,18})?). Or is not separated\n"
-			"by a space from the next descriptor.\n");
+			"by a space from the brightness descriptor.\n");
 		return (false);
 	}
 	return (true);
 }
 
-static void	field_of_view_check(t_camera camera, char c, bool *parsing_error,
-				size_t lineno)
+static bool	check_for_space_float(char c, bool *parsing_error,
+				size_t lineno, long double x)
 {
-	if (*parsing_error == true)
-		return ;
-	if ((!!ft_isspace(c) == false && c != '\0')
-		|| (camera.field_of_view < 0 || camera.field_of_view > 180))
+	if (!!ft_isspace(c) == false || x < 0 || x > 1)
 	{
 		*parsing_error = true;
 		ft_putstr_fileno(STDERR_FILENO, "Error\nline ");
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
-		ft_putstr_fileno(STDERR_FILENO, " field of view floating point value"
-			" does not match regex (-?[0-9]{0,19}(\\.[0-9]{1,18})?),\n"
-			"or is not in the range of 0 to 180, or does not end in a newline"
-			" or space.\n");
+		ft_putstr_fileno(STDERR_FILENO, " floating point value does not match"
+			" regex (-?[0-9]{0,19}(\\.[0-9]{1,18})?). Or is not separated\n"
+			"by a space from the color descriptor. Or is not in the range"
+			" of 0 to 1.\n");
+		return (false);
 	}
+	return (true);
 }
 
-static t_camera	parse_camera(t_line *line, bool *parsing_error, size_t lineno)
+static t_light	parse_light(t_line *line, bool *parsing_error,
+								size_t lineno)
 {
-	t_camera	camera;
-	int			i;
+	t_light	light;
+	int		i;
 
 	i = 0;
+	light.is_initialized = true;
 	while (ft_isspace(line->line[i]) != false)
 		i++;
 	while (ft_isalpha(line->line[i]) != false)
 		i++;
 	while (ft_isspace(line->line[i]) != false)
 		i++;
-	camera.position
-		= parse_coordinates(line, &i, parsing_error, lineno);
+	light.position = parse_coordinates(line, &i, parsing_error, lineno);
 	if (*parsing_error == true || !check_space(line, i, parsing_error, lineno))
-		return (camera);
+		return (light);
 	while (ft_isspace(line->line[i]) != false)
 		i++;
-	camera.orientation_vector
-		= parse_orientation_vector(line, &i, parsing_error, lineno);
-	if (*parsing_error == true || !check_space(line, i, parsing_error, lineno))
-		return (camera);
+	light.brightness = parse_float(line, &i, parsing_error, lineno);
+	if ((*parsing_error == true)
+		|| (check_for_space_float(line->line[i], parsing_error, lineno,
+		light.brightness) == false))
+		return (light);
 	while (ft_isspace(line->line[i]) != false)
 		i++;
-	camera.field_of_view = parse_float(line, &i, parsing_error, lineno);
-	field_of_view_check(camera, line->line[i], parsing_error, lineno);
-	return (camera);
+	light.color = parse_color(line, &i, parsing_error, lineno);
+	return (light);
 }
 
-static void	set_camera_internal(t_parameters *parameters, int fileno)
+static void	set_light_internal(t_parameters *parameters, int fileno)
 {
 	t_buffer	buf;
 	t_line		line;
 	size_t		i;
 	bool		parsing_error;
 
-	parsing_error = false;
 	i = 1;
+	parsing_error = false;
 	load_line_initial(&line, &buf, fileno);
-	while (line.size > 0 && first_char_of_line(&line) != 'C')
+	while (line.size > 0 && first_char_of_line(&line) != 'L')
 	{
 		load_line(&line, &buf, fileno);
 		i++;
 	}
-	parameters->camera = parse_camera(&line, &parsing_error, i);
+	parameters->light = parse_light(&line, &parsing_error, i);
 	if (parsing_error == true)
 		parameters->parameters_valid = false;
 }
 
-void	set_camera(char *filename, t_parameters *parameters)
+void	set_light(char *filename, t_element_count element_count,
+				t_parameters *parameters)
 {
 	const int		fileno = open(filename, O_RDONLY);
 
 	if (parameters->parameters_valid == false)
 		return ;
+	if (element_count.light_count	== 0)
+	{
+		parameters->light.is_initialized = false;
+		return ;
+	}
 	if (fileno == -1)
 	{
 		perror("Error\nCould not open input file");
 		parameters->parameters_valid = false;
 		return ;
 	}
-	set_camera_internal(parameters, fileno);
+	set_light_internal(parameters, fileno);
 	close(fileno);
 }
 

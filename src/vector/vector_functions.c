@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/20 00:13:37                                            */
-/*   Updated:  2023/10/20 04:01:31                                            */
+/*   Updated:  2023/10/20 06:17:17                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 
 bool	is_normal(t_vector vector)
 {
-	const long double magnitude = sqrtl(vector.x * vector.x
+	const long double	magnitude = sqrtl(vector.x * vector.x
 			+ vector.y * vector.y + vector.z * vector.z);
 
-	if ((magnitude < 1.L - 1E-14L)
-		|| (magnitude > 1.L + 1E-14L))
+	if ((magnitude < 1.L - 1E-16L)
+		|| (magnitude > 1.L + 1E-16L))
 		return (false);
 	return (true);
 }
