@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/21 08:49:29                                            */
-/*   Updated:  2023/10/21 08:59:40                                            */
+/*   Updated:  2023/10/21 12:26:32                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ static bool	check_for_space_float(char c, bool *parsing_error,
 	return (true);
 }
 
-static bool parse_cylinder_helper(t_line *line, int *i, size_t lineno, t_cylinder *cylinder)
+static bool	parse_cylinder_helper(t_line *line, int *i, size_t lineno,
+				t_cylinder *cylinder)
 {
 	bool	parsing_error;
 
@@ -72,8 +73,10 @@ static bool parse_cylinder_helper(t_line *line, int *i, size_t lineno, t_cylinde
 	cylinder->diameter = parse_float(line, i, &parsing_error, lineno);
 	if ((parsing_error == true)
 		|| (check_for_space_float(line->line[*i], &parsing_error, lineno,
-		cylinder->diameter) == false))
+				cylinder->diameter) == false))
 		return (true);
+	while (ft_isspace(line->line[*i]) != false)
+		(*i)++;
 	return (false);
 }
 
@@ -96,8 +99,10 @@ t_cylinder	parse_cylinder(t_line *line, bool *parsing_error,
 	cylinder.height = parse_float(line, &i, parsing_error, lineno);
 	if ((*parsing_error == true)
 		|| (check_for_space_float(line->line[i], parsing_error, lineno,
-		cylinder.height) == false))
+				cylinder.height) == false))
 		return (cylinder);
+	while (ft_isspace(line->line[i]) != false)
+		i++;
 	cylinder.color = parse_color(line, &i, parsing_error, lineno);
 	return (cylinder);
 }

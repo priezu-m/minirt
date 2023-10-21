@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                                            */
-/*   Filename: set_ambient_lightning.c                                        */
+/*   Filename: set_ambient_lighting.c                                         */
 /*   Author:   Peru Riezu <riezumunozperu@gmail.com>                          */
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/18 16:19:52                                            */
-/*   Updated:  2023/10/21 08:00:36                                            */
+/*   Updated:  2023/10/21 09:14:11                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static t_ambient_lighting	parse_lighting(t_line *line, bool *parsing_error,
 		= parse_float(line, &i, parsing_error, lineno);
 	if ((*parsing_error == true)
 		|| (check_for_space_float(line->line[i], parsing_error, lineno,
-		ambient_lighting.ambient_lighting_intensity) == false))
+				ambient_lighting.ambient_lighting_intensity) == false))
 		return (ambient_lighting);
 	while (ft_isspace(line->line[i]) != false)
 		i++;

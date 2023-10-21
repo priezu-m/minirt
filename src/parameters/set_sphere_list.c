@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/21 03:23:04                                            */
-/*   Updated:  2023/10/21 08:15:27                                            */
+/*   Updated:  2023/10/21 09:15:43                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ static t_sphere	parse_sphere(t_line *line, bool *parsing_error,
 	sphere.diameter = parse_float(line, &i, parsing_error, lineno);
 	if ((*parsing_error == true)
 		|| (check_for_space_float(line->line[i], parsing_error, lineno,
-		sphere.diameter) == false))
+				sphere.diameter) == false))
 		return (sphere);
 	while (ft_isspace(line->line[i]) != false)
 		i++;
@@ -101,14 +101,13 @@ static void	set_sphere_list_internal(t_parameters *parameters, int fileno)
 	{
 		if (first_char_of_line(&line) == 's')
 		{
-			parameters->sphere_list.sphere_list[j]
+			parameters->sphere_list.sphere_list[j++]
 				= parse_sphere(&line, &parsing_error, i);
 			if (parsing_error == true)
 			{
 				parameters->parameters_valid = false;
 				return ;
 			}
-			j++;
 		}
 		load_line(&line, &buf, fileno);
 		i++;
@@ -122,7 +121,7 @@ void	set_sphere_list(char *filename, t_element_count element_count,
 
 	parameters->sphere_list.size = element_count.sphere_count;
 	if ((parameters->parameters_valid == false)
-		|| (element_count.sphere_count	== 0))
+		|| (element_count.sphere_count == 0))
 	{
 		parameters->sphere_list.sphere_list = NULL;
 		return ;

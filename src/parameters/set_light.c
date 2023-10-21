@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/20 06:47:13                                            */
-/*   Updated:  2023/10/21 08:01:10                                            */
+/*   Updated:  2023/10/21 09:11:44                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ static t_light	parse_light(t_line *line, bool *parsing_error,
 	light.brightness = parse_float(line, &i, parsing_error, lineno);
 	if ((*parsing_error == true)
 		|| (check_for_space_float(line->line[i], parsing_error, lineno,
-		light.brightness) == false))
+				light.brightness) == false))
 		return (light);
 	while (ft_isspace(line->line[i]) != false)
 		i++;
@@ -112,7 +112,7 @@ void	set_light(char *filename, t_element_count element_count,
 
 	if (parameters->parameters_valid == false)
 		return ;
-	if (element_count.light_count	== 0)
+	if (element_count.light_count == 0)
 	{
 		parameters->light.is_initialized = false;
 		return ;

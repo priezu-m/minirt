@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/21 08:06:20                                            */
-/*   Updated:  2023/10/21 08:25:36                                            */
+/*   Updated:  2023/10/21 11:33:41                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,14 +84,13 @@ static void	set_plane_list_internal(t_parameters *parameters, int fileno)
 	{
 		if (first_char_of_line(&line) == 'p')
 		{
-			parameters->plane_list.plane_list[j]
+			parameters->plane_list.plane_list[j++]
 				= parse_plane(&line, &parsing_error, i);
 			if (parsing_error == true)
 			{
 				parameters->parameters_valid = false;
 				return ;
 			}
-			j++;
 		}
 		load_line(&line, &buf, fileno);
 		i++;
@@ -103,9 +102,9 @@ void	set_plane_list(char *filename, t_element_count element_count,
 {
 	const int		fileno = open(filename, O_RDONLY);
 
-	parameters->sphere_list.size = element_count.plane_count;
+	parameters->plane_list.size = element_count.plane_count;
 	if ((parameters->parameters_valid == false)
-		|| (element_count.plane_count	== 0))
+		|| (element_count.plane_count == 0))
 	{
 		parameters->plane_list.plane_list = NULL;
 		return ;
@@ -117,7 +116,7 @@ void	set_plane_list(char *filename, t_element_count element_count,
 		return ;
 	}
 	parameters->plane_list.plane_list
-		= malloc((size_t)element_count.plane_count * sizeof(t_sphere));
+		= malloc((size_t)element_count.plane_count * sizeof(t_plane));
 	if (parameters->plane_list.plane_list == NULL)
 	{
 		perror("Error\nCould not reserve enough memory");

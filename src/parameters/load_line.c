@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/07 19:54:14                                            */
-/*   Updated:  2023/10/18 17:41:06                                            */
+/*   Updated:  2023/10/21 11:40:39                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	first_char_of_line(t_line *line)
 	int	i;
 
 	i = 0;
-	while (ft_isspace(line->line[i]) != false)
+	while (ft_isspace(line->line[i]) != false && line->line[i] != '\n')
 		i++;
 	return (line->line[i]);
 }

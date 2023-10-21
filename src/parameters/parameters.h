@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/03 21:56:50                                            */
-/*   Updated:  2023/10/21 08:50:28                                            */
+/*   Updated:  2023/10/21 09:13:16                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,10 +158,10 @@ void			set_sphere_list(char *filename, t_element_count element_count,
 					t_parameters *parameters);
 void			set_plane_list(char *filename, t_element_count element_count,
 					t_parameters *parameters);
-void		set_cylinder_list(char *filename, t_element_count element_count,
+void			set_cylinder_list(char *filename, t_element_count element_count,
 					t_parameters *parameters);
-t_cylinder	parse_cylinder(t_line *line, bool *parsing_error,
-								size_t lineno);
+t_cylinder		parse_cylinder(t_line *line, bool *parsing_error,
+					size_t lineno);
 
 # pragma clang diagnostic pop
 

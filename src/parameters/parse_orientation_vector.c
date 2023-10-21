@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/19 23:36:48                                            */
-/*   Updated:  2023/10/20 01:09:00                                            */
+/*   Updated:  2023/10/21 11:41:23                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ static void	check_normal(t_vector orientation, bool *parsing_error,
 		*parsing_error = true;
 		ft_putstr_fileno(STDERR_FILENO, "Error\nline ");
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
-		ft_putstr_fileno(STDERR_FILENO, " orientation is not a normalized"
-			" vector of three floating point values in the range from"
+		ft_putstr_fileno(STDERR_FILENO, " vecto is not a normalized"
+			" vector composed three floating point values in the range from"
 			" -1 to 1\n");
 	}
 }
