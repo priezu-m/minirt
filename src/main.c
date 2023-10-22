@@ -6,90 +6,24 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/09/25 17:27:48                                            */
-/*   Updated:  2023/10/22 09:42:36                                            */
+/*   Updated:  2023/10/22 13:49:02                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parameters/parameters.h"
+#include "render_scene/render_scene.h"
 #include "libft/libft.h"
 #include <stdbool.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdio.h>
-#include <mlx.h>
 
 ;
 #pragma clang diagnostic push
 #pragma clang diagnostic warning "-Weverything"
 #pragma clang diagnostic ignored "-Wempty-translation-unit"
 #pragma clang diagnostic ignored "-Wunused-macros"
-
-#define  WIDTH 1080
-#define  HEIGHT 720
-
-static void	stablish_conection(void **connection_id, void **window_id,
-		void **img_id)
-{
-	*connection_id = mlx_init();
-	if (connection_id == NULL)
-	{
-		perror("Error\nFailed to stablish a connection with the X server");
-		return ;
-	}
-	*window_id = mlx_new_window(*connection_id , WIDTH, HEIGHT, "Minirt");
-	if (*window_id == NULL)
-	{
-		perror("Error\nFailed to create a window");
-		mlx_destroy_display(*connection_id);
-		return ;
-	}
-	*img_id = mlx_new_image(*connection_id, WIDTH, HEIGHT);
-	if (*img_id == NULL)
-	{
-		perror("Error\nFailed to create a buffer");
-		mlx_destroy_window(*connection_id, *window_id);
-		mlx_destroy_display(*connection_id);
-		return ;
-	}
-}
-
-typedef struct	s_data
-{
-	char	*addr;
-	int		bits_per_pixel;
-	int		line_length;
-	int		endian;
-}t_data;
-
-static void	render_scene(t_parameters parameters)
-{
-	void		*connection_id;
-	void		*window_id;
-	void		*img_id;
-	t_data		img_data;
-	const char	msg[] = "This system not supported, aborting\n";
-
-	stablish_conection(&connection_id, &window_id, &img_id);
-	if (connection_id == NULL || window_id == NULL || img_id == NULL)
-		return ;
-	img_data.addr = mlx_get_data_addr(img_id, &img_data.bits_per_pixel,
-		&img_data.line_length, &img_data.endian);	
-	if (img_data.bits_per_pixel == 32 && img_data.endian == 0)
-	{
-		//visibility_notify (12) (0) (put image again)
-		//keypress_notify (02) (0) (check esc close close programm if pressed)
-		//DestroyNotify(17) (0) (close_programm)
-		//render_scene_in_buffer(parameters, img_data.addr, HEIGHT, WIDTH);
-		mlx_put_image_to_window(connection_id, window_id, img_id, 0, 0);
-		while (1);
-	}
-	else
-		write(STDERR_FILENO, msg, sizeof(msg));
-	mlx_destroy_image(connection_id, img_id);
-	mlx_destroy_window(connection_id, window_id);
-	mlx_destroy_display(connection_id);
-}
 
 int	main(int argc, char **argv)
 {
@@ -107,7 +41,6 @@ int	main(int argc, char **argv)
 		return (EXIT_FAILURE);
 	}
 	render_scene(parameters);
-	destroy_parameters(parameters);
 	return (EXIT_SUCCESS);
 }
 
