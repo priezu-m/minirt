@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/21 09:23:05                                            */
-/*   Updated:  2023/10/21 09:24:15                                            */
+/*   Updated:  2023/10/22 06:25:06                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #pragma clang diagnostic ignored "-Wempty-translation-unit"
 #pragma clang diagnostic ignored "-Wunused-macros"
 
-void destroy_parameters(t_parameters parameters)
+void	destroy_parameters(t_parameters parameters)
 {
 	free(parameters.cylinder_list.cylinder_list);
 	free(parameters.plane_list.plane_list);

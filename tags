@@ -44,8 +44,8 @@ ambient_lighting	src/parameters/parameters.h	/^	t_ambient_lighting	ambient_light
 ambient_lighting	src/parameters/set_ambient_lighting.c	/^	t_ambient_lighting	ambient_lighting;$/;"	kind:local	line:47	language:C	scope:function:parse_lighting	typeref:typename:t_ambient_lighting	file:	roles:def	extras:fileScope	end:47
 ambient_lighting_count	src/parameters/parameters.h	/^	int		ambient_lighting_count;$/;"	kind:member	line:122	language:C++	scope:struct:s_element_count	typeref:typename:int	access:public	roles:def	end:122
 ambient_lighting_intensity	src/parameters/parameters.h	/^	long double	ambient_lighting_intensity;$/;"	kind:member	line:48	language:C++	scope:struct:s_ambient_lighting	typeref:typename:long double	access:public	roles:def	end:48
-argc	src/main.c	/^int	main(int argc, char **argv)$/;"	kind:parameter	line:120	language:C	scope:function:main	typeref:typename:int	file:	roles:def	extras:fileScope	nth:0
-argv	src/main.c	/^int	main(int argc, char **argv)$/;"	kind:parameter	line:120	language:C	scope:function:main	typeref:typename:char **	file:	roles:def	extras:fileScope	nth:1
+argc	src/main.c	/^int	main(int argc, char **argv)$/;"	kind:parameter	line:26	language:C	scope:function:main	typeref:typename:int	file:	roles:def	extras:fileScope	nth:0
+argv	src/main.c	/^int	main(int argc, char **argv)$/;"	kind:parameter	line:26	language:C	scope:function:main	typeref:typename:char **	file:	roles:def	extras:fileScope	nth:1
 b	src/color/color.h	/^	unsigned char	b;$/;"	kind:member	line:26	language:C++	scope:struct:s_color	typeref:typename:unsigned char	access:public	roles:def	end:26
 brightness	src/parameters/parameters.h	/^	long double		brightness;$/;"	kind:member	line:63	language:C++	scope:struct:s_light	typeref:typename:long double	access:public	roles:def	end:63
 buf	src/parameters/count_elements.c	/^	t_buffer		buf;$/;"	kind:local	line:84	language:C	scope:function:count_elements	typeref:typename:t_buffer	file:	roles:def	extras:fileScope	end:84
@@ -115,9 +115,9 @@ cylinder_count	src/parameters/parameters.h	/^	int		cylinder_count;$/;"	kind:memb
 cylinder_list	src/parameters/parameters.h	/^	t_cylider_list		cylinder_list;$/;"	kind:member	line:116	language:C++	scope:struct:s_parametes	typeref:typename:t_cylider_list	access:public	roles:def	end:116
 cylinder_list	src/parameters/parameters.h	/^	t_cylinder	*cylinder_list;$/;"	kind:member	line:105	language:C++	scope:struct:s_cylider_list	typeref:typename:t_cylinder *	access:public	roles:def	end:105
 decimal_part	src/parameters/parse_float.c	/^	unsigned long int	decimal_part;$/;"	kind:local	line:47	language:C	scope:function:parse_float_internal	typeref:typename:unsigned long int	file:	roles:def	extras:fileScope	end:47
-destroy_parameters	src/parameters/destroy_parameters.c	/^void destroy_parameters(t_parameters parameters)$/;"	kind:function	line:22	language:C	typeref:typename:void	signature:(t_parameters parameters)	roles:def	end:27
+destroy_parameters	src/parameters/destroy_parameters.c	/^void	destroy_parameters(t_parameters parameters)$/;"	kind:function	line:22	language:C	typeref:typename:void	signature:(t_parameters parameters)	roles:def	end:27
 destroy_parameters	src/parameters/parameters.h	/^void			destroy_parameters(t_parameters parameters);$/;"	kind:prototype	line:133	language:C++	typeref:typename:void	signature:(t_parameters parameters)	roles:def	end:133
-destroy_parameters.c	src/parameters/destroy_parameters.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:29	epoch:1697873056
+destroy_parameters.c	src/parameters/destroy_parameters.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:29	epoch:1697948708
 diameter	src/parameters/parameters.h	/^	long double		diameter;$/;"	kind:member	line:71	language:C++	scope:struct:s_sphere	typeref:typename:long double	access:public	roles:def	end:71
 diameter	src/parameters/parameters.h	/^	long double		diameter;$/;"	kind:member	line:99	language:C++	scope:struct:s_cylinder	typeref:typename:long double	access:public	roles:def	end:99
 element_count	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, size_t i, size_t lineno)$/;"	kind:parameter	line:26	language:C	scope:function:check_camera	typeref:typename:t_element_count *	file:	roles:def	extras:fileScope	nth:1
@@ -236,7 +236,6 @@ get_parameters_internal.c	src/parameters/get_parameters_internal.c	1;"	kind:file
 height	src/parameters/parameters.h	/^	long double		height;$/;"	kind:member	line:98	language:C++	scope:struct:s_cylinder	typeref:typename:long double	access:public	roles:def	end:98
 i	src/libft/ft_putnbr_fileno.c	/^	int			i;$/;"	kind:local	line:45	language:C	scope:function:ft_putnbr_fileno	typeref:typename:int	file:	roles:def	extras:fileScope	end:45
 i	src/libft/ft_strlen.c	/^	size_t	i;$/;"	kind:local	line:24	language:C	scope:function:ft_strlen	typeref:typename:size_t	file:	roles:def	extras:fileScope	end:24
-i	src/main.c	/^	int	i;$/;"	kind:local	line:28	language:C	scope:function:print_parameters	typeref:typename:int	file:	roles:def	extras:fileScope	end:28
 i	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, size_t i, size_t lineno)$/;"	kind:parameter	line:26	language:C	scope:function:check_camera	typeref:typename:size_t	file:	roles:def	extras:fileScope	nth:2
 i	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, size_t i, size_t lineno)$/;"	kind:parameter	line:43	language:C	scope:function:check_ambient_light	typeref:typename:size_t	file:	roles:def	extras:fileScope	nth:2
 i	src/parameters/add_to_count_helper.c	/^				t_element_count *element_count, size_t i, size_t lineno)$/;"	kind:parameter	line:60	language:C	scope:function:check_light	typeref:typename:size_t	file:	roles:def	extras:fileScope	nth:2
@@ -412,8 +411,8 @@ magnitude	src/libft/ft_putnbr_fileno.c	/^	uintmax_t	magnitude;$/;"	kind:local	li
 magnitude	src/parameters/parse_float.c	/^								unsigned long int *magnitude)$/;"	kind:parameter	line:28	language:C	scope:function:get_num	typeref:typename:unsigned long int *	file:	roles:def	extras:fileScope	nth:2
 magnitude	src/parameters/parse_float.c	/^	unsigned long int	magnitude;$/;"	kind:local	line:48	language:C	scope:function:parse_float_internal	typeref:typename:unsigned long int	file:	roles:def	extras:fileScope	end:48
 magnitude	src/vector/vector_functions.c	/^	const long double	magnitude = sqrtl(vector.x * vector.x$/;"	kind:local	line:25	language:C	scope:function:is_normal	typeref:typename:const long double	file:	roles:def	extras:fileScope	end:26
-main	src/main.c	/^int	main(int argc, char **argv)$/;"	kind:function	line:120	language:C	typeref:typename:int	signature:(int argc,char ** argv)	roles:def	end:138
-main.c	src/main.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:140	epoch:1697884272
+main	src/main.c	/^int	main(int argc, char **argv)$/;"	kind:function	line:26	language:C	typeref:typename:int	signature:(int argc,char ** argv)	roles:def	end:43
+main.c	src/main.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:144	epoch:1697949265
 math.h	src/vector/vector_functions.c	/^#include <math.h>/;"	kind:header	line:15	language:C	roles:system	extras:reference
 msg	src/parameters/get_parameters.c	/^	const char		msg[]$/;"	kind:local	line:27	language:C	scope:function:filename_extension_correct	typeref:typename:const char[]	file:	roles:def	extras:fileScope	end:28
 msg	src/parameters/print_usage.c	/^	const char	msg[]$/;"	kind:local	line:24	language:C	scope:function:print_usage	typeref:typename:const char[]	file:	roles:def	extras:fileScope	end:28
@@ -426,9 +425,8 @@ orientation	src/parameters/parse_orientation_vector.c	/^static void	check_normal
 orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	kind:member	line:55	language:C++	scope:struct:s_camera	typeref:typename:t_vector	access:public	roles:def	end:55
 orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	kind:member	line:83	language:C++	scope:struct:s_plane	typeref:typename:t_vector	access:public	roles:def	end:83
 orientation_vector	src/parameters/parameters.h	/^	t_vector		orientation_vector;$/;"	kind:member	line:96	language:C++	scope:struct:s_cylinder	typeref:typename:t_vector	access:public	roles:def	end:96
-parameters	src/main.c	/^	t_parameters	parameters;$/;"	kind:local	line:122	language:C	scope:function:main	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	end:122
-parameters	src/main.c	/^static void	print_parameters(t_parameters parameters)$/;"	kind:parameter	line:26	language:C	scope:function:print_parameters	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	nth:0
-parameters	src/parameters/destroy_parameters.c	/^void destroy_parameters(t_parameters parameters)$/;"	kind:parameter	line:22	language:C	scope:function:destroy_parameters	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	nth:0
+parameters	src/main.c	/^	t_parameters	parameters;$/;"	kind:local	line:28	language:C	scope:function:main	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	end:28
+parameters	src/parameters/destroy_parameters.c	/^void	destroy_parameters(t_parameters parameters)$/;"	kind:parameter	line:22	language:C	scope:function:destroy_parameters	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	nth:0
 parameters	src/parameters/get_parameters.c	/^	t_parameters	parameters;$/;"	kind:local	line:45	language:C	scope:function:get_parameters	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	end:45
 parameters	src/parameters/get_parameters_internal.c	/^	t_parameters	parameters;$/;"	kind:local	line:32	language:C	scope:function:get_parameters_internal	typeref:typename:t_parameters	file:	roles:def	extras:fileScope	end:32
 parameters	src/parameters/parameters.h	/^					t_element_count element_count, t_parameters *parameters);$/;"	kind:parameter	line:143	language:C++	scope:prototype:set_ambient_lighting	typeref:typename:t_parameters *	file:	roles:def	extras:fileScope	nth:2
@@ -542,7 +540,6 @@ position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	l
 position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:70	language:C++	scope:struct:s_sphere	typeref:typename:t_coordinate	access:public	roles:def	end:70
 position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:84	language:C++	scope:struct:s_plane	typeref:typename:t_coordinate	access:public	roles:def	end:84
 position	src/parameters/parameters.h	/^	t_coordinate	position;$/;"	kind:member	line:97	language:C++	scope:struct:s_cylinder	typeref:typename:t_coordinate	access:public	roles:def	end:97
-print_parameters	src/main.c	/^static void	print_parameters(t_parameters parameters)$/;"	kind:function	line:26	language:C	typeref:typename:void	file:	signature:(t_parameters parameters)	roles:def	extras:fileScope	end:118	properties:static
 print_usage	src/parameters/parameters.h	/^void			print_usage(void);$/;"	kind:prototype	line:134	language:C++	typeref:typename:void	signature:(void)	roles:def	end:134
 print_usage	src/parameters/print_usage.c	/^void	print_usage(void)$/;"	kind:function	line:22	language:C	typeref:typename:void	signature:(void)	roles:def	end:31
 print_usage.c	src/parameters/print_usage.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:33	epoch:1696707180
