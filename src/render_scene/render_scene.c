@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/22 13:28:58                                            */
-/*   Updated:  2023/10/22 14:07:03                                            */
+/*   Updated:  2023/10/24 09:42:14                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@
 #pragma clang diagnostic warning "-Weverything"
 #pragma clang diagnostic ignored "-Wempty-translation-unit"
 #pragma clang diagnostic ignored "-Wunused-macros"
+#pragma clang diagnostic ignored "-Wpadded"
 
-#define WIDTH 1080
+#define WIDTH 960
 #define HEIGHT 720
 
 typedef struct s_img_data
 {
-	char	*addr;
+	void	*addr;
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
@@ -114,7 +115,7 @@ void	render_scene(t_parameters parameters)
 			&img_data.line_length, &img_data.endian);
 	if (img_data.bits_per_pixel == 32 && img_data.endian == 0)
 	{
-		//render_scene_in_buffer(parameters, img_data.addr, HEIGHT, WIDTH);
+		render_scene_in_buffer(parameters, img_data.addr, HEIGHT, WIDTH);
 		mlx_hook(window_id, 12, 0, redraw, &hook_parameters);
 		mlx_hook(window_id, 2, 1, check_for_esc, &hook_parameters);
 		mlx_hook(window_id, 17, 0, destroy_and_exit, &hook_parameters);

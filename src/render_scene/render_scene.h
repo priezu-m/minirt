@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/22 13:33:30                                            */
-/*   Updated:  2023/10/22 13:47:18                                            */
+/*   Updated:  2023/10/23 08:59:07                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 # pragma clang diagnostic ignored "-Wunused-macros"
 
 void	render_scene(t_parameters parameters);
+void	render_scene_in_buffer(t_parameters parameters, unsigned int *buffer,
+			int height, int width);
 
 # pragma clang diagnostic pop
 

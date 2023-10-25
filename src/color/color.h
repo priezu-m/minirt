@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/03 23:50:07                                            */
-/*   Updated:  2023/10/07 20:32:48                                            */
+/*   Updated:  2023/10/25 18:53:40                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@
 
 typedef struct s_color
 {
-	unsigned char	r;
-	unsigned char	g;
 	unsigned char	b;
-}t_color;
+	unsigned char	g;
+	unsigned char	r;
+	unsigned char	t;
+}t_color __attribute__((aligned(4)));
 
 # pragma clang diagnostic pop
 

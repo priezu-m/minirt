@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/19 23:36:48                                            */
-/*   Updated:  2023/10/21 11:41:23                                            */
+/*   Updated:  2023/10/25 09:39:31                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,27 +37,27 @@ static bool	check_comma(t_line *line, int *i, bool *parsing_error,
 	return (true);
 }
 
-static void	check_normal(t_vector orientation, bool *parsing_error,
+static void	check_normal(t_vector3 orientation, bool *parsing_error,
 				size_t lineno)
 {
 	if ((orientation.x < -1 || orientation.x > 1)
 		|| (orientation.y < -1 || orientation.y > 1)
 		|| (orientation.z < -1 || orientation.z > 1)
-		|| is_normal(orientation) == false)
+		|| is_normal_vector3(orientation) == false)
 	{
 		*parsing_error = true;
 		ft_putstr_fileno(STDERR_FILENO, "Error\nline ");
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
-		ft_putstr_fileno(STDERR_FILENO, " vecto is not a normalized"
+		ft_putstr_fileno(STDERR_FILENO, " vector is not a normalized"
 			" vector composed three floating point values in the range from"
 			" -1 to 1\n");
 	}
 }
 
-t_vector	parse_orientation_vector(t_line *line, int *i, bool *parsing_error,
+t_vector3	parse_orientation_vector(t_line *line, int *i, bool *parsing_error,
 				size_t lineno)
 {
-	t_vector	orientation;
+	t_vector3	orientation;
 
 	orientation.x = parse_float(line, i, parsing_error, lineno);
 	if ((*parsing_error == true)
