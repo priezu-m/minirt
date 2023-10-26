@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/23 08:56:27                                            */
-/*   Updated:  2023/10/25 19:00:35                                            */
+/*   Updated:  2023/10/26 08:49:59                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,25 +36,18 @@ static t_vector3	get_ray_direction(t_camera_data camera_data, long double w,
 			long double h)
 {
 	t_vector3	direction;
+	t_vector3	aux;
 
-	camera_data.right.x *= w * camera_data.width_tan;
-	camera_data.right.y *= w * camera_data.width_tan;
-	camera_data.right.z *= w * camera_data.width_tan;
-	camera_data.up.x *= h * camera_data.height_tan;
-	camera_data.up.y *= h * camera_data.height_tan;
-	camera_data.up.z *= h * camera_data.height_tan;
 	direction = camera_data.origin;
-	direction.x += camera_data.orientation.x;
-	direction.y += camera_data.orientation.y;
-	direction.z += camera_data.orientation.z;
-	direction.x += camera_data.right.x;
-	direction.y += camera_data.right.y;
-	direction.z += camera_data.right.z;
-	direction.x += camera_data.up.x;
-	direction.y += camera_data.up.y;
-	direction.z += camera_data.up.z;
-	return (direction);
-//	return (normalize_vector3(direction));
+	aux = vector3_add(direction, camera_data.orientation);
+	direction = aux;
+	aux = vector3_add(direction,
+			vector3_multiply(camera_data.right, camera_data.width_tan * w));
+	direction = aux;
+	aux = vector3_add(direction,
+			vector3_multiply(camera_data.up, camera_data.height_tan * h));
+	direction = aux;
+	return (normalize_vector3(direction));
 }
 
 static long double	normalize_point(long double current, long double max)
@@ -62,18 +55,17 @@ static long double	normalize_point(long double current, long double max)
 	return (((current * 2) / max) - 1);
 }
 
-
 static t_vector3	get_up_vector(t_camera_data camera_data)
 {
-	long double	radians;
+	long double		radians;
 	const t_vector3	reference_vector = normalize_vector3((t_vector3)
-			{.x = camera_data.orientation.x, .z = camera_data.orientation.z});
+		{.x = camera_data.orientation.x, .z = camera_data.orientation.z});
 	const t_vector3	p = vector3_multiply(camera_data.orientation,
 			dot_product_vector3(camera_data.orientation, reference_vector));
 	const t_vector3	o = vector3_substract(reference_vector, p);
 
 	if (get_magnitude_vector3(reference_vector) < 1.E-14L
-			&& get_magnitude_vector3(reference_vector) > -1.E-14L)
+		&& get_magnitude_vector3(reference_vector) > -1.E-14L)
 	{
 		if (camera_data.orientation.y > 0)
 			return ((t_vector3){.x = 0, .y = 0, .z = 1});
@@ -81,14 +73,15 @@ static t_vector3	get_up_vector(t_camera_data camera_data)
 	}
 	radians = 90.L * PIL / 180.L;
 	if ((camera_data.orientation.x >= 0 && camera_data.orientation.y >= 0)
-			|| (camera_data.orientation.x < 0
-				&& camera_data.orientation.y >= 0))
+		|| (camera_data.orientation.x < 0
+			&& camera_data.orientation.y >= 0))
 		radians = -radians;
-	if (camera_data.orientation.y < 1.E-14L && camera_data.orientation.y > -1.E-14L)
+	if (camera_data.orientation.y < 1.E-14L
+		&& camera_data.orientation.y > -1.E-14L)
 		return ((t_vector3){.x = 0, .y = 1, .z = 0});
 	return (normalize_vector3(vector3_add(
-		vector3_multiply(camera_data.orientation, cosl(radians)),
-		vector3_multiply(o, sinl(radians)))));
+				vector3_multiply(camera_data.orientation, cosl(radians)),
+				vector3_multiply(o, sinl(radians)))));
 }
 
 static t_camera_data	get_camera_data(t_parameters parameters, int height,
@@ -99,25 +92,13 @@ static t_camera_data	get_camera_data(t_parameters parameters, int height,
 	camera_data.origin = parameters.camera.position;
 	camera_data.orientation = parameters.camera.orientation_vector;
 	camera_data.ratio = ((long double)height / (long double)width);
-	camera_data.width_tan = tanl(((parameters.camera.field_of_view / 2) * PIL) / 180);
+	camera_data.width_tan = tanl(((parameters.camera.field_of_view / 2) * PIL)
+			/ 180);
 	camera_data.height_tan = camera_data.width_tan * camera_data.ratio;
 	camera_data.up = get_up_vector(camera_data);
 	camera_data.right = cross_product_vector3(camera_data.up,
 			camera_data.orientation);
 	return (camera_data);
-}
-
-static unsigned int	get_ray_color(t_vector3 ray_direction,
-		t_parameters parameters)
-{
-	(void)parameters;
-	t_color	color =
-	{
-		.r = (unsigned char)((ray_direction.x + 1.L) * (255.L / 2.L)),
-		.g = (unsigned char)((ray_direction.y + 0.75L) * (255.L / 2.L / 0.75L)),
-		.b = 100
-	};
-	return (*(unsigned int *)&color);
 }
 
 void	render_scene_in_buffer(t_parameters parameters, unsigned int *buffer,
