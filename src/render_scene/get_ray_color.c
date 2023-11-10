@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/26 08:50:14                                            */
-/*   Updated:  2023/11/10 17:16:02                                            */
+/*   Updated:  2023/11/10 18:59:48                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #pragma clang diagnostic ignored "-Wempty-translation-unit"
 #pragma clang diagnostic ignored "-Wunused-macros"
 
-unsigned int	get_ray_color(t_vector3 ray_direction, t_parameters parameters)
+unsigned int	get_ray_color(t_vector ray_direction, t_parameters parameters)
 {
 	t_color		color;
 	long double min_t;
@@ -28,19 +28,19 @@ unsigned int	get_ray_color(t_vector3 ray_direction, t_parameters parameters)
 	int			i;
 
 	color = (t_color){.r = 0, .g = 0, .b = 0};
-	if (parameters.ambient_lighting.is_initialized == true)
+	if (parameters.ambient_lighting.initialized == true)
 		color = parameters.ambient_lighting.color;
 	min_t = HUGE_VALL;
 	i = 0;
 	while (i < parameters.plane_list.size)
 	{
-		t = intersect_ray_plane(ray_direction, parameters.camera.position, parameters.plane_list.plane_list[i]);
+		t = intersect_ray_plane(ray_direction, parameters.camera.position, parameters.plane_list.planes[i]);
 		if (t >= 0)
 		{
 			if (t < min_t)
 			{
 				min_t = t;
-				color = parameters.plane_list.plane_list[i].color;
+				color = parameters.plane_list.planes[i].color;
 			}
 		}
 		i++;
@@ -48,13 +48,13 @@ unsigned int	get_ray_color(t_vector3 ray_direction, t_parameters parameters)
 	i = 0;
 	while (i < parameters.sphere_list.size)
 	{
-		t = intersect_ray_sphere(ray_direction, parameters.camera.position, parameters.sphere_list.sphere_list[i]);
+		t = intersect_ray_sphere(ray_direction, parameters.camera.position, parameters.sphere_list.spheres[i]);
 		if (t >= 0)
 		{
 			if (t < min_t)
 			{
 				min_t = t;
-				color = parameters.sphere_list.sphere_list[i].color;
+				color = parameters.sphere_list.spheres[i].color;
 			}
 		}
 		i++;

@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/19 21:29:44                                            */
-/*   Updated:  2023/10/25 09:42:29                                            */
+/*   Updated:  2023/11/10 18:57:47                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ static t_camera	parse_camera(t_line *line, bool *parsing_error, size_t lineno)
 		return (camera);
 	while (ft_isspace(line->line[i]) != false)
 		i++;
-	camera.orientation_vector
+	camera.orientation
 		= parse_orientation_vector(line, &i, parsing_error, lineno);
 	if (*parsing_error == true || !check_space(line, i, parsing_error, lineno))
 		return (camera);

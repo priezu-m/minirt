@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/19 21:52:02                                            */
-/*   Updated:  2023/10/25 09:42:03                                            */
+/*   Updated:  2023/11/10 18:55:43                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ static bool	check_comma(t_line *line, int *i, bool *parsing_error,
 	return (true);
 }
 
-t_vector3	parse_coordinates(t_line *line, int *i, bool *parsing_error,
+t_vector	parse_coordinates(t_line *line, int *i, bool *parsing_error,
 					size_t lineno)
 {
-	t_vector3	coordinates;
+	t_vector	coordinates;
 
 	coordinates.x = parse_float(line, i, parsing_error, lineno);
 	if ((*parsing_error == true) || (check_comma(line, i, parsing_error, lineno)

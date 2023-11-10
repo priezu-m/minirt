@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/21 08:49:29                                            */
-/*   Updated:  2023/10/25 09:42:18                                            */
+/*   Updated:  2023/11/10 18:56:24                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,13 @@ static bool	parse_cylinder_helper(t_line *line, int *i, size_t lineno,
 	bool	parsing_error;
 
 	parsing_error = false;
-	cylinder->position = parse_coordinates(line, i, &parsing_error, lineno);
+	cylinder->geometric_center
+		= parse_coordinates(line, i, &parsing_error, lineno);
 	if (parsing_error == true || !check_space(line, *i, &parsing_error, lineno))
 		return (true);
 	while (ft_isspace(line->line[*i]) != false)
 		(*i)++;
-	cylinder->orientation_vector
+	cylinder->direction
 		= parse_orientation_vector(line, i, &parsing_error, lineno);
 	if (parsing_error == true || !check_space(line, *i, &parsing_error, lineno))
 		return (true);

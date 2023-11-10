@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/22 13:33:30                                            */
-/*   Updated:  2023/10/26 08:49:53                                            */
+/*   Updated:  2023/11/10 18:43:31                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 void			render_scene(t_parameters parameters);
 void			render_scene_in_buffer(t_parameters parameters,
 					unsigned int *buffer, int height, int width);
-unsigned int	get_ray_color(t_vector3 ray_direction, t_parameters parameters);
+unsigned int	get_ray_color(t_vector ray_direction, t_parameters parameters);
 
 # pragma clang diagnostic pop
 

@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/18 16:19:52                                            */
-/*   Updated:  2023/10/21 09:14:11                                            */
+/*   Updated:  2023/11/10 18:57:32                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,18 +48,18 @@ static t_ambient_lighting	parse_lighting(t_line *line, bool *parsing_error,
 	int					i;
 
 	i = 0;
-	ambient_lighting.is_initialized = true;
+	ambient_lighting.initialized = true;
 	while (ft_isspace(line->line[i]) != false)
 		i++;
 	while (ft_isalpha(line->line[i]) != false)
 		i++;
 	while (ft_isspace(line->line[i]) != false)
 		i++;
-	ambient_lighting.ambient_lighting_intensity
+	ambient_lighting.intensity
 		= parse_float(line, &i, parsing_error, lineno);
 	if ((*parsing_error == true)
 		|| (check_for_space_float(line->line[i], parsing_error, lineno,
-				ambient_lighting.ambient_lighting_intensity) == false))
+				ambient_lighting.intensity) == false))
 		return (ambient_lighting);
 	while (ft_isspace(line->line[i]) != false)
 		i++;
@@ -96,7 +96,7 @@ void	set_ambient_lighting(char *filename, t_element_count element_count,
 		return ;
 	if (element_count.ambient_lighting_count == 0)
 	{
-		parameters->ambient_lighting.is_initialized = false;
+		parameters->ambient_lighting.initialized = false;
 		return ;
 	}
 	if (fileno == -1)

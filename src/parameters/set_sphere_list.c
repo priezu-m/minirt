@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/21 03:23:04                                            */
-/*   Updated:  2023/10/21 09:15:43                                            */
+/*   Updated:  2023/11/10 18:59:11                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static t_sphere	parse_sphere(t_line *line, bool *parsing_error,
 		i++;
 	while (ft_isspace(line->line[i]) != false)
 		i++;
-	sphere.position = parse_coordinates(line, &i, parsing_error, lineno);
+	sphere.center = parse_coordinates(line, &i, parsing_error, lineno);
 	if (*parsing_error == true || !check_space(line, i, parsing_error, lineno))
 		return (sphere);
 	while (ft_isspace(line->line[i]) != false)
@@ -101,7 +101,7 @@ static void	set_sphere_list_internal(t_parameters *parameters, int fileno)
 	{
 		if (first_char_of_line(&line) == 's')
 		{
-			parameters->sphere_list.sphere_list[j++]
+			parameters->sphere_list.spheres[j++]
 				= parse_sphere(&line, &parsing_error, i);
 			if (parsing_error == true)
 			{
@@ -123,7 +123,7 @@ void	set_sphere_list(char *filename, t_element_count element_count,
 	if ((parameters->parameters_valid == false)
 		|| (element_count.sphere_count == 0))
 	{
-		parameters->sphere_list.sphere_list = NULL;
+		parameters->sphere_list.spheres = NULL;
 		return ;
 	}
 	if (fileno == -1)
@@ -132,9 +132,9 @@ void	set_sphere_list(char *filename, t_element_count element_count,
 		parameters->parameters_valid = false;
 		return ;
 	}
-	parameters->sphere_list.sphere_list
+	parameters->sphere_list.spheres
 		= malloc((size_t)element_count.sphere_count * sizeof(t_sphere));
-	if (parameters->sphere_list.sphere_list == NULL)
+	if (parameters->sphere_list.spheres == NULL)
 	{
 		perror("Error\nCould not reserve enough memory");
 		parameters->parameters_valid = false;

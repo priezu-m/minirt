@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/21 09:23:05                                            */
-/*   Updated:  2023/10/22 06:25:06                                            */
+/*   Updated:  2023/11/10 18:55:06                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 void	destroy_parameters(t_parameters parameters)
 {
 	free(parameters.cylinder_list.cylinder_list);
-	free(parameters.plane_list.plane_list);
-	free(parameters.sphere_list.sphere_list);
+	free(parameters.plane_list.planes);
+	free(parameters.sphere_list.spheres);
 }
 
 #pragma clang diagnostic pop

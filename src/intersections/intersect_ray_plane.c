@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/11/10 15:42:08                                            */
-/*   Updated:  2023/11/10 16:20:41                                            */
+/*   Updated:  2023/11/10 18:49:49                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@
 #pragma clang diagnostic ignored "-Wunused-macros"
 
 
-long double	intersect_ray_plane(t_vector3 ray_direction, t_vector3 origin, t_plane plane)
+long double	intersect_ray_plane(t_vector ray_direction, t_vector origin, t_plane plane)
 {
 
-	t_vector3	x = vector3_substract(origin, plane.position);
-	long double	dv = dot_product_vector3(ray_direction, plane.orientation_vector);
+	t_vector	x = substract(origin, plane.position);
+	long double	dv = dot_product(ray_direction, plane.normal);
 
 	if (dv < 0)
 		return (-1);
-	return (dot_product_vector3(vector3_multiply(x, -1), plane.orientation_vector) / dv);
+	return (dot_product(multiply(x, -1), plane.normal) / dv);
 }
 
 #pragma clang diagnostic pop

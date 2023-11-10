@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/03 21:56:50                                            */
-/*   Updated:  2023/10/25 09:41:41                                            */
+/*   Updated:  2023/11/10 18:44:38                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,56 +44,56 @@ typedef struct s_buffer
 
 typedef struct s_ambient_lighting
 {
-	long double	ambient_lighting_intensity;
+	long double	intensity;
 	t_color		color;
-	bool		is_initialized;
+	bool		initialized;
 }t_ambient_lighting;
 
 typedef struct s_camera
 {
-	t_vector3		orientation_vector;
+	t_vector		orientation;
 	long double		field_of_view;
-	t_vector3		position;
+	t_vector		position;
 }t_camera;
 
 typedef struct s_light
 {
-	t_vector3		position;
+	t_vector		position;
 	long double		brightness;
 	t_color			color;
-	bool			is_initialized;
+	bool			initialized;
 }t_light;
 
 typedef struct s_sphere
 {
-	t_vector3	position;
+	t_vector	center;
 	long double	diameter;
 	t_color		color;
 }t_sphere;
 
 typedef struct s_sphere_list
 {
-	t_sphere	*sphere_list;
+	t_sphere	*spheres;
 	int			size;
 }t_sphere_list;
 
 typedef struct s_plane
 {
-	t_vector3	orientation_vector;
-	t_vector3	position;
+	t_vector	normal;
+	t_vector	position;
 	t_color		color;
 }t_plane;
 
 typedef struct s_plane_list
 {
-	t_plane	*plane_list;
+	t_plane	*planes;
 	int		size;
 }t_plane_list;
 
 typedef struct s_cylinder
 {
-	t_vector3	orientation_vector;
-	t_vector3	position;
+	t_vector	direction;
+	t_vector	geometric_center;
 	long double	height;
 	long double	diameter;
 	t_color		color;
@@ -147,9 +147,9 @@ t_color			parse_color(t_line *line, int *i, bool *parsing_error,
 char			first_char_of_line(t_line *line);
 void			load_line_initial(t_line *line, t_buffer *buf, int fileno);
 void			set_camera(char *filename, t_parameters *parameters);
-t_vector3		parse_coordinates(t_line *line, int *i, bool *parsing_error,
+t_vector		parse_coordinates(t_line *line, int *i, bool *parsing_error,
 					size_t lineno);
-t_vector3		parse_orientation_vector(t_line *line, int *i,
+t_vector		parse_orientation_vector(t_line *line, int *i,
 					bool *parsing_error, size_t lineno);
 void			set_light(char *filename, t_element_count element_count,
 					t_parameters *parameters);
