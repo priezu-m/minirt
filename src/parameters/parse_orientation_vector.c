@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/19 23:36:48                                            */
-/*   Updated:  2023/11/10 19:04:16                                            */
+/*   Updated:  2023/11/10 19:30:27                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static bool	check_comma(t_line *line, int *i, bool *parsing_error,
 		*parsing_error = true;
 		ft_putstr_fileno(STDERR_FILENO, "Error\nline ");
 		ft_putnbr_fileno(STDERR_FILENO, lineno);
-		ft_putstr_fileno(STDERR_FILENO, " orientation is not a vector of three"
+		ft_putstr_fileno(STDERR_FILENO, " vector is not three"
 			" floating point values separated by comas\n");
 		return (false);
 	}
