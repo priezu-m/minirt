@@ -6,11 +6,13 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/26 09:17:38                                            */
-/*   Updated:  2023/10/26 09:54:05                                            */
+/*   Updated:  2023/11/09 19:13:11                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intersections.h"
+#include <math.h>
+#include <stdbool.h>
 
 ;
 #pragma clang diagnostic push
@@ -32,9 +34,11 @@ long double	intersect_ray_sphere(t_vector3 ray_direction, t_vector3 origin,
 		return (-1);
 	intersections.t1 = (-b - sqrtl(discriminant)) / 2.0L;
 	intersections.t2 = (-b + sqrtl(discriminant)) / 2.0L;
-	if (intersections.t1 < intersections.t2 && intersections.t1 >= 0)
+	if (((intersections.t1 < intersections.t2) || (intersections.t2 < 0)) && intersections.t1 >= 0)
 		return (intersections.t1);
-	return (intersections.t2);
+	if (isnan(intersections.t2) == false)
+		return (intersections.t2);
+	return (-1);
 }
 
 #pragma clang diagnostic pop

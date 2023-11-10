@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/21 08:22:29                                            */
-/*   Updated:  2023/10/21 11:29:34                                            */
+/*   Updated:  2023/11/02 21:51:15                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	set_cylinder_list(char *filename, t_element_count element_count,
 
 	parameters->cylinder_list.size = element_count.cylinder_count;
 	if ((parameters->parameters_valid == false)
-		|| (element_count.plane_count == 0))
+		|| (element_count.cylinder_count == 0))
 	{
 		parameters->cylinder_list.cylinder_list = NULL;
 		return ;

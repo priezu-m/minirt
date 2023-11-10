@@ -6,12 +6,13 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/23 08:56:27                                            */
-/*   Updated:  2023/10/26 08:49:59                                            */
+/*   Updated:  2023/11/10 17:08:12                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_scene.h"
 #include <math.h>
+#include <stdio.h>
 
 ;
 #pragma clang diagnostic push
@@ -36,17 +37,12 @@ static t_vector3	get_ray_direction(t_camera_data camera_data, long double w,
 			long double h)
 {
 	t_vector3	direction;
-	t_vector3	aux;
 
-	direction = camera_data.origin;
-	aux = vector3_add(direction, camera_data.orientation);
-	direction = aux;
-	aux = vector3_add(direction,
+	direction = camera_data.orientation;
+	direction = vector3_add(direction,
 			vector3_multiply(camera_data.right, camera_data.width_tan * w));
-	direction = aux;
-	aux = vector3_add(direction,
+	direction = vector3_add(direction,
 			vector3_multiply(camera_data.up, camera_data.height_tan * h));
-	direction = aux;
 	return (normalize_vector3(direction));
 }
 
@@ -124,6 +120,7 @@ void	render_scene_in_buffer(t_parameters parameters, unsigned int *buffer,
 		}
 		height--;
 	}
+	fprintf(stderr, "done\n");
 }
 
 #pragma clang diagnostic pop
