@@ -6,12 +6,12 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/26 09:02:32                                            */
-/*   Updated:  2023/11/10 18:43:50                                            */
+/*   Updated:  2023/11/10 19:36:35                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef  INTERSECTIONS_H
-# define  INTERSECTIONS_H
+#ifndef INTERSECTIONS_H
+# define INTERSECTIONS_H
 
 # include "../parameters/parameters.h"
 
