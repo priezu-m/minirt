@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/26 09:17:38                                            */
-/*   Updated:  2023/11/10 19:38:34                                            */
+/*   Updated:  2023/11/12 18:03:52                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,25 +20,28 @@
 #pragma clang diagnostic ignored "-Wempty-translation-unit"
 #pragma clang diagnostic ignored "-Wunused-macros"
 
-long double	intersect_ray_sphere(t_vector ray_direction, t_vector origin,
-				t_sphere sphere)
+t_intersection	intersect_ray_sphere(t_vector ray_direction, t_vector origin,
+					t_sphere sphere)
 {
 	const t_vector		oc = substract(origin, sphere.center);
 	const long double	b = 2.0L * dot_product(oc, ray_direction);
-	const long double	c = dot_product(oc, oc)
-		- powl(sphere.diameter / 2.L, 2.L);
-	long double			distance1;
-	long double			distance2;
+	const long double	c = dot_product(oc, oc) - powl(sphere.diameter / 2, 2);
+	long double			distance[2];
+	t_intersection		intersection;
 
+	intersection.distance = -1;
 	if ((b * b - 4 * c) < 0)
-		return (-1);
-	distance1 = (-b - sqrtl(b * b - 4 * c)) / 2.0L;
-	distance2 = (-b + sqrtl(b * b - 4 * c)) / 2.0L;
-	if (((distance1 < distance2) || (distance2 < 0)) && distance1 >= 0)
-		return (distance1);
-	if (isnan(distance2) == false)
-		return (distance2);
-	return (-1);
+		return (intersection);
+	distance[0] = (-b - sqrtl(b * b - 4 * c)) / 2.0L;
+	distance[1] = (-b + sqrtl(b * b - 4 * c)) / 2.0L;
+	if (((distance[0] < distance[1]) || (distance[1] < 0)) && distance[0] >= 0)
+		intersection.distance = distance[0];
+	if (isnan(distance[1]) == false)
+		intersection.distance = distance[1];
+	intersection.point = add(origin, multiply(ray_direction, distance[0]));
+	intersection.surface_normal = normalize(substract(intersection.point,
+		sphere.center));
+	return (intersection);
 }
 
 #pragma clang diagnostic pop

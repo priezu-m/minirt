@@ -6,13 +6,14 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/26 08:50:14                                            */
-/*   Updated:  2023/11/12 13:22:42                                            */
+/*   Updated:  2023/11/12 20:59:54                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_scene.h"
 #include "../intersections/intersections.h"
 #include <math.h>
+#include <stdbool.h>
 
 ;
 #pragma clang diagnostic push
@@ -21,7 +22,7 @@
 #pragma clang diagnostic ignored "-Wunused-macros"
 
 static t_color	check_plane_intersection(t_parameters parameters,
-					t_vector ray_direction, long double min_t, t_color color)
+					t_vector ray_direction, long double *min_t, t_color color)
 {
 	int			i;
 	long double	t;
@@ -33,9 +34,9 @@ static t_color	check_plane_intersection(t_parameters parameters,
 				parameters.plane_list.planes[i]);
 		if (t >= 0)
 		{
-			if (t < min_t)
+			if (t < *min_t)
 			{
-				min_t = t;
+				*min_t = t;
 				color = parameters.plane_list.planes[i].color;
 			}
 		}
@@ -45,23 +46,37 @@ static t_color	check_plane_intersection(t_parameters parameters,
 }
 
 static t_color	check_sphere_intersection(t_parameters parameters,
-					t_vector ray_direction, long double min_t, t_color color)
+					t_vector ray_direction, long double *min_t, t_color color)
 {
-	int			i;
-	long double	t;
+	int				i;
+	long double		t;
+	long double		s;
+	t_intersection	intersection;
+	t_vector		direction_to_light;
 
 	i = 0;
 	while (i < parameters.sphere_list.size)
 	{
-		t = intersect_ray_sphere(ray_direction, parameters.camera.position,
+		intersection = intersect_ray_sphere(ray_direction, parameters.camera.position,
 				parameters.sphere_list.spheres[i]);
-		if (t >= 0)
+		t = intersection.distance;
+		if ((t >= 0) && (t < *min_t))
 		{
-			if (t < min_t)
-			{
-				min_t = t;
-				color = parameters.sphere_list.spheres[i].color;
-			}
+				*min_t = t;
+				color = (t_color){0};
+				if (direct_light(e_sphere, i, intersection.point, parameters) == true)
+				{
+					direction_to_light = normalize(substract(parameters.light.position, intersection.point));
+					s = dot_product(direction_to_light, intersection.surface_normal);
+					if (s > 0)
+						color = color_absorb(parameters.sphere_list.spheres[i].color,
+								color_multiply(color_multiply(parameters.light.color, parameters.light.brightness),
+									s));
+				}
+				if (parameters.ambient_lighting.initialized == true)
+					color = color_add(color, color_absorb(parameters.sphere_list.spheres[i].color,
+								color_multiply(parameters.ambient_lighting.color,
+									parameters.ambient_lighting.intensity)));
 		}
 		i++;
 	}
@@ -69,7 +84,7 @@ static t_color	check_sphere_intersection(t_parameters parameters,
 }
 
 static t_color	check_cylinder_intersection(t_parameters parameters,
-					t_vector ray_direction, long double min_t, t_color color)
+					t_vector ray_direction, long double *min_t, t_color color)
 {
 	int			i;
 	long double	t;
@@ -81,9 +96,9 @@ static t_color	check_cylinder_intersection(t_parameters parameters,
 				parameters.cylinder_list.cylinder_list[i]);
 		if (t >= 0)
 		{
-			if (t < min_t)
+			if (t < *min_t)
 			{
-				min_t = t;
+				*min_t = t;
 				color = parameters.cylinder_list.cylinder_list[i].color;
 			}
 		}
@@ -99,11 +114,12 @@ unsigned int	get_ray_color(t_vector ray_direction, t_parameters parameters)
 
 	color = (t_color){.r = 0, .g = 0, .b = 0};
 	if (parameters.ambient_lighting.initialized == true)
-		color = parameters.ambient_lighting.color;
+		color = color_multiply(parameters.ambient_lighting.color,
+					parameters.ambient_lighting.intensity);
 	min_t = HUGE_VALL;
-	color = check_plane_intersection(parameters, ray_direction, min_t, color);
-	color = check_sphere_intersection(parameters, ray_direction, min_t, color);
-	color = check_cylinder_intersection(parameters, ray_direction, min_t,
+	color = check_plane_intersection(parameters, ray_direction, &min_t, color);
+	color = check_sphere_intersection(parameters, ray_direction, &min_t, color);
+	color = check_cylinder_intersection(parameters, ray_direction, &min_t,
 			color);
 	return (*(unsigned *)&color);
 }

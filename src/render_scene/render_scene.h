@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/22 13:33:30                                            */
-/*   Updated:  2023/11/10 18:43:31                                            */
+/*   Updated:  2023/11/12 19:25:59                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,19 @@
 # pragma clang diagnostic ignored "-Wempty-translation-unit"
 # pragma clang diagnostic ignored "-Wunused-macros"
 
+typedef enum e_shape_type
+{
+	e_sphere,
+	e_plane,
+	e_cylinder
+}t_shape_type;
+
 void			render_scene(t_parameters parameters);
 void			render_scene_in_buffer(t_parameters parameters,
 					unsigned int *buffer, int height, int width);
 unsigned int	get_ray_color(t_vector ray_direction, t_parameters parameters);
+bool			direct_light(t_shape_type shape_type, int i,
+					t_vector intersection_point, t_parameters parameters);
 
 # pragma clang diagnostic pop
 
