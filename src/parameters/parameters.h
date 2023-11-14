@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/03 21:56:50                                            */
-/*   Updated:  2023/11/10 18:44:38                                            */
+/*   Updated:  2023/11/14 23:45:57                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ typedef struct s_cylinder
 
 typedef struct s_cylider_list
 {
-	t_cylinder	*cylinder_list;
+	t_cylinder	*cylinders;
 	int			size;
 }t_cylider_list;
 

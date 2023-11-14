@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/21 08:22:29                                            */
-/*   Updated:  2023/11/02 21:51:15                                            */
+/*   Updated:  2023/11/14 23:45:44                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	set_cylinder_list_internal(t_parameters *parameters, int fileno)
 	{
 		if (first_char_of_line(&line) == 'c')
 		{
-			parameters->cylinder_list.cylinder_list[j++]
+			parameters->cylinder_list.cylinders[j++]
 				= parse_cylinder(&line, &parsing_error, i);
 			if (parsing_error == true)
 			{
@@ -62,7 +62,7 @@ void	set_cylinder_list(char *filename, t_element_count element_count,
 	if ((parameters->parameters_valid == false)
 		|| (element_count.cylinder_count == 0))
 	{
-		parameters->cylinder_list.cylinder_list = NULL;
+		parameters->cylinder_list.cylinders = NULL;
 		return ;
 	}
 	if (fileno == -1)
@@ -71,9 +71,9 @@ void	set_cylinder_list(char *filename, t_element_count element_count,
 		parameters->parameters_valid = false;
 		return ;
 	}
-	parameters->cylinder_list.cylinder_list
+	parameters->cylinder_list.cylinders
 		= malloc((size_t)element_count.cylinder_count * sizeof(t_cylinder));
-	if (parameters->cylinder_list.cylinder_list == NULL)
+	if (parameters->cylinder_list.cylinders == NULL)
 	{
 		perror("Error\nCould not reserve enough memory");
 		parameters->parameters_valid = false;

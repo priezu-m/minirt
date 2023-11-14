@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/21 09:23:05                                            */
-/*   Updated:  2023/11/14 16:18:33                                            */
+/*   Updated:  2023/11/14 23:46:11                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 void	destroy_parameters(t_parameters parameters)
 {
-	free(parameters.cylinder_list.cylinder_list);
+	free(parameters.cylinder_list.cylinders);
 	free(parameters.plane_list.planes);
 	free(parameters.sphere_list.spheres);
 }

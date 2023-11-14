@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/22 13:28:58                                            */
-/*   Updated:  2023/11/14 16:29:38                                            */
+/*   Updated:  2023/11/14 23:11:24                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,10 +100,10 @@ static int	check_for_esc(int keycode, void *parameters_ptr)
 
 void	render_scene(t_parameters parameters)
 {
-	void				*connection_id;
-	void				*window_id;
-	void				*img_id;
-	t_img_data			img_data;
+	void						*connection_id;
+	void						*window_id;
+	void						*img_id;
+	t_img_data					img_data;
 	static t_hook_parameters	hook_parameters;
 
 	stablish_conection(&connection_id, &window_id, &img_id);
