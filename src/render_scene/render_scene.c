@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/22 13:28:58                                            */
-/*   Updated:  2023/10/24 09:42:14                                            */
+/*   Updated:  2023/11/14 16:29:38                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,10 +84,10 @@ static int	destroy_and_exit(void *parameters_ptr)
 {
 	const t_hook_parameters	parameters = *(t_hook_parameters *)parameters_ptr;
 
-	destroy_parameters(parameters.parameters);
 	mlx_destroy_image(parameters.connection_id, parameters.img_id);
 	mlx_destroy_window(parameters.connection_id, parameters.window_id);
 	mlx_destroy_display(parameters.connection_id);
+	destroy_parameters(parameters.parameters);
 	exit(0);
 }
 
@@ -104,7 +104,7 @@ void	render_scene(t_parameters parameters)
 	void				*window_id;
 	void				*img_id;
 	t_img_data			img_data;
-	t_hook_parameters	hook_parameters;
+	static t_hook_parameters	hook_parameters;
 
 	stablish_conection(&connection_id, &window_id, &img_id);
 	if (connection_id == NULL || window_id == NULL || img_id == NULL)

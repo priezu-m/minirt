@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/26 09:17:38                                            */
-/*   Updated:  2023/11/12 18:03:52                                            */
+/*   Updated:  2023/11/14 18:23:25                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ t_intersection	intersect_ray_sphere(t_vector ray_direction, t_vector origin,
 		intersection.distance = distance[1];
 	intersection.point = add(origin, multiply(ray_direction, distance[0]));
 	intersection.surface_normal = normalize(substract(intersection.point,
-		sphere.center));
+				sphere.center));
 	return (intersection);
 }
 

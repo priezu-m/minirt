@@ -6,7 +6,7 @@
 #    github:   https://github.com/priezu-m                                     #
 #    Licence:  GPLv3                                                           #
 #    Created:  2023/09/27 18:57:07                                             #
-#    Updated:  2023/11/10 19:06:04                                             #
+#    Updated:  2023/11/14 16:44:23                                             #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 SHELL :=			bash
 CC :=				gcc
-CFLAGS :=			-ggdb -O0 -flto -Wall -Wextra -Wno-unknown-pragmas -fsanitize=address,leak,undefined
+CFLAGS :=			-g3 -O0 -fno-lto -Wall -Wextra -Wno-unknown-pragmas #-fsanitize=address,leak,undefined
 LDFLAGS :=			-lm -lmlx -lXext -lX11
 
 ################################################################################

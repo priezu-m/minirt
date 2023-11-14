@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/11/12 19:27:07                                            */
-/*   Updated:  2023/11/12 20:57:04                                            */
+/*   Updated:  2023/11/14 17:14:16                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,11 @@ static bool	check_plane_intersection(t_parameters parameters,
 		if (i != ignored || shape_type != e_plane)
 		{
 			t = intersect_ray_plane(ray_direction, parameters.camera.position,
-					parameters.plane_list.planes[i]);
+					parameters.plane_list.planes[i]).distance;
 			if (t >= 0)
 				return (false);
 		}
+		i++;
 	}
 	return (true);
 }
@@ -76,7 +77,7 @@ static bool	check_cylinder_intersection(t_parameters parameters,
 		if (i != ingnore || shape_type != e_cylinder)
 		{
 			t = intersect_ray_cylinder(ray_direction, parameters.camera.position,
-				parameters.cylinder_list.cylinder_list[i]);
+				parameters.cylinder_list.cylinder_list[i]).distance;
 			if (t >= 0)
 				return (false);
 		}
@@ -94,7 +95,6 @@ bool			direct_light(t_shape_type shape_type, int i,
 	if (parameters.light.initialized == false)
 		return (false);
 	parameters.camera.position = intersection_point;
-//	ray_direction = normalize(substract(intersection_point, parameters.light.position));
 	ray_direction = normalize(substract(parameters.light.position, intersection_point));
 	ret = true;
 	ret = check_plane_intersection(parameters, ray_direction, i, shape_type);
