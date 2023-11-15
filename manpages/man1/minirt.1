@@ -58,7 +58,7 @@ ambient lighting.
 .BR Color
 .RS
 Three integer values, in the range of 0 to 255 both included, separated by commas, representing
-the red, green, and blue values, that can be subtracted from the light.
+the red, green, and blue values, that can be absorbed from the light.
 .RE 0
 .TP
 .BR Camera
@@ -123,7 +123,7 @@ A floating point value, in the range of 0 to 1 both included, is used to indicat
 .BR Color
 .RS
 Three integer values, in the range of 0 to 255 both included, separated by commas, representing
-the red, green, and blue values, that can be subtracted from the light.
+the red, green, and blue values, that can be absorbed from the light.
 .RE 0
 .TP
 .BR Sphere
@@ -153,7 +153,8 @@ A floating point value no less than 0, is used to indicate the diameter of the s
 .BR Color
 .RS
 Three integer values, in the range of 0 to 255 both included, separated by commas, representing
-the red, green, and blue values, which will be subtracted from the light that reaches the sphere.
+the red, green, and blue values, which will be used to calculete the diffuse reflection, of the
+light that reaches the sphere.
 .RE 0
 .TP
 .BR Plane
@@ -186,7 +187,8 @@ be within the range of -1 to 1.
 .BR Color
 .RS
 Three integer values, in the range of 0 to 255 both included, separated by commas, representing
-the red, green, and blue values, which will be subtracted from the light that reaches the plane.
+the red, green, and blue values, which will be used to calculete the diffuse reflection, of the
+light that reaches the plane.
 .RE 0
 .TP
 .BR Cylinder
@@ -229,7 +231,8 @@ A floating point value no less than 0, is used to indicate the height of the cyl
 .BR Color
 .RS
 Three integer values, in the range of 0 to 255 both included, separated by commas, representing
-the red, green, and blue values, which will be subtracted from the light that reaches the cylinder.
+the red, green, and blue values, which will be used to calculete the diffuse reflection, of the
+light that reaches the cylinder.
 .RE 0
 .TP
 
