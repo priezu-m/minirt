@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/10/26 16:43:27                                            */
-/*   Updated:  2023/11/14 19:39:22                                            */
+/*   Updated:  2023/11/15 01:50:12                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ t_intersection	check_intersection_whit_lid(t_vector ray_direction,
 			substract(lid_center2, add(origin, multiply(ray_direction, t2))))
 		> (cylinder.diameter / 2))
 		t2 = -1;
-	if (t1 >= 0)
+	if (t1 >= 0 && ((t1 < t2) || (t2 < 0)))
 		return ((t_intersection){.distance = t1, .point = add(origin,
 				multiply(ray_direction, t1)),
 			.surface_normal = multiply(cylinder.direction, -1)});

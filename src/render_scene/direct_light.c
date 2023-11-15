@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/11/12 19:27:07                                            */
-/*   Updated:  2023/11/14 23:46:32                                            */
+/*   Updated:  2023/11/15 02:00:14                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@
 static bool	check_plane_intersection(t_parameters parameters,
 				t_vector ray_direction, int ignored, t_shape_type shape_type)
 {
-	int			i;
-	long double	t;
+	int					i;
+	long double			t;
+	const long double	max_t = get_magnitude(
+			substract(parameters.camera.position, parameters.light.position));
 
 	i = 0;
 	while (i < parameters.plane_list.size)
@@ -33,7 +35,7 @@ static bool	check_plane_intersection(t_parameters parameters,
 		{
 			t = intersect_ray_plane(ray_direction, parameters.camera.position,
 					parameters.plane_list.planes[i]).distance;
-			if (t >= 0)
+			if (t >= 0 && t < max_t)
 				return (false);
 		}
 		i++;
@@ -44,9 +46,11 @@ static bool	check_plane_intersection(t_parameters parameters,
 static bool	check_sphere_intersection(t_parameters parameters,
 				t_vector ray_direction, int ingnore, t_shape_type shape_type)
 {
-	int				i;
-	long double		t;
-	t_intersection	intersection;
+	int					i;
+	long double			t;
+	t_intersection		intersection;
+	const long double	max_t = get_magnitude(
+			substract(parameters.camera.position, parameters.light.position));
 
 	i = 0;
 	while (i < parameters.sphere_list.size)
@@ -57,7 +61,7 @@ static bool	check_sphere_intersection(t_parameters parameters,
 					parameters.camera.position,
 					parameters.sphere_list.spheres[i]);
 			t = intersection.distance;
-			if (t >= 0)
+			if (t >= 0 && t < max_t)
 				return (false);
 		}
 		i++;
@@ -68,8 +72,10 @@ static bool	check_sphere_intersection(t_parameters parameters,
 static bool	check_cylinder_intersection(t_parameters parameters,
 				t_vector ray_direction, int ingnore, t_shape_type shape_type)
 {
-	int			i;
-	long double	t;
+	int					i;
+	long double			t;
+	const long double	max_t = get_magnitude(
+			substract(parameters.camera.position, parameters.light.position));
 
 	i = 0;
 	while (i < parameters.cylinder_list.size)
@@ -79,7 +85,7 @@ static bool	check_cylinder_intersection(t_parameters parameters,
 			t = intersect_ray_cylinder(ray_direction,
 					parameters.camera.position,
 					parameters.cylinder_list.cylinders[i]).distance;
-			if (t >= 0)
+			if (t >= 0 && t < max_t)
 				return (false);
 		}
 		i++;
