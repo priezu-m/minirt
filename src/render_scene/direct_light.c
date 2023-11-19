@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/11/12 19:27:07                                            */
-/*   Updated:  2023/11/15 02:00:14                                            */
+/*   Updated:  2023/11/20 00:06:29                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static bool	check_plane_intersection(t_parameters parameters,
 		{
 			t = intersect_ray_plane(ray_direction, parameters.camera.position,
 					parameters.plane_list.planes[i]).distance;
-			if (t >= 0 && t < max_t)
+			if (t > 0 && t < max_t)
 				return (false);
 		}
 		i++;
@@ -61,7 +61,7 @@ static bool	check_sphere_intersection(t_parameters parameters,
 					parameters.camera.position,
 					parameters.sphere_list.spheres[i]);
 			t = intersection.distance;
-			if (t >= 0 && t < max_t)
+			if (t > 0 && t < max_t)
 				return (false);
 		}
 		i++;
@@ -85,7 +85,7 @@ static bool	check_cylinder_intersection(t_parameters parameters,
 			t = intersect_ray_cylinder(ray_direction,
 					parameters.camera.position,
 					parameters.cylinder_list.cylinders[i]).distance;
-			if (t >= 0 && t < max_t)
+			if (t > 0 && t < max_t)
 				return (false);
 		}
 		i++;

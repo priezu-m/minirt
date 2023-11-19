@@ -53,7 +53,7 @@ add	src/vector/vector_functions2.c	/^t_vector	add(t_vector v1, t_vector v2)$/;"	
 add_to_count	src/parameters/count_elements.c	/^static void	add_to_count(t_element_count *element_count, t_line *line,$/;"	kind:function	line:26	language:C	typeref:typename:void	file:	signature:(t_element_count * element_count,t_line * line,size_t lineno)	roles:def	extras:fileScope	end:54	properties:static
 add_to_count_helper	src/parameters/add_to_count_helper.c	/^void	add_to_count_helper(t_line *line,$/;"	kind:function	line:105	language:C	typeref:typename:void	signature:(t_line * line,t_element_count * element_count,size_t lineno)	roles:def	end:128
 add_to_count_helper	src/parameters/parameters.h	/^void			add_to_count_helper(t_line *line,$/;"	kind:prototype	line:137	language:C++	typeref:typename:void	signature:(t_line * line,t_element_count * element_count,size_t lineno)	roles:def	end:138
-add_to_count_helper.c	src/parameters/add_to_count_helper.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:130	epoch:1699638885
+add_to_count_helper.c	src/parameters/add_to_count_helper.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:130	epoch:1700435166
 addr	src/render_scene/render_scene.c	/^	void	*addr;$/;"	kind:member	line:31	language:C	scope:struct:s_img_data	typeref:typename:void *	file:	access:public	roles:def	extras:fileScope	end:31
 ambient_lighting	src/parameters/parameters.h	/^	t_ambient_lighting	ambient_lighting;$/;"	kind:member	line:110	language:C++	scope:struct:s_parametes	typeref:typename:t_ambient_lighting	access:public	roles:def	end:110
 ambient_lighting	src/parameters/set_ambient_lighting.c	/^	t_ambient_lighting	ambient_lighting;$/;"	kind:local	line:47	language:C	scope:function:parse_lighting	typeref:typename:t_ambient_lighting	file:	roles:def	extras:fileScope	end:47
@@ -126,7 +126,7 @@ check_comma	src/parameters/parse_orientation_vector.c	/^static bool	check_comma(
 check_cylinder_intersection	src/render_scene/direct_light.c	/^static bool	check_cylinder_intersection(t_parameters parameters,$/;"	kind:function	line:72	language:C	typeref:typename:bool	file:	signature:(t_parameters parameters,t_vector ray_direction,int ingnore,t_shape_type shape_type)	roles:def	extras:fileScope	end:94	properties:static
 check_cylinder_intersection_color	src/render_scene/check_cylinder_intersection_color.c	/^t_color	check_cylinder_intersection_color(t_parameters parameters,$/;"	kind:function	line:52	language:C	typeref:typename:t_color	signature:(t_parameters parameters,t_vector ray_direction,long double * min_t,t_color color)	roles:def	end:77
 check_cylinder_intersection_color	src/render_scene/render_scene.h	/^t_color			check_cylinder_intersection_color(t_parameters parameters,$/;"	kind:prototype	line:37	language:C++	typeref:typename:t_color	signature:(t_parameters parameters,t_vector ray_direction,long double * min_t,t_color color)	roles:def	end:38
-check_cylinder_intersection_color.c	src/render_scene/check_cylinder_intersection_color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:79	epoch:1700002023
+check_cylinder_intersection_color.c	src/render_scene/check_cylinder_intersection_color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:79	epoch:1700435166
 check_for_esc	src/render_scene/render_scene.c	/^static int	check_for_esc(int keycode, void *parameters_ptr)$/;"	kind:function	line:94	language:C	typeref:typename:int	file:	signature:(int keycode,void * parameters_ptr)	roles:def	extras:fileScope	end:99	properties:static
 check_for_space	src/parameters/parse_color.c	/^static void	check_for_space(t_line *line, int *i, bool *parsing_error,$/;"	kind:function	line:51	language:C	typeref:typename:void	file:	signature:(t_line * line,int * i,bool * parsing_error,size_t lineno)	roles:def	extras:fileScope	end:63	properties:static
 check_for_space_float	src/parameters/parse_cylinder.c	/^static bool	check_for_space_float(char c, bool *parsing_error,$/;"	kind:function	line:40	language:C	typeref:typename:bool	file:	signature:(char c,bool * parsing_error,size_t lineno,long double x)	roles:def	extras:fileScope	end:54	properties:static
@@ -141,7 +141,7 @@ check_normal	src/parameters/parse_orientation_vector.c	/^static void	check_norma
 check_plane_intersection	src/render_scene/direct_light.c	/^static bool	check_plane_intersection(t_parameters parameters,$/;"	kind:function	line:23	language:C	typeref:typename:bool	file:	signature:(t_parameters parameters,t_vector ray_direction,int ignored,t_shape_type shape_type)	roles:def	extras:fileScope	end:44	properties:static
 check_plane_intersection_color	src/render_scene/check_plane_intersection_color.c	/^t_color	check_plane_intersection_color(t_parameters parameters,$/;"	kind:function	line:52	language:C	typeref:typename:t_color	signature:(t_parameters parameters,t_vector ray_direction,long double * min_t,t_color color)	roles:def	end:76
 check_plane_intersection_color	src/render_scene/render_scene.h	/^t_color			check_plane_intersection_color(t_parameters parameters,$/;"	kind:prototype	line:41	language:C++	typeref:typename:t_color	signature:(t_parameters parameters,t_vector ray_direction,long double * min_t,t_color color)	roles:def	end:42
-check_plane_intersection_color.c	src/render_scene/check_plane_intersection_color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:78	epoch:1700000839
+check_plane_intersection_color.c	src/render_scene/check_plane_intersection_color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:78	epoch:1700435166
 check_regex_match	src/parameters/parse_float.c	/^static bool	check_regex_match(t_line *line, int i)$/;"	kind:function	line:64	language:C	typeref:typename:bool	file:	signature:(t_line * line,int i)	roles:def	extras:fileScope	end:89	properties:static
 check_space	src/parameters/parse_cylinder.c	/^static bool	check_space(t_line *line, int i, bool *parsing_error,$/;"	kind:function	line:24	language:C	typeref:typename:bool	file:	signature:(t_line * line,int i,bool * parsing_error,size_t lineno)	roles:def	extras:fileScope	end:38	properties:static
 check_space	src/parameters/set_camera.c	/^static bool	check_space(t_line *line, int i, bool *parsing_error,$/;"	kind:function	line:27	language:C	typeref:typename:bool	file:	signature:(t_line * line,int i,bool * parsing_error,size_t lineno)	roles:def	extras:fileScope	end:41	properties:static
@@ -152,7 +152,7 @@ check_sphere_and_cylinders	src/parameters/add_to_count_helper.c	/^static void	ch
 check_sphere_intersection	src/render_scene/direct_light.c	/^static bool	check_sphere_intersection(t_parameters parameters,$/;"	kind:function	line:46	language:C	typeref:typename:bool	file:	signature:(t_parameters parameters,t_vector ray_direction,int ingnore,t_shape_type shape_type)	roles:def	extras:fileScope	end:70	properties:static
 check_sphere_intersection_color	src/render_scene/check_sphere_intersection_color.c	/^t_color	check_sphere_intersection_color(t_parameters parameters,$/;"	kind:function	line:52	language:C	typeref:typename:t_color	signature:(t_parameters parameters,t_vector ray_direction,long double * min_t,t_color color)	roles:def	end:74
 check_sphere_intersection_color	src/render_scene/render_scene.h	/^t_color			check_sphere_intersection_color(t_parameters parameters,$/;"	kind:prototype	line:39	language:C++	typeref:typename:t_color	signature:(t_parameters parameters,t_vector ray_direction,long double * min_t,t_color color)	roles:def	end:40
-check_sphere_intersection_color.c	src/render_scene/check_sphere_intersection_color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:76	epoch:1700000445
+check_sphere_intersection_color.c	src/render_scene/check_sphere_intersection_color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:76	epoch:1700435166
 color	src/parameters/parameters.h	/^	t_color			color;$/;"	kind:member	line:63	language:C++	scope:struct:s_light	typeref:typename:t_color	access:public	roles:def	end:63
 color	src/parameters/parameters.h	/^	t_color		color;$/;"	kind:member	line:48	language:C++	scope:struct:s_ambient_lighting	typeref:typename:t_color	access:public	roles:def	end:48
 color	src/parameters/parameters.h	/^	t_color		color;$/;"	kind:member	line:71	language:C++	scope:struct:s_sphere	typeref:typename:t_color	access:public	roles:def	end:71
@@ -169,9 +169,9 @@ color	src/render_scene/get_ray_color.c	/^	t_color		color;$/;"	kind:local	line:26
 color	src/render_scene/render_scene.h	/^					t_vector ray_direction, long double *min_t, t_color color);$/;"	kind:parameter	line:38	language:C++	scope:prototype:check_cylinder_intersection_color	typeref:typename:t_color	file:	roles:def	extras:fileScope	nth:3
 color	src/render_scene/render_scene.h	/^					t_vector ray_direction, long double *min_t, t_color color);$/;"	kind:parameter	line:40	language:C++	scope:prototype:check_sphere_intersection_color	typeref:typename:t_color	file:	roles:def	extras:fileScope	nth:3
 color	src/render_scene/render_scene.h	/^					t_vector ray_direction, long double *min_t, t_color color);$/;"	kind:parameter	line:42	language:C++	scope:prototype:check_plane_intersection_color	typeref:typename:t_color	file:	roles:def	extras:fileScope	nth:3
-color.c	src/color/color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:74	epoch:1699982452
+color.c	src/color/color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:74	epoch:1700435166
 color.h	src/color/color.c	/^#include "color.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
-color.h	src/color/color.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:36	epoch:1699982498
+color.h	src/color/color.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:36	epoch:1700435166
 color_absorb	src/color/color.c	/^t_color	color_absorb(t_color c1, t_color c2)$/;"	kind:function	line:40	language:C	typeref:typename:t_color	signature:(t_color c1,t_color c2)	roles:def	end:54
 color_absorb	src/color/color.h	/^t_color	color_absorb(t_color c1, t_color c2);$/;"	kind:prototype	line:31	language:C++	typeref:typename:t_color	signature:(t_color c1,t_color c2)	roles:def	end:31
 color_add	src/color/color.c	/^t_color	color_add(t_color c1, t_color c2)$/;"	kind:function	line:21	language:C	typeref:typename:t_color	signature:(t_color c1,t_color c2)	roles:def	end:38
@@ -185,7 +185,7 @@ coordinates	src/parameters/parse_coordinates.c	/^	t_vector	coordinates;$/;"	kind
 count	src/parameters/parse_float.c	/^	int	count;$/;"	kind:local	line:66	language:C	scope:function:check_regex_match	typeref:typename:int	file:	roles:def	extras:fileScope	end:66
 count_elements	src/parameters/count_elements.c	/^t_element_count	count_elements(char *filename)$/;"	kind:function	line:80	language:C	typeref:typename:t_element_count	signature:(char * filename)	roles:def	end:98
 count_elements	src/parameters/parameters.h	/^t_element_count	count_elements(char *filename);$/;"	kind:prototype	line:134	language:C++	typeref:typename:t_element_count	signature:(char * filename)	roles:def	end:134
-count_elements.c	src/parameters/count_elements.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:100	epoch:1697776010
+count_elements.c	src/parameters/count_elements.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:100	epoch:1700435166
 count_failed	src/parameters/parameters.h	/^	bool	count_failed;$/;"	kind:member	line:127	language:C++	scope:struct:s_element_count	typeref:typename:bool	access:public	roles:def	end:127
 cross_product	src/vector/vector.h	/^t_vector	cross_product(t_vector v1, t_vector v2);$/;"	kind:prototype	line:34	language:C++	typeref:typename:t_vector	signature:(t_vector v1,t_vector v2)	roles:def	end:34
 cross_product	src/vector/vector_functions.c	/^t_vector	cross_product(t_vector v1, t_vector v2)$/;"	kind:function	line:33	language:C	typeref:typename:t_vector	signature:(t_vector v1,t_vector v2)	roles:def	end:37
@@ -210,12 +210,12 @@ decimal_part	src/parameters/parse_float.c	/^	unsigned long int	decimal_part;$/;"
 destroy_and_exit	src/render_scene/render_scene.c	/^static int	destroy_and_exit(void *parameters_ptr)$/;"	kind:function	line:83	language:C	typeref:typename:int	file:	signature:(void * parameters_ptr)	roles:def	extras:fileScope	end:92	properties:static
 destroy_parameters	src/parameters/destroy_parameters.c	/^void	destroy_parameters(t_parameters parameters)$/;"	kind:function	line:22	language:C	typeref:typename:void	signature:(t_parameters parameters)	roles:def	end:27
 destroy_parameters	src/parameters/parameters.h	/^void			destroy_parameters(t_parameters parameters);$/;"	kind:prototype	line:132	language:C++	typeref:typename:void	signature:(t_parameters parameters)	roles:def	end:132
-destroy_parameters.c	src/parameters/destroy_parameters.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:29	epoch:1700001971
+destroy_parameters.c	src/parameters/destroy_parameters.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:29	epoch:1700435166
 diameter	src/parameters/parameters.h	/^	long double	diameter;$/;"	kind:member	line:70	language:C++	scope:struct:s_sphere	typeref:typename:long double	access:public	roles:def	end:70
 diameter	src/parameters/parameters.h	/^	long double	diameter;$/;"	kind:member	line:98	language:C++	scope:struct:s_cylinder	typeref:typename:long double	access:public	roles:def	end:98
 direct_light	src/render_scene/direct_light.c	/^bool	direct_light(t_shape_type shape_type, int i,$/;"	kind:function	line:96	language:C	typeref:typename:bool	signature:(t_shape_type shape_type,int i,t_vector intersection_point,t_parameters parameters)	roles:def	end:117
 direct_light	src/render_scene/render_scene.h	/^bool			direct_light(t_shape_type shape_type, int i,$/;"	kind:prototype	line:35	language:C++	typeref:typename:bool	signature:(t_shape_type shape_type,int i,t_vector intersection_point,t_parameters parameters)	roles:def	end:36
-direct_light.c	src/render_scene/direct_light.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:119	epoch:1700010014
+direct_light.c	src/render_scene/direct_light.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:119	epoch:1700435189
 direction	src/parameters/parameters.h	/^	t_vector	direction;$/;"	kind:member	line:95	language:C++	scope:struct:s_cylinder	typeref:typename:t_vector	access:public	roles:def	end:95
 direction	src/render_scene/render_scene_in_buffer.c	/^	t_vector	direction;$/;"	kind:local	line:38	language:C	scope:function:get_ray_direction	typeref:typename:t_vector	file:	roles:def	extras:fileScope	end:38
 direction_to_light	src/render_scene/check_cylinder_intersection_color.c	/^	t_vector	direction_to_light;$/;"	kind:local	line:26	language:C	scope:function:get_color	typeref:typename:t_vector	file:	roles:def	extras:fileScope	end:26
@@ -317,28 +317,28 @@ first_char_of_line	src/parameters/load_line.c	/^char	first_char_of_line(t_line *
 first_char_of_line	src/parameters/parameters.h	/^char			first_char_of_line(t_line *line);$/;"	kind:prototype	line:147	language:C++	typeref:typename:char	signature:(t_line * line)	roles:def	end:147
 ft_isalpha	src/libft/ft_isalpha.c	/^int	ft_isalpha(char c)$/;"	kind:function	line:21	language:C	typeref:typename:int	signature:(char c)	roles:def	end:26
 ft_isalpha	src/libft/libft.h	/^int		ft_isalpha(char c);$/;"	kind:prototype	line:28	language:C++	typeref:typename:int	signature:(char c)	roles:def	end:28
-ft_isalpha.c	src/libft/ft_isalpha.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:28	epoch:1697218932
+ft_isalpha.c	src/libft/ft_isalpha.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:28	epoch:1700435166
 ft_isdigit	src/libft/ft_isdigit.c	/^int	ft_isdigit(char c)$/;"	kind:function	line:21	language:C	typeref:typename:int	signature:(char c)	roles:def	end:26
 ft_isdigit	src/libft/libft.h	/^int		ft_isdigit(char c);$/;"	kind:prototype	line:30	language:C++	typeref:typename:int	signature:(char c)	roles:def	end:30
-ft_isdigit.c	src/libft/ft_isdigit.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:28	epoch:1697494040
+ft_isdigit.c	src/libft/ft_isdigit.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:28	epoch:1700435166
 ft_isspace	src/libft/ft_isspace.c	/^int	ft_isspace(char c)$/;"	kind:function	line:21	language:C	typeref:typename:int	signature:(char c)	roles:def	end:27
 ft_isspace	src/libft/libft.h	/^int		ft_isspace(char c);$/;"	kind:prototype	line:29	language:C++	typeref:typename:int	signature:(char c)	roles:def	end:29
-ft_isspace.c	src/libft/ft_isspace.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:29	epoch:1697211428
+ft_isspace.c	src/libft/ft_isspace.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:29	epoch:1700435166
 ft_putnbr_fileno	src/libft/ft_putnbr_fileno.c	/^void	ft_putnbr_fileno(int fileno, uintmax_t nbr)$/;"	kind:function	line:42	language:C	typeref:typename:void	signature:(int fileno,uintmax_t nbr)	roles:def	end:59
 ft_putnbr_fileno	src/libft/libft.h	/^void	ft_putnbr_fileno(int fileno, uintmax_t nbr);$/;"	kind:prototype	line:32	language:C++	typeref:typename:void	signature:(int fileno,uintmax_t nbr)	roles:def	end:32
-ft_putnbr_fileno.c	src/libft/ft_putnbr_fileno.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:61	epoch:1697213308
+ft_putnbr_fileno.c	src/libft/ft_putnbr_fileno.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:61	epoch:1700435166
 ft_putstr	src/libft/ft_putstr.c	/^void	ft_putstr(const char *str)$/;"	kind:function	line:22	language:C	typeref:typename:void	signature:(const char * str)	roles:def	end:25
 ft_putstr	src/libft/libft.h	/^void	ft_putstr(const char *str);$/;"	kind:prototype	line:25	language:C++	typeref:typename:void	signature:(const char * str)	roles:def	end:25
-ft_putstr.c	src/libft/ft_putstr.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:27	epoch:1696704935
+ft_putstr.c	src/libft/ft_putstr.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:27	epoch:1700435166
 ft_putstr_fileno	src/libft/ft_putstr_fileno.c	/^void	ft_putstr_fileno(int fileno, const char *str)$/;"	kind:function	line:22	language:C	typeref:typename:void	signature:(int fileno,const char * str)	roles:def	end:25
 ft_putstr_fileno	src/libft/libft.h	/^void	ft_putstr_fileno(int fileno, const char *str);$/;"	kind:prototype	line:31	language:C++	typeref:typename:void	signature:(int fileno,const char * str)	roles:def	end:31
-ft_putstr_fileno.c	src/libft/ft_putstr_fileno.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:27	epoch:1696705061
+ft_putstr_fileno.c	src/libft/ft_putstr_fileno.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:27	epoch:1700435166
 ft_strcmp	src/libft/ft_strcmp.c	/^int	ft_strcmp(const char *s1, const char *s2)$/;"	kind:function	line:21	language:C	typeref:typename:int	signature:(const char * s1,const char * s2)	roles:def	end:31
 ft_strcmp	src/libft/libft.h	/^int		ft_strcmp(const char *s1, const char *s2);$/;"	kind:prototype	line:27	language:C++	typeref:typename:int	signature:(const char * s1,const char * s2)	roles:def	end:27
-ft_strcmp.c	src/libft/ft_strcmp.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:33	epoch:1697211369
+ft_strcmp.c	src/libft/ft_strcmp.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:33	epoch:1700435166
 ft_strlen	src/libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	kind:function	line:22	language:C	typeref:typename:size_t	signature:(const char * str)	roles:def	end:30
 ft_strlen	src/libft/libft.h	/^size_t	ft_strlen(const char *str);$/;"	kind:prototype	line:26	language:C++	typeref:typename:size_t	signature:(const char * str)	roles:def	end:26
-ft_strlen.c	src/libft/ft_strlen.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:32	epoch:1696705127
+ft_strlen.c	src/libft/ft_strlen.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:32	epoch:1700435166
 g	src/color/color.c	/^	long double	g;$/;"	kind:local	line:43	language:C	scope:function:color_absorb	typeref:typename:long double	file:	roles:def	extras:fileScope	end:43
 g	src/color/color.c	/^	long double	g;$/;"	kind:local	line:59	language:C	scope:function:color_multiply	typeref:typename:long double	file:	roles:def	extras:fileScope	end:59
 g	src/color/color.c	/^	unsigned int	g;$/;"	kind:local	line:24	language:C	scope:function:color_add	typeref:typename:unsigned int	file:	roles:def	extras:fileScope	end:24
@@ -358,13 +358,13 @@ get_magnitude	src/vector/vector_functions.c	/^long double	get_magnitude(t_vector
 get_num	src/parameters/parse_float.c	/^static unsigned long int	get_num(t_line *line, int *i,$/;"	kind:function	line:27	language:C	typeref:typename:unsigned long int	file:	signature:(t_line * line,int * i,unsigned long int * magnitude)	roles:def	extras:fileScope	end:42	properties:static
 get_parameters	src/parameters/get_parameters.c	/^t_parameters	get_parameters(char *filename)$/;"	kind:function	line:43	language:C	typeref:typename:t_parameters	signature:(char * filename)	roles:def	end:62
 get_parameters	src/parameters/parameters.h	/^t_parameters	get_parameters(char *filename);$/;"	kind:prototype	line:130	language:C++	typeref:typename:t_parameters	signature:(char * filename)	roles:def	end:130
-get_parameters.c	src/parameters/get_parameters.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:64	epoch:1697248080
+get_parameters.c	src/parameters/get_parameters.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:64	epoch:1700435166
 get_parameters_internal	src/parameters/get_parameters_internal.c	/^t_parameters	get_parameters_internal(char *filename,$/;"	kind:function	line:29	language:C	typeref:typename:t_parameters	signature:(char * filename,t_element_count element_count)	roles:def	end:42
 get_parameters_internal	src/parameters/parameters.h	/^t_parameters	get_parameters_internal(char *filename,$/;"	kind:prototype	line:139	language:C++	typeref:typename:t_parameters	signature:(char * filename,t_element_count element_count)	roles:def	end:140
-get_parameters_internal.c	src/parameters/get_parameters_internal.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:44	epoch:1698331911
+get_parameters_internal.c	src/parameters/get_parameters_internal.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:44	epoch:1700435166
 get_ray_color	src/render_scene/get_ray_color.c	/^unsigned int	get_ray_color(t_vector ray_direction, t_parameters parameters)$/;"	kind:function	line:24	language:C	typeref:typename:unsigned int	signature:(t_vector ray_direction,t_parameters parameters)	roles:def	end:41
 get_ray_color	src/render_scene/render_scene.h	/^unsigned int	get_ray_color(t_vector ray_direction, t_parameters parameters);$/;"	kind:prototype	line:34	language:C++	typeref:typename:unsigned int	signature:(t_vector ray_direction,t_parameters parameters)	roles:def	end:34
-get_ray_color.c	src/render_scene/get_ray_color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:43	epoch:1700000981
+get_ray_color.c	src/render_scene/get_ray_color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:43	epoch:1700435166
 get_ray_direction	src/render_scene/render_scene_in_buffer.c	/^static t_vector	get_ray_direction(t_camera_data camera_data, long double w,$/;"	kind:function	line:35	language:C	typeref:typename:t_vector	file:	signature:(t_camera_data camera_data,long double w,long double h)	roles:def	extras:fileScope	end:46	properties:static
 get_up_vector	src/render_scene/render_scene_in_buffer.c	/^static t_vector	get_up_vector(t_camera_data camera_data)$/;"	kind:function	line:53	language:C	typeref:typename:t_vector	file:	signature:(t_camera_data camera_data)	roles:def	extras:fileScope	end:80	properties:static
 h	src/render_scene/render_scene_in_buffer.c	/^			long double h)$/;"	kind:parameter	line:36	language:C	scope:function:get_ray_direction	typeref:typename:long double	file:	roles:def	extras:fileScope	nth:2
@@ -447,17 +447,17 @@ integer_part	src/parameters/parse_float.c	/^	unsigned long int	integer_part;$/;"
 intensity	src/parameters/parameters.h	/^	long double	intensity;$/;"	kind:member	line:47	language:C++	scope:struct:s_ambient_lighting	typeref:typename:long double	access:public	roles:def	end:47
 intersect_ray_cylinder	src/intersections/intersect_ray_cylinder.c	/^t_intersection	intersect_ray_cylinder(t_vector ray_direction, t_vector origin,$/;"	kind:function	line:86	language:C	typeref:typename:t_intersection	signature:(t_vector ray_direction,t_vector origin,t_cylinder cylinder)	roles:def	end:114
 intersect_ray_cylinder	src/intersections/intersections.h	/^t_intersection	intersect_ray_cylinder(t_vector ray_direction, t_vector origin,$/;"	kind:prototype	line:54	language:C++	typeref:typename:t_intersection	signature:(t_vector ray_direction,t_vector origin,t_cylinder cylinder)	roles:def	end:55
-intersect_ray_cylinder.c	src/intersections/intersect_ray_cylinder.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:116	epoch:1700009414
+intersect_ray_cylinder.c	src/intersections/intersect_ray_cylinder.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:116	epoch:1700435166
 intersect_ray_cylinder_helper	src/intersections/intersect_ray_cylinder_helper.c	/^t_intersection	intersect_ray_cylinder_helper($/;"	kind:function	line:57	language:C	typeref:typename:t_intersection	signature:(t_intersect_ray_cylinder_data data)	roles:def	end:81
 intersect_ray_cylinder_helper	src/intersections/intersections.h	/^t_intersection	intersect_ray_cylinder_helper($/;"	kind:prototype	line:58	language:C++	typeref:typename:t_intersection	signature:(t_intersect_ray_cylinder_data data)	roles:def	end:59
-intersect_ray_cylinder_helper.c	src/intersections/intersect_ray_cylinder_helper.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:83	epoch:1700008461
+intersect_ray_cylinder_helper.c	src/intersections/intersect_ray_cylinder_helper.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:83	epoch:1700435166
 intersect_ray_cylinder_helper_internal	src/intersections/intersect_ray_cylinder_helper.c	/^static t_intersection	intersect_ray_cylinder_helper_internal($/;"	kind:function	line:40	language:C	typeref:typename:t_intersection	file:	signature:(t_intersect_ray_cylinder_data data)	roles:def	extras:fileScope	end:55	properties:static
 intersect_ray_plane	src/intersections/intersect_ray_plane.c	/^t_intersection	intersect_ray_plane(t_vector ray_direction, t_vector origin,$/;"	kind:function	line:21	language:C	typeref:typename:t_intersection	signature:(t_vector ray_direction,t_vector origin,t_plane plane)	roles:def	end:36
 intersect_ray_plane	src/intersections/intersections.h	/^t_intersection	intersect_ray_plane(t_vector ray_direction, t_vector origin,$/;"	kind:prototype	line:56	language:C++	typeref:typename:t_intersection	signature:(t_vector ray_direction,t_vector origin,t_plane plane)	roles:def	end:57
-intersect_ray_plane.c	src/intersections/intersect_ray_plane.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:38	epoch:1699982626
+intersect_ray_plane.c	src/intersections/intersect_ray_plane.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:38	epoch:1700435166
 intersect_ray_sphere	src/intersections/intersect_ray_sphere.c	/^t_intersection	intersect_ray_sphere(t_vector ray_direction, t_vector origin,$/;"	kind:function	line:23	language:C	typeref:typename:t_intersection	signature:(t_vector ray_direction,t_vector origin,t_sphere sphere)	roles:def	end:45
 intersect_ray_sphere	src/intersections/intersections.h	/^t_intersection	intersect_ray_sphere(t_vector ray_direction, t_vector origin,$/;"	kind:prototype	line:52	language:C++	typeref:typename:t_intersection	signature:(t_vector ray_direction,t_vector origin,t_sphere sphere)	roles:def	end:53
-intersect_ray_sphere.c	src/intersections/intersect_ray_sphere.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:47	epoch:1700005416
+intersect_ray_sphere.c	src/intersections/intersect_ray_sphere.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:47	epoch:1700435166
 intersection	src/intersections/intersect_ray_sphere.c	/^	t_intersection		intersection;$/;"	kind:local	line:30	language:C	scope:function:intersect_ray_sphere	typeref:typename:t_intersection	file:	roles:def	extras:fileScope	end:30
 intersection	src/render_scene/check_cylinder_intersection_color.c	/^	t_intersection	intersection;$/;"	kind:local	line:57	language:C	scope:function:check_cylinder_intersection_color	typeref:typename:t_intersection	file:	roles:def	extras:fileScope	end:57
 intersection	src/render_scene/check_cylinder_intersection_color.c	/^static t_color	get_color(int i, t_intersection intersection,$/;"	kind:parameter	line:22	language:C	scope:function:get_color	typeref:typename:t_intersection	file:	roles:def	extras:fileScope	nth:1
@@ -474,14 +474,14 @@ intersections.h	src/intersections/intersect_ray_cylinder.c	/^#include "intersect
 intersections.h	src/intersections/intersect_ray_cylinder_helper.c	/^#include "intersections.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 intersections.h	src/intersections/intersect_ray_plane.c	/^#include "intersections.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 intersections.h	src/intersections/intersect_ray_sphere.c	/^#include "intersections.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
-intersections.h	src/intersections/intersections.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:65	epoch:1699987184
+intersections.h	src/intersections/intersections.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:65	epoch:1700435166
 io_error	src/parameters/parameters.h	/^	bool	io_error;$/;"	kind:member	line:34	language:C++	scope:struct:s_line	typeref:typename:bool	access:public	roles:def	end:34
 io_error	src/parameters/parameters.h	/^	bool	io_error;$/;"	kind:member	line:42	language:C++	scope:struct:s_buffer	typeref:typename:bool	access:public	roles:def	end:42
 is_normal	src/vector/vector.h	/^bool		is_normal(t_vector vector);$/;"	kind:prototype	line:32	language:C++	typeref:typename:bool	signature:(t_vector vector)	roles:def	end:32
 is_normal	src/vector/vector_functions.c	/^bool	is_normal(t_vector v)$/;"	kind:function	line:23	language:C	typeref:typename:bool	signature:(t_vector v)	roles:def	end:31
 is_valid_id	src/parameters/is_valid_id.c	/^bool	is_valid_id(const char **valid_element_ids, t_line *line)$/;"	kind:function	line:49	language:C	typeref:typename:bool	signature:(const char ** valid_element_ids,t_line * line)	roles:def	end:65
 is_valid_id	src/parameters/parameters.h	/^bool			is_valid_id(const char **valid_element_ids, t_line *line);$/;"	kind:prototype	line:136	language:C++	typeref:typename:bool	signature:(const char ** valid_element_ids,t_line * line)	roles:def	end:136
-is_valid_id.c	src/parameters/is_valid_id.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:67	epoch:1696848243
+is_valid_id.c	src/parameters/is_valid_id.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:67	epoch:1700435166
 j	src/parameters/set_cylinder_list.c	/^	int			j;$/;"	kind:local	line:32	language:C	scope:function:set_cylinder_list_internal	typeref:typename:int	file:	roles:def	extras:fileScope	end:32
 j	src/parameters/set_plane_list.c	/^	int			j;$/;"	kind:local	line:76	language:C	scope:function:set_plane_list_internal	typeref:typename:int	file:	roles:def	extras:fileScope	end:76
 j	src/parameters/set_sphere_list.c	/^	int			j;$/;"	kind:local	line:93	language:C	scope:function:set_sphere_list_internal	typeref:typename:int	file:	roles:def	extras:fileScope	end:93
@@ -497,7 +497,7 @@ libft.h	src/libft/ft_putstr.c	/^#include "libft.h"/;"	kind:header	line:13	langua
 libft.h	src/libft/ft_putstr_fileno.c	/^#include "libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 libft.h	src/libft/ft_strcmp.c	/^#include "libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 libft.h	src/libft/ft_strlen.c	/^#include "libft.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
-libft.h	src/libft/libft.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:36	epoch:1697493967
+libft.h	src/libft/libft.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:36	epoch:1700435166
 libft/libft.h	src/main.c	/^#include "libft\/libft.h"/;"	kind:header	line:15	language:C	roles:local	extras:reference
 lid_center	src/intersections/intersect_ray_cylinder.c	/^							t_vector lid_center)$/;"	kind:parameter	line:65	language:C	scope:function:get_discriminant	typeref:typename:t_vector	file:	roles:def	extras:fileScope	nth:3
 lid_center	src/intersections/intersect_ray_cylinder.c	/^	const t_vector			lid_center = add(cylinder.geometric_center,$/;"	kind:local	line:89	language:C	scope:function:intersect_ray_cylinder	typeref:typename:const t_vector	file:	roles:def	extras:fileScope	end:90
@@ -603,7 +603,7 @@ lineno	src/parameters/set_sphere_list.c	/^				size_t lineno)$/;"	kind:parameter	
 lineno	src/parameters/set_sphere_list.c	/^				size_t lineno, long double x)$/;"	kind:parameter	line:44	language:C	scope:function:check_for_space_float	typeref:typename:size_t	file:	roles:def	extras:fileScope	nth:2
 load_line	src/parameters/load_line.c	/^void	load_line(t_line *line, t_buffer *buf, int fileno)$/;"	kind:function	line:55	language:C	typeref:typename:void	signature:(t_line * line,t_buffer * buf,int fileno)	roles:def	end:79
 load_line	src/parameters/parameters.h	/^void			load_line(t_line *line, t_buffer *buf, int fileno);$/;"	kind:prototype	line:135	language:C++	typeref:typename:void	signature:(t_line * line,t_buffer * buf,int fileno)	roles:def	end:135
-load_line.c	src/parameters/load_line.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:81	epoch:1697881243
+load_line.c	src/parameters/load_line.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:81	epoch:1700435166
 load_line_initial	src/parameters/load_line.c	/^void	load_line_initial(t_line *line, t_buffer *buf, int fileno)$/;"	kind:function	line:33	language:C	typeref:typename:void	signature:(t_line * line,t_buffer * buf,int fileno)	roles:def	end:38
 load_line_initial	src/parameters/parameters.h	/^void			load_line_initial(t_line *line, t_buffer *buf, int fileno);$/;"	kind:prototype	line:148	language:C++	typeref:typename:void	signature:(t_line * line,t_buffer * buf,int fileno)	roles:def	end:148
 m	src/intersections/intersect_ray_cylinder.c	/^	long double				m;$/;"	kind:local	line:95	language:C	scope:function:intersect_ray_cylinder	typeref:typename:long double	file:	roles:def	extras:fileScope	end:95
@@ -615,7 +615,7 @@ magnitude	src/parameters/parse_float.c	/^								unsigned long int *magnitude)$/
 magnitude	src/parameters/parse_float.c	/^	unsigned long int	magnitude;$/;"	kind:local	line:48	language:C	scope:function:parse_float_internal	typeref:typename:unsigned long int	file:	roles:def	extras:fileScope	end:48
 magnitude	src/vector/vector_functions.c	/^	const long double	magnitude = get_magnitude(v);$/;"	kind:local	line:25	language:C	scope:function:is_normal	typeref:typename:const long double	file:	roles:def	extras:fileScope	end:25
 main	src/main.c	/^int	main(int argc, char **argv)$/;"	kind:function	line:28	language:C	typeref:typename:int	signature:(int argc,char ** argv)	roles:def	end:45
-main.c	src/main.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:146	epoch:1697975603
+main.c	src/main.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:146	epoch:1700435166
 math.h	src/intersections/intersect_ray_cylinder.c	/^#include <math.h>/;"	kind:header	line:14	language:C	roles:system	extras:reference
 math.h	src/intersections/intersect_ray_sphere.c	/^#include <math.h>/;"	kind:header	line:14	language:C	roles:system	extras:reference
 math.h	src/render_scene/get_ray_color.c	/^#include <math.h>/;"	kind:header	line:15	language:C	roles:system	extras:reference
@@ -722,7 +722,7 @@ parameters.h	src/parameters/get_parameters.c	/^#include "parameters.h"/;"	kind:h
 parameters.h	src/parameters/get_parameters_internal.c	/^#include "parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 parameters.h	src/parameters/is_valid_id.c	/^#include "parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 parameters.h	src/parameters/load_line.c	/^#include "parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
-parameters.h	src/parameters/parameters.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:167	epoch:1700001959
+parameters.h	src/parameters/parameters.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:167	epoch:1700435166
 parameters.h	src/parameters/parse_color.c	/^#include "parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 parameters.h	src/parameters/parse_coordinates.c	/^#include "parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 parameters.h	src/parameters/parse_cylinder.c	/^#include "parameters.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
@@ -744,23 +744,23 @@ parameters_valid	src/parameters/parameters.h	/^bool			parameters_valid(t_paramet
 parse_camera	src/parameters/set_camera.c	/^static t_camera	parse_camera(t_line *line, bool *parsing_error, size_t lineno)$/;"	kind:function	line:61	language:C	typeref:typename:t_camera	file:	signature:(t_line * line,bool * parsing_error,size_t lineno)	roles:def	extras:fileScope	end:88	properties:static
 parse_color	src/parameters/parameters.h	/^t_color			parse_color(t_line *line, int *i, bool *parsing_error,$/;"	kind:prototype	line:145	language:C++	typeref:typename:t_color	signature:(t_line * line,int * i,bool * parsing_error,size_t lineno)	roles:def	end:146
 parse_color	src/parameters/parse_color.c	/^t_color	parse_color(t_line *line, int *i, bool *parsing_error, size_t lineno)$/;"	kind:function	line:65	language:C	typeref:typename:t_color	signature:(t_line * line,int * i,bool * parsing_error,size_t lineno)	roles:def	end:92
-parse_color.c	src/parameters/parse_color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:94	epoch:1697783470
+parse_color.c	src/parameters/parse_color.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:94	epoch:1700435166
 parse_coordinates	src/parameters/parameters.h	/^t_vector		parse_coordinates(t_line *line, int *i, bool *parsing_error,$/;"	kind:prototype	line:150	language:C++	typeref:typename:t_vector	signature:(t_line * line,int * i,bool * parsing_error,size_t lineno)	roles:def	end:151
 parse_coordinates	src/parameters/parse_coordinates.c	/^t_vector	parse_coordinates(t_line *line, int *i, bool *parsing_error,$/;"	kind:function	line:40	language:C	typeref:typename:t_vector	signature:(t_line * line,int * i,bool * parsing_error,size_t lineno)	roles:def	end:57
-parse_coordinates.c	src/parameters/parse_coordinates.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:59	epoch:1699638943
+parse_coordinates.c	src/parameters/parse_coordinates.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:59	epoch:1700435166
 parse_cylinder	src/parameters/parameters.h	/^t_cylinder		parse_cylinder(t_line *line, bool *parsing_error,$/;"	kind:prototype	line:162	language:C++	typeref:typename:t_cylinder	signature:(t_line * line,bool * parsing_error,size_t lineno)	roles:def	end:163
 parse_cylinder	src/parameters/parse_cylinder.c	/^t_cylinder	parse_cylinder(t_line *line, bool *parsing_error,$/;"	kind:function	line:84	language:C	typeref:typename:t_cylinder	signature:(t_line * line,bool * parsing_error,size_t lineno)	roles:def	end:109
-parse_cylinder.c	src/parameters/parse_cylinder.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:111	epoch:1699638984
+parse_cylinder.c	src/parameters/parse_cylinder.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:111	epoch:1700435166
 parse_cylinder_helper	src/parameters/parse_cylinder.c	/^static bool	parse_cylinder_helper(t_line *line, int *i, size_t lineno,$/;"	kind:function	line:56	language:C	typeref:typename:bool	file:	signature:(t_line * line,int * i,size_t lineno,t_cylinder * cylinder)	roles:def	extras:fileScope	end:82	properties:static
 parse_float	src/parameters/parameters.h	/^long double		parse_float(t_line *line, int *i, bool *parsing_error,$/;"	kind:prototype	line:143	language:C++	typeref:typename:long double	signature:(t_line * line,int * i,bool * parsing_error,size_t lineno)	roles:def	end:144
 parse_float	src/parameters/parse_float.c	/^long double	parse_float(t_line *line, int *i, bool *parsing_error,$/;"	kind:function	line:91	language:C	typeref:typename:long double	signature:(t_line * line,int * i,bool * parsing_error,size_t lineno)	roles:def	end:109
-parse_float.c	src/parameters/parse_float.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:111	epoch:1697775471
+parse_float.c	src/parameters/parse_float.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:111	epoch:1700435166
 parse_float_internal	src/parameters/parse_float.c	/^static long double	parse_float_internal(t_line *line, int *i)$/;"	kind:function	line:44	language:C	typeref:typename:long double	file:	signature:(t_line * line,int * i)	roles:def	extras:fileScope	end:62	properties:static
 parse_light	src/parameters/set_light.c	/^static t_light	parse_light(t_line *line, bool *parsing_error,$/;"	kind:function	line:58	language:C	typeref:typename:t_light	file:	signature:(t_line * line,bool * parsing_error,size_t lineno)	roles:def	extras:fileScope	end:86	properties:static
 parse_lighting	src/parameters/set_ambient_lighting.c	/^static t_ambient_lighting	parse_lighting(t_line *line, bool *parsing_error,$/;"	kind:function	line:44	language:C	typeref:typename:t_ambient_lighting	file:	signature:(t_line * line,bool * parsing_error,size_t lineno)	roles:def	extras:fileScope	end:68	properties:static
 parse_orientation_vector	src/parameters/parameters.h	/^t_vector		parse_orientation_vector(t_line *line, int *i,$/;"	kind:prototype	line:152	language:C++	typeref:typename:t_vector	signature:(t_line * line,int * i,bool * parsing_error,size_t lineno)	roles:def	end:153
 parse_orientation_vector	src/parameters/parse_orientation_vector.c	/^t_vector	parse_orientation_vector(t_line *line, int *i, bool *parsing_error,$/;"	kind:function	line:57	language:C	typeref:typename:t_vector	signature:(t_line * line,int * i,bool * parsing_error,size_t lineno)	roles:def	end:75
-parse_orientation_vector.c	src/parameters/parse_orientation_vector.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:77	epoch:1699641027
+parse_orientation_vector.c	src/parameters/parse_orientation_vector.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:77	epoch:1700435166
 parse_plane	src/parameters/set_plane_list.c	/^static t_plane	parse_plane(t_line *line, bool *parsing_error,$/;"	kind:function	line:43	language:C	typeref:typename:t_plane	file:	signature:(t_line * line,bool * parsing_error,size_t lineno)	roles:def	extras:fileScope	end:69	properties:static
 parse_sphere	src/parameters/set_sphere_list.c	/^static t_sphere	parse_sphere(t_line *line, bool *parsing_error,$/;"	kind:function	line:59	language:C	typeref:typename:t_sphere	file:	signature:(t_line * line,bool * parsing_error,size_t lineno)	roles:def	extras:fileScope	end:86	properties:static
 parsing_error	src/parameters/parameters.h	/^					bool *parsing_error, size_t lineno);$/;"	kind:parameter	line:153	language:C++	scope:prototype:parse_orientation_vector	typeref:typename:bool *	file:	roles:def	extras:fileScope	nth:2
@@ -814,7 +814,7 @@ position	src/parameters/parameters.h	/^	t_vector		position;$/;"	kind:member	line
 position	src/parameters/parameters.h	/^	t_vector	position;$/;"	kind:member	line:83	language:C++	scope:struct:s_plane	typeref:typename:t_vector	access:public	roles:def	end:83
 print_usage	src/parameters/parameters.h	/^void			print_usage(void);$/;"	kind:prototype	line:133	language:C++	typeref:typename:void	signature:(void)	roles:def	end:133
 print_usage	src/parameters/print_usage.c	/^void	print_usage(void)$/;"	kind:function	line:22	language:C	typeref:typename:void	signature:(void)	roles:def	end:31
-print_usage.c	src/parameters/print_usage.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:33	epoch:1696707180
+print_usage.c	src/parameters/print_usage.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:33	epoch:1700435166
 r	src/color/color.c	/^	long double	r;$/;"	kind:local	line:42	language:C	scope:function:color_absorb	typeref:typename:long double	file:	roles:def	extras:fileScope	end:42
 r	src/color/color.c	/^	long double	r;$/;"	kind:local	line:58	language:C	scope:function:color_multiply	typeref:typename:long double	file:	roles:def	extras:fileScope	end:58
 r	src/color/color.c	/^	unsigned int	r;$/;"	kind:local	line:23	language:C	scope:function:color_add	typeref:typename:unsigned int	file:	roles:def	extras:fileScope	end:23
@@ -851,19 +851,19 @@ redraw	src/render_scene/render_scene.c	/^static int	redraw(void *parameters_ptr)
 reference_vector	src/render_scene/render_scene_in_buffer.c	/^	const t_vector	reference_vector = normalize((t_vector)$/;"	kind:local	line:56	language:C	scope:function:get_up_vector	typeref:typename:const t_vector	file:	roles:def	extras:fileScope	end:57
 render_scene	src/render_scene/render_scene.c	/^void	render_scene(t_parameters parameters)$/;"	kind:function	line:101	language:C	typeref:typename:void	signature:(t_parameters parameters)	roles:def	end:127
 render_scene	src/render_scene/render_scene.h	/^void			render_scene(t_parameters parameters);$/;"	kind:prototype	line:31	language:C++	typeref:typename:void	signature:(t_parameters parameters)	roles:def	end:31
-render_scene.c	src/render_scene/render_scene.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:129	epoch:1700009416
+render_scene.c	src/render_scene/render_scene.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:129	epoch:1700435166
 render_scene.h	src/render_scene/check_cylinder_intersection_color.c	/^#include "render_scene.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 render_scene.h	src/render_scene/check_plane_intersection_color.c	/^#include "render_scene.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 render_scene.h	src/render_scene/check_sphere_intersection_color.c	/^#include "render_scene.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 render_scene.h	src/render_scene/direct_light.c	/^#include "render_scene.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 render_scene.h	src/render_scene/get_ray_color.c	/^#include "render_scene.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 render_scene.h	src/render_scene/render_scene.c	/^#include "render_scene.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
-render_scene.h	src/render_scene/render_scene.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:46	epoch:1700000680
+render_scene.h	src/render_scene/render_scene.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:46	epoch:1700435166
 render_scene.h	src/render_scene/render_scene_in_buffer.c	/^#include "render_scene.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 render_scene/render_scene.h	src/main.c	/^#include "render_scene\/render_scene.h"/;"	kind:header	line:14	language:C	roles:local	extras:reference
 render_scene_in_buffer	src/render_scene/render_scene.h	/^void			render_scene_in_buffer(t_parameters parameters,$/;"	kind:prototype	line:32	language:C++	typeref:typename:void	signature:(t_parameters parameters,unsigned int * buffer,int height,int width)	roles:def	end:33
 render_scene_in_buffer	src/render_scene/render_scene_in_buffer.c	/^void	render_scene_in_buffer(t_parameters parameters, unsigned int *buffer,$/;"	kind:function	line:99	language:C	typeref:typename:void	signature:(t_parameters parameters,unsigned int * buffer,int height,int width)	roles:def	end:122
-render_scene_in_buffer.c	src/render_scene/render_scene_in_buffer.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:124	epoch:1699639492
+render_scene_in_buffer.c	src/render_scene/render_scene_in_buffer.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:124	epoch:1700435166
 res	src/parameters/parse_color.c	/^	int	res;$/;"	kind:local	line:28	language:C	scope:function:get_color	typeref:typename:int	file:	roles:def	extras:fileScope	end:28
 res	src/parameters/parse_float.c	/^	unsigned long int	res;$/;"	kind:local	line:30	language:C	scope:function:get_num	typeref:typename:unsigned long int	file:	roles:def	extras:fileScope	end:30
 ret	src/render_scene/direct_light.c	/^	bool		ret;$/;"	kind:local	line:99	language:C	scope:function:direct_light	typeref:typename:bool	file:	roles:def	extras:fileScope	end:99
@@ -987,27 +987,27 @@ s_vector::y	src/vector/vector.h	/^	long double	y;$/;"	kind:member	line:28	langua
 s_vector::z	src/vector/vector.h	/^	long double	z;$/;"	kind:member	line:29	language:C++	scope:struct:s_vector	typeref:typename:long double	access:public	roles:def	extras:qualified
 set_ambient_lighting	src/parameters/parameters.h	/^void			set_ambient_lighting(char *filename,$/;"	kind:prototype	line:141	language:C++	typeref:typename:void	signature:(char * filename,t_element_count element_count,t_parameters * parameters)	roles:def	end:142
 set_ambient_lighting	src/parameters/set_ambient_lighting.c	/^void	set_ambient_lighting(char *filename, t_element_count element_count,$/;"	kind:function	line:90	language:C	typeref:typename:void	signature:(char * filename,t_element_count element_count,t_parameters * parameters)	roles:def	end:110
-set_ambient_lighting.c	src/parameters/set_ambient_lighting.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:112	epoch:1699639052
+set_ambient_lighting.c	src/parameters/set_ambient_lighting.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:112	epoch:1700435166
 set_ambient_lighting_internal	src/parameters/set_ambient_lighting.c	/^static void	set_ambient_lighting_internal(t_parameters *parameters, int fileno)$/;"	kind:function	line:70	language:C	typeref:typename:void	file:	signature:(t_parameters * parameters,int fileno)	roles:def	extras:fileScope	end:88	properties:static
 set_camera	src/parameters/parameters.h	/^void			set_camera(char *filename, t_parameters *parameters);$/;"	kind:prototype	line:149	language:C++	typeref:typename:void	signature:(char * filename,t_parameters * parameters)	roles:def	end:149
 set_camera	src/parameters/set_camera.c	/^void	set_camera(char *filename, t_parameters *parameters)$/;"	kind:function	line:110	language:C	typeref:typename:void	signature:(char * filename,t_parameters * parameters)	roles:def	end:124
-set_camera.c	src/parameters/set_camera.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:126	epoch:1699639067
+set_camera.c	src/parameters/set_camera.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:126	epoch:1700435166
 set_camera_internal	src/parameters/set_camera.c	/^static void	set_camera_internal(t_parameters *parameters, int fileno)$/;"	kind:function	line:90	language:C	typeref:typename:void	file:	signature:(t_parameters * parameters,int fileno)	roles:def	extras:fileScope	end:108	properties:static
 set_cylinder_list	src/parameters/parameters.h	/^void			set_cylinder_list(char *filename, t_element_count element_count,$/;"	kind:prototype	line:160	language:C++	typeref:typename:void	signature:(char * filename,t_element_count element_count,t_parameters * parameters)	roles:def	end:161
 set_cylinder_list	src/parameters/set_cylinder_list.c	/^void	set_cylinder_list(char *filename, t_element_count element_count,$/;"	kind:function	line:56	language:C	typeref:typename:void	signature:(char * filename,t_element_count element_count,t_parameters * parameters)	roles:def	end:84
-set_cylinder_list.c	src/parameters/set_cylinder_list.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:86	epoch:1700001960
+set_cylinder_list.c	src/parameters/set_cylinder_list.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:86	epoch:1700435166
 set_cylinder_list_internal	src/parameters/set_cylinder_list.c	/^static void	set_cylinder_list_internal(t_parameters *parameters, int fileno)$/;"	kind:function	line:27	language:C	typeref:typename:void	file:	signature:(t_parameters * parameters,int fileno)	roles:def	extras:fileScope	end:54	properties:static
 set_light	src/parameters/parameters.h	/^void			set_light(char *filename, t_element_count element_count,$/;"	kind:prototype	line:154	language:C++	typeref:typename:void	signature:(char * filename,t_element_count element_count,t_parameters * parameters)	roles:def	end:155
 set_light	src/parameters/set_light.c	/^void	set_light(char *filename, t_element_count element_count,$/;"	kind:function	line:108	language:C	typeref:typename:void	signature:(char * filename,t_element_count element_count,t_parameters * parameters)	roles:def	end:128
-set_light.c	src/parameters/set_light.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:130	epoch:1699639088
+set_light.c	src/parameters/set_light.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:130	epoch:1700435166
 set_light_internal	src/parameters/set_light.c	/^static void	set_light_internal(t_parameters *parameters, int fileno)$/;"	kind:function	line:88	language:C	typeref:typename:void	file:	signature:(t_parameters * parameters,int fileno)	roles:def	extras:fileScope	end:106	properties:static
 set_plane_list	src/parameters/parameters.h	/^void			set_plane_list(char *filename, t_element_count element_count,$/;"	kind:prototype	line:158	language:C++	typeref:typename:void	signature:(char * filename,t_element_count element_count,t_parameters * parameters)	roles:def	end:159
 set_plane_list	src/parameters/set_plane_list.c	/^void	set_plane_list(char *filename, t_element_count element_count,$/;"	kind:function	line:100	language:C	typeref:typename:void	signature:(char * filename,t_element_count element_count,t_parameters * parameters)	roles:def	end:128
-set_plane_list.c	src/parameters/set_plane_list.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:130	epoch:1699641088
+set_plane_list.c	src/parameters/set_plane_list.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:130	epoch:1700435166
 set_plane_list_internal	src/parameters/set_plane_list.c	/^static void	set_plane_list_internal(t_parameters *parameters, int fileno)$/;"	kind:function	line:71	language:C	typeref:typename:void	file:	signature:(t_parameters * parameters,int fileno)	roles:def	extras:fileScope	end:98	properties:static
 set_sphere_list	src/parameters/parameters.h	/^void			set_sphere_list(char *filename, t_element_count element_count,$/;"	kind:prototype	line:156	language:C++	typeref:typename:void	signature:(char * filename,t_element_count element_count,t_parameters * parameters)	roles:def	end:157
 set_sphere_list	src/parameters/set_sphere_list.c	/^void	set_sphere_list(char *filename, t_element_count element_count,$/;"	kind:function	line:117	language:C	typeref:typename:void	signature:(char * filename,t_element_count element_count,t_parameters * parameters)	roles:def	end:145
-set_sphere_list.c	src/parameters/set_sphere_list.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:147	epoch:1700002614
+set_sphere_list.c	src/parameters/set_sphere_list.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:147	epoch:1700435166
 set_sphere_list_internal	src/parameters/set_sphere_list.c	/^static void	set_sphere_list_internal(t_parameters *parameters, int fileno)$/;"	kind:function	line:88	language:C	typeref:typename:void	file:	signature:(t_parameters * parameters,int fileno)	roles:def	extras:fileScope	end:115	properties:static
 shape_type	src/render_scene/direct_light.c	/^				t_vector ray_direction, int ignored, t_shape_type shape_type)$/;"	kind:parameter	line:24	language:C	scope:function:check_plane_intersection	typeref:typename:t_shape_type	file:	roles:def	extras:fileScope	nth:3
 shape_type	src/render_scene/direct_light.c	/^				t_vector ray_direction, int ingnore, t_shape_type shape_type)$/;"	kind:parameter	line:47	language:C	scope:function:check_sphere_intersection	typeref:typename:t_shape_type	file:	roles:def	extras:fileScope	nth:3
@@ -1173,11 +1173,11 @@ valid_element_ids	src/parameters/count_elements.c	/^	const char	*valid_element_i
 valid_element_ids	src/parameters/is_valid_id.c	/^bool	is_valid_id(const char **valid_element_ids, t_line *line)$/;"	kind:parameter	line:49	language:C	scope:function:is_valid_id	typeref:typename:const char **	file:	roles:def	extras:fileScope	nth:0
 valid_element_ids	src/parameters/parameters.h	/^bool			is_valid_id(const char **valid_element_ids, t_line *line);$/;"	kind:parameter	line:136	language:C++	scope:prototype:is_valid_id	typeref:typename:const char **	file:	roles:def	extras:fileScope	nth:0
 vector	src/vector/vector.h	/^bool		is_normal(t_vector vector);$/;"	kind:parameter	line:32	language:C++	scope:prototype:is_normal	typeref:typename:t_vector	file:	roles:def	extras:fileScope	nth:0
-vector.h	src/vector/vector.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:43	epoch:1699638290
+vector.h	src/vector/vector.h	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:43	epoch:1700435166
 vector.h	src/vector/vector_functions.c	/^#include "vector.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
 vector.h	src/vector/vector_functions2.c	/^#include "vector.h"/;"	kind:header	line:13	language:C	roles:local	extras:reference
-vector_functions.c	src/vector/vector_functions.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:61	epoch:1699818259
-vector_functions2.c	src/vector/vector_functions2.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:36	epoch:1699639426
+vector_functions.c	src/vector/vector_functions.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:61	epoch:1700435166
+vector_functions2.c	src/vector/vector_functions2.c	1;"	kind:file	line:1	language:C	roles:def	extras:inputFile	end:36	epoch:1700435166
 w	src/render_scene/render_scene_in_buffer.c	/^static t_vector	get_ray_direction(t_camera_data camera_data, long double w,$/;"	kind:parameter	line:35	language:C	scope:function:get_ray_direction	typeref:typename:long double	file:	roles:def	extras:fileScope	nth:1
 width	src/render_scene/render_scene.h	/^					unsigned int *buffer, int height, int width);$/;"	kind:parameter	line:33	language:C++	scope:prototype:render_scene_in_buffer	typeref:typename:int	file:	roles:def	extras:fileScope	nth:3
 width	src/render_scene/render_scene_in_buffer.c	/^							int width)$/;"	kind:parameter	line:83	language:C	scope:function:get_camera_data	typeref:typename:int	file:	roles:def	extras:fileScope	nth:2
